@@ -246,7 +246,7 @@ theme = "LoveIt"
     Matrix = ""
     Bilibili = ""
     Email = ""
-    RSS = false #
+    RSS = true #
 
   #  Page config
   [params.page]
