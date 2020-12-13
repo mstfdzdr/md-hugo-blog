@@ -184,7 +184,7 @@ theme = "LoveIt"
   # Social config about the author
   [params.social]
     GitHub = "mstfdzdr"
-    Linkedin = ""
+    Linkedin = "mstfdzdr"
     Twitter = "mustafadizdar_"
     Instagram = "mstfdzdr"
     Facebook = ""
@@ -343,13 +343,13 @@ theme = "LoveIt"
       Mix = false
     #  Comment config
     [params.page.comment]
-      enable = true
+      enable = false
       # Disqus comment config
       [params.page.comment.disqus]
         # 
         enable = false
         # Disqus shortname to use Disqus in posts
-        shortname = ""
+        shortname = "mstfdzdr-blog"
       # Gitalk comment config
       [params.page.comment.gitalk]
         # 

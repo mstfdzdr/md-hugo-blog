@@ -136,8 +136,8 @@ Her yeni posttan sonra **hugo** komutu ile siteyi derleyip html renderı almak v
 
 {{< admonition quote "Kaynaklar" false >}}
 
-1. [kayaen.github.io] (https://kayaen.github.io/blog/2019-02/bu-sitenin-kurulumu/)
+1. [kayaen.github.io](https://kayaen.github.io/blog/2019-02/bu-sitenin-kurulumu/)
 
-2. [levelup] (https://levelup.gitconnected.com/build-a-personal-website-with-github-pages-and-hugo-6c68592204c7)
+2. [levelup](https://levelup.gitconnected.com/build-a-personal-website-with-github-pages-and-hugo-6c68592204c7)
 {{< /admonition >}}
 

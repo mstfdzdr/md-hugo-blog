@@ -1,6 +1,7 @@
 ---
 title: "Gigabyte B450 anakartta virtualization açma"
 date: 2020-11-20T19:23:28+03:00
+draft: false
 description: "Bu aralar Android Studio ile biraz flörtleşiyoruz. Emülatör için virtualization teknolojisini açmak icap etti. Biraz uğraştırdı"
 tags: ["amd", "gigabyte b450","virtualization"]
 categories: ["Nasıl Yapılır"]
