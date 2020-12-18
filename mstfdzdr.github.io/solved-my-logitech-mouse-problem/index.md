@@ -21,5 +21,5 @@ Böyle geçerken vakit aklıma Logitech K360 klavyemin de alıcısının [unifyi
 
 ![Alt text](https://drive.google.com/uc?export=view&id=1n80SDTjZBEFyqJYsaQ3Lpjcb4MgAITty "İki farklı tipte unifying alıcı")
 
-Fare ile gelen beyaz tip, klavye ile gelen turuncu tip idi. Velhasıl klavye ile geleni taktım ve unifying manager'dan faremi ekledim. O da nesi? Direkt çalıştı buton5. Artık firmware sıkıntısı mı yoksa alıcının kendi frekansı vs kaynaklı teknooji sıkıntısı mı bilemiyorum. Ama ben sorunumu çözdüm.
+Fare ile gelen beyaz tip, klavye ile gelen turuncu tip idi. Velhasıl klavye ile geleni taktım ve unifying manager'dan faremi ekledim. O da nesi? Direkt çalıştı buton5. Artık firmware sıkıntısı mı yoksa alıcının kendi frekansı vs kaynaklı teknoloji sıkıntısı mı bilemiyorum. Ama ben sorunumu çözdüm.
 
