@@ -19,7 +19,7 @@ Bu sırada her fırsatta baktım internet üzerinde bu sorunu yaşayan kullanıc
 
 Böyle geçerken vakit aklıma Logitech K360 klavyemin de alıcısının [unifying](https://www.logitech.com/tr-tr/product/unifying-receiver-usb) olduğunu hatırladım. Mevcut alıcıdan faremi sildim. Alıcıyı çıkardım ve K360 ile gelen alıcıyı taktım. Bu sırada bir şey farkettim.
 
-![Alt text](https://drive.google.com/uc?export=view&id=1n80SDTjZBEFyqJYsaQ3Lpjcb4MgAITty "İki farklı tipte unifying alıcı")
+![Alt text](./img/1.png "İki farklı tipte unifying alıcı")
 
 Fare ile gelen beyaz tip, klavye ile gelen turuncu tip idi. Velhasıl klavye ile geleni taktım ve unifying manager'dan faremi ekledim. O da nesi? Direkt çalıştı buton5. Artık firmware sıkıntısı mı yoksa alıcının kendi frekansı vs kaynaklı teknoloji sıkıntısı mı bilemiyorum. Ama ben sorunumu çözdüm.
 
