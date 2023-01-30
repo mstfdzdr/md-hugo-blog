@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>CSS - Kategori - mustafa dizdar - blog</title>
-        <link>https://mstfdzdr.github.io/categories/css/</link>
+        <link>https://dizdar.dev/categories/css/</link>
         <description>CSS - Kategori - mustafa dizdar - blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 18 Dec 2020 03:45:13 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/categories/css/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 18 Dec 2020 03:45:13 &#43;0300</lastBuildDate><atom:link href="https://dizdar.dev/categories/css/" rel="self" type="application/rss+xml" /><item>
     <title>CSS temel ölçü birimleri</title>
-    <link>https://mstfdzdr.github.io/css-temel-olcu-birimleri/</link>
+    <link>https://dizdar.dev/css-temel-olcu-birimleri/</link>
     <pubDate>Fri, 18 Dec 2020 03:45:13 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/css-temel-olcu-birimleri/</guid>
+    <guid>https://dizdar.dev/css-temel-olcu-birimleri/</guid>
     <description><![CDATA[<p>Hiç bi zaman aram iyi olmadı CSS ile ta ki <a href="https://ademilter.com/" target="_blank" rel="noopener noreffer ">Adem İlter</a>&lsquo;i takip edene kadar :) Hem öğreniyorum hem de kendime not olsun diye buraya bırakayım.</p>]]></description>
 </item>
 </channel>

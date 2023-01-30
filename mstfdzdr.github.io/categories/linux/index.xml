@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Linux - Kategori - mustafa dizdar - blog</title>
-        <link>https://mstfdzdr.github.io/categories/linux/</link>
+        <link>https://dizdar.dev/categories/linux/</link>
         <description>Linux - Kategori - mustafa dizdar - blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Sat, 12 Jun 2021 13:23:30 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/categories/linux/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Sat, 12 Jun 2021 13:23:30 &#43;0300</lastBuildDate><atom:link href="https://dizdar.dev/categories/linux/" rel="self" type="application/rss+xml" /><item>
     <title>Ubuntu üzerinde web geliştirici ortamı kurmak</title>
-    <link>https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/</link>
+    <link>https://dizdar.dev/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/</link>
     <pubDate>Sat, 12 Jun 2021 13:23:30 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/</guid>
+    <guid>https://dizdar.dev/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/</guid>
     <description><![CDATA[<p>Ara ara live usb ya da virtual machine üzerinden deneyimlerim olsa da kalıcı olarak Linux kullanma fırsatım olmamıştı.
 Geçtiğimiz senenin sonunda nihayet bir masaüstü bilgisayar alınca notebooku farklı işletim sistemleri test etmek amaçlı kullanmaya başladım.</p>
 <p>Amacım macOS’a ulaşamayan içimdeki junior developer’ı Windows‘a göre daha rahat edebileceğim bir ortamda kodlamak için Ubuntu kurmak idi.

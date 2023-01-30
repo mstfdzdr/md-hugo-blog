@@ -1,23 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Django - Kategori - mustafa dizdar - blog</title>
-        <link>https://mstfdzdr.github.io/categories/django/</link>
+        <link>https://dizdar.dev/categories/django/</link>
         <description>Django - Kategori - mustafa dizdar - blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 27 Jan 2023 13:52:29 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/categories/django/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 27 Jan 2023 13:52:29 &#43;0300</lastBuildDate><atom:link href="https://dizdar.dev/categories/django/" rel="self" type="application/rss+xml" /><item>
     <title>Yeni Django Projesine Başlamak</title>
-    <link>https://mstfdzdr.github.io/yeni-django-projesine-baslamak/</link>
+    <link>https://dizdar.dev/yeni-django-projesine-baslamak/</link>
     <pubDate>Fri, 27 Jan 2023 13:52:29 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/yeni-django-projesine-baslamak/</guid>
+    <guid>https://dizdar.dev/yeni-django-projesine-baslamak/</guid>
     <description><![CDATA[<p>Herkese selam, bu yazı aslında kendime not gibi olacak çünkü her yeni projeye başlarken komutları biliyor da
 olsam teyit etmek amaçlı dokümantasyonlardan kontrol ediyorum. Bu yüzden derli toplu bir şekilde blogta dursun istedim.</p>]]></description>
 </item>
 <item>
     <title>Django: Veritabanını Resetlemek</title>
-    <link>https://mstfdzdr.github.io/django-veritabanini-resetlemek/</link>
+    <link>https://dizdar.dev/django-veritabanini-resetlemek/</link>
     <pubDate>Fri, 27 Jan 2023 13:41:55 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/django-veritabanini-resetlemek/</guid>
+    <guid>https://dizdar.dev/django-veritabanini-resetlemek/</guid>
     <description><![CDATA[<p>Bir proje olgunlaşırken gerek db model üzerinden gerekse data üzerinde sürekli değişiklikler oluyor ve bir yerden sonra test için veri çok anlamsız hâle gelebiliyor. Bu gibi durumlarda veritabanınızı resetlemek (sıfırlamak) ihtiyacı doğabilir. Bunun için birkaç farklı yöntem bulunuyor.</p>]]></description>
 </item>
 </channel>

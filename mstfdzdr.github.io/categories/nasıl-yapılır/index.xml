@@ -1,57 +1,57 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Nasıl Yapılır - Kategori - mustafa dizdar - blog</title>
-        <link>https://mstfdzdr.github.io/categories/nas%C4%B1l-yap%C4%B1l%C4%B1r/</link>
+        <link>https://dizdar.dev/categories/nas%C4%B1l-yap%C4%B1l%C4%B1r/</link>
         <description>Nasıl Yapılır - Kategori - mustafa dizdar - blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 27 Jan 2023 14:57:05 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/categories/nas%C4%B1l-yap%C4%B1l%C4%B1r/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 27 Jan 2023 14:57:05 &#43;0300</lastBuildDate><atom:link href="https://dizdar.dev/categories/nas%C4%B1l-yap%C4%B1l%C4%B1r/" rel="self" type="application/rss+xml" /><item>
     <title>Windows Terminal’den uygulama güncellemek</title>
-    <link>https://mstfdzdr.github.io/windows-terminalden-uygulama-guncellemek/</link>
+    <link>https://dizdar.dev/windows-terminalden-uygulama-guncellemek/</link>
     <pubDate>Fri, 27 Jan 2023 14:57:05 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/windows-terminalden-uygulama-guncellemek/</guid>
+    <guid>https://dizdar.dev/windows-terminalden-uygulama-guncellemek/</guid>
     <description><![CDATA[Ubuntu kullananlar bilir, apt update ve apt upgrade çok sık yazdığımız komutlardır. Bunlar uygulamaları güncellemek için kullanılır. Malum Windows son zamanlarda WSL falan derken epey yanladı Linux cephesine 🙂 Şimdi de bu komut satırından güncelleme topuna girmiş gibi görünüyor.
 Nasıl yapıyoruz peki? Powershell’i açıp, “winget upgrade” yazıp enter’layın.]]></description>
 </item>
 <item>
     <title>Visual Studio Code koyu tema/açık tema ayarı yapmak</title>
-    <link>https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/</link>
+    <link>https://dizdar.dev/vs-code-koyu-acik-tema-ayari-yapmak/</link>
     <pubDate>Fri, 26 Nov 2021 16:06:59 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/</guid>
+    <guid>https://dizdar.dev/vs-code-koyu-acik-tema-ayari-yapmak/</guid>
     <description><![CDATA[Bir önceki yazımda belirttiğim Windows’ta koyu/açık tema ayarını otomatikleştirdikten sonra Visual Studio Code için de bu özellik bir ihtiyaç haline geldi. Gün içinde yansımaları vb. engellemek gece ise gözümüzü daha az yormak için bunu nasıl yapabiliriz diye araştırırken meğer Visual Studio Code’un kendi içinde böyle bir ayar olduğunu fark ettim.
 Peki nasıl yapacağız? Visual Studio Code’da ayarları açıp, arama kutusuna auto detect yazarak aratalım.
 Yukarıdaki görselde görüleceği üzere gelen ayarlardan Windows: Auto Detect Color Scheme seçeneğini işaretleyelim.]]></description>
 </item>
 <item>
     <title>[Çözüldü!] Logitech M560 mouse Button 5 problemi</title>
-    <link>https://mstfdzdr.github.io/solved-my-logitech-mouse-problem/</link>
+    <link>https://dizdar.dev/solved-my-logitech-mouse-problem/</link>
     <pubDate>Sun, 13 Dec 2020 01:37:16 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/solved-my-logitech-mouse-problem/</guid>
+    <guid>https://dizdar.dev/solved-my-logitech-mouse-problem/</guid>
     <description><![CDATA[<p>Uzun zamandır kablolu standart mouse kullanıyordum. Geçenlerde sorunsuz şekilde dolaba kaldırdığım Logitech M560&rsquo;ımı tekrar kullanmaya başlayayım dedim. Olmadı&hellip;</p>]]></description>
 </item>
 <item>
     <title>Gigabyte B450 anakartta virtualization açma</title>
-    <link>https://mstfdzdr.github.io/gigabyte-virtualization-acma/</link>
+    <link>https://dizdar.dev/gigabyte-virtualization-acma/</link>
     <pubDate>Fri, 20 Nov 2020 19:23:28 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/gigabyte-virtualization-acma/</guid>
+    <guid>https://dizdar.dev/gigabyte-virtualization-acma/</guid>
     <description><![CDATA[<p>Bu aralar Android Studio ile biraz flörtleşiyoruz. Emülatör için virtualization teknolojisini açmak icap etti. Biraz uğraştırdı&hellip;</p>]]></description>
 </item>
 <item>
     <title>Bu site nasıl çalışıyor?</title>
-    <link>https://mstfdzdr.github.io/bu-siteyi-nasil-ayaga-kaldirdim/</link>
+    <link>https://dizdar.dev/bu-siteyi-nasil-ayaga-kaldirdim/</link>
     <pubDate>Thu, 12 Nov 2020 02:27:24 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/bu-siteyi-nasil-ayaga-kaldirdim/</guid>
+    <guid>https://dizdar.dev/bu-siteyi-nasil-ayaga-kaldirdim/</guid>
     <description><![CDATA[<p>Bilmediğim bilmediğim işler :) Oraya bak burdan oku derken nihayet canlıya çıkarabildim blogu. Ama nasıl&hellip;</p>]]></description>
 </item>
 <item>
     <title>WhatsApp yedeği Google Drive ve telefondan nasıl silinir?</title>
-    <link>https://mstfdzdr.github.io/whatsapp-yedegi-drivedan-nasil-silinir/</link>
+    <link>https://dizdar.dev/whatsapp-yedegi-drivedan-nasil-silinir/</link>
     <pubDate>Wed, 11 Nov 2020 15:55:03 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/whatsapp-yedegi-drivedan-nasil-silinir/</guid>
+    <guid>https://dizdar.dev/whatsapp-yedegi-drivedan-nasil-silinir/</guid>
     <description><![CDATA[<p>Telefon değiştirme esnasında bazen bu yedekler oldukça sıkıntı çıkarabiliyor. Yerel yedek daha güncel oluyor, cloud&rsquo;dakini çekmeye çalışıyor kurulumda falan&hellip;</p>]]></description>
 </item>
 </channel>

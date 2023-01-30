@@ -1,77 +1,77 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>mustafa dizdar - blog</title>
-        <link>https://mstfdzdr.github.io/</link>
+        <link>https://dizdar.dev/</link>
         <description>mustafa dizdar blog</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 27 Jan 2023 14:57:05 &#43;0300</lastBuildDate>
-            <atom:link href="https://mstfdzdr.github.io/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="https://dizdar.dev/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Windows Terminal’den uygulama güncellemek</title>
-    <link>https://mstfdzdr.github.io/windows-terminalden-uygulama-guncellemek/</link>
+    <link>https://dizdar.dev/windows-terminalden-uygulama-guncellemek/</link>
     <pubDate>Fri, 27 Jan 2023 14:57:05 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/windows-terminalden-uygulama-guncellemek/</guid>
+    <guid>https://dizdar.dev/windows-terminalden-uygulama-guncellemek/</guid>
     <description><![CDATA[Ubuntu kullananlar bilir, apt update ve apt upgrade çok sık yazdığımız komutlardır. Bunlar uygulamaları güncellemek için kullanılır. Malum Windows son zamanlarda WSL falan derken epey yanladı Linux cephesine 🙂 Şimdi de bu komut satırından güncelleme topuna girmiş gibi görünüyor.
 Nasıl yapıyoruz peki? Powershell’i açıp, “winget upgrade” yazıp enter’layın.]]></description>
 </item>
 <item>
     <title>Flutter Telefon Araması Yaptırmak</title>
-    <link>https://mstfdzdr.github.io/flutter-telefon-aramasi-yaptirmak/</link>
+    <link>https://dizdar.dev/flutter-telefon-aramasi-yaptirmak/</link>
     <pubDate>Fri, 27 Jan 2023 14:15:22 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/flutter-telefon-aramasi-yaptirmak/</guid>
+    <guid>https://dizdar.dev/flutter-telefon-aramasi-yaptirmak/</guid>
     <description><![CDATA[<p>Geçenlerde bir proje için modelden gelen numarayı arama ihtiyacı doğdu. Sonrasında araştırınca url launcher paketi ile bunun gerçekleştirildiğini gördüm.
 Hatta paket sadece arama yapmak için değil, adı gibi tüm url açma işlemleri için kullanılıyor. Örn: web linkleri açmak, sms atmak, e-mail göndermek gibi.</p>]]></description>
 </item>
 <item>
     <title>Yeni Django Projesine Başlamak</title>
-    <link>https://mstfdzdr.github.io/yeni-django-projesine-baslamak/</link>
+    <link>https://dizdar.dev/yeni-django-projesine-baslamak/</link>
     <pubDate>Fri, 27 Jan 2023 13:52:29 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/yeni-django-projesine-baslamak/</guid>
+    <guid>https://dizdar.dev/yeni-django-projesine-baslamak/</guid>
     <description><![CDATA[<p>Herkese selam, bu yazı aslında kendime not gibi olacak çünkü her yeni projeye başlarken komutları biliyor da
 olsam teyit etmek amaçlı dokümantasyonlardan kontrol ediyorum. Bu yüzden derli toplu bir şekilde blogta dursun istedim.</p>]]></description>
 </item>
 <item>
     <title>Python: Ayın Son Gününü Bulmak</title>
-    <link>https://mstfdzdr.github.io/python-ayin-son-gununu-bulmak/</link>
+    <link>https://dizdar.dev/python-ayin-son-gununu-bulmak/</link>
     <pubDate>Fri, 27 Jan 2023 13:49:23 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/python-ayin-son-gununu-bulmak/</guid>
+    <guid>https://dizdar.dev/python-ayin-son-gununu-bulmak/</guid>
     <description><![CDATA[<p>Bir iş için girilen bir ayın son gününü bulmam gerekti. Kendime not olsun diye buraya da ekleyeyim istedim.</p>]]></description>
 </item>
 <item>
     <title>Django: Veritabanını Resetlemek</title>
-    <link>https://mstfdzdr.github.io/django-veritabanini-resetlemek/</link>
+    <link>https://dizdar.dev/django-veritabanini-resetlemek/</link>
     <pubDate>Fri, 27 Jan 2023 13:41:55 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/django-veritabanini-resetlemek/</guid>
+    <guid>https://dizdar.dev/django-veritabanini-resetlemek/</guid>
     <description><![CDATA[<p>Bir proje olgunlaşırken gerek db model üzerinden gerekse data üzerinde sürekli değişiklikler oluyor ve bir yerden sonra test için veri çok anlamsız hâle gelebiliyor. Bu gibi durumlarda veritabanınızı resetlemek (sıfırlamak) ihtiyacı doğabilir. Bunun için birkaç farklı yöntem bulunuyor.</p>]]></description>
 </item>
 <item>
     <title>MongoDB&#39;ye Uzaktan Erişim Vermek</title>
-    <link>https://mstfdzdr.github.io/mongodb-ye-uzaktan-erisim-vermek/</link>
+    <link>https://dizdar.dev/mongodb-ye-uzaktan-erisim-vermek/</link>
     <pubDate>Fri, 27 Jan 2023 13:25:01 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/mongodb-ye-uzaktan-erisim-vermek/</guid>
+    <guid>https://dizdar.dev/mongodb-ye-uzaktan-erisim-vermek/</guid>
     <description><![CDATA[<p>Windows sunucuda çalıştırdığımız MongoDB’ye uzaktan erişmemiz gerekti. Nasıl yapılır diye araştırırken, buraya da not alayım istedim.</p>]]></description>
 </item>
 <item>
     <title>Visual Studio Code koyu tema/açık tema ayarı yapmak</title>
-    <link>https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/</link>
+    <link>https://dizdar.dev/vs-code-koyu-acik-tema-ayari-yapmak/</link>
     <pubDate>Fri, 26 Nov 2021 16:06:59 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/</guid>
+    <guid>https://dizdar.dev/vs-code-koyu-acik-tema-ayari-yapmak/</guid>
     <description><![CDATA[Bir önceki yazımda belirttiğim Windows’ta koyu/açık tema ayarını otomatikleştirdikten sonra Visual Studio Code için de bu özellik bir ihtiyaç haline geldi. Gün içinde yansımaları vb. engellemek gece ise gözümüzü daha az yormak için bunu nasıl yapabiliriz diye araştırırken meğer Visual Studio Code’un kendi içinde böyle bir ayar olduğunu fark ettim.
 Peki nasıl yapacağız? Visual Studio Code’da ayarları açıp, arama kutusuna auto detect yazarak aratalım.
 Yukarıdaki görselde görüleceği üzere gelen ayarlardan Windows: Auto Detect Color Scheme seçeneğini işaretleyelim.]]></description>
 </item>
 <item>
     <title>Ubuntu üzerinde web geliştirici ortamı kurmak</title>
-    <link>https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/</link>
+    <link>https://dizdar.dev/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/</link>
     <pubDate>Sat, 12 Jun 2021 13:23:30 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/</guid>
+    <guid>https://dizdar.dev/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/</guid>
     <description><![CDATA[<p>Ara ara live usb ya da virtual machine üzerinden deneyimlerim olsa da kalıcı olarak Linux kullanma fırsatım olmamıştı.
 Geçtiğimiz senenin sonunda nihayet bir masaüstü bilgisayar alınca notebooku farklı işletim sistemleri test etmek amaçlı kullanmaya başladım.</p>
 <p>Amacım macOS’a ulaşamayan içimdeki junior developer’ı Windows‘a göre daha rahat edebileceğim bir ortamda kodlamak için Ubuntu kurmak idi.
@@ -79,18 +79,18 @@ Yazının bundan sonrası esasında bir anlamda kendime sonraki kurulumlarda reh
 </item>
 <item>
     <title>Yüksek Lisans&#39;ı tamamladım. Doktora&#39;ya başladım!</title>
-    <link>https://mstfdzdr.github.io/yuksek-lisans-bitti-doktoraya-basladim/</link>
+    <link>https://dizdar.dev/yuksek-lisans-bitti-doktoraya-basladim/</link>
     <pubDate>Thu, 01 Apr 2021 02:06:29 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/yuksek-lisans-bitti-doktoraya-basladim/</guid>
+    <guid>https://dizdar.dev/yuksek-lisans-bitti-doktoraya-basladim/</guid>
     <description><![CDATA[<p>Son blog girdisinden bu yana epey vakit geçmiş. Aslında planım bu yönde değildi burayı ayağa kaldırdığımda. Bu yazıda hem bu uzun aradan hem de bu aranın oluşma sebebi olan eğitim hayatımdaki gelişmelerden bahsetmek istiyorum.</p>]]></description>
 </item>
 <item>
     <title>CSS temel ölçü birimleri</title>
-    <link>https://mstfdzdr.github.io/css-temel-olcu-birimleri/</link>
+    <link>https://dizdar.dev/css-temel-olcu-birimleri/</link>
     <pubDate>Fri, 18 Dec 2020 03:45:13 &#43;0300</pubDate>
     <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/css-temel-olcu-birimleri/</guid>
+    <guid>https://dizdar.dev/css-temel-olcu-birimleri/</guid>
     <description><![CDATA[<p>Hiç bi zaman aram iyi olmadı CSS ile ta ki <a href="https://ademilter.com/" target="_blank" rel="noopener noreffer ">Adem İlter</a>&lsquo;i takip edene kadar :) Hem öğreniyorum hem de kendime not olsun diye buraya bırakayım.</p>]]></description>
 </item>
 </channel>
