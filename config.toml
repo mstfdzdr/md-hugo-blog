@@ -1,7 +1,7 @@
 baseURL = "https://mstfdzdr.github.io/"
 publishDir = "mstfdzdr.github.io"
 # [en, zh-cn, fr, ...] determines default content language
-defaultContentLanguage = "en"
+defaultContentLanguage = "tr"
 # language code
 languageCode = "tr"
 title = "mustafa dizdar - blog"
@@ -176,7 +176,7 @@ theme = "LoveIt"
     [params.home.posts]
       enable = true
       # special amount of posts in each home posts page
-      paginate = 6
+      paginate = 5
       #  replaced with hiddenFromHomePage in params.page
       # default behavior when you don't set "hiddenFromHomePage" in front matter
       defaultHiddenFromHomePage = false
@@ -185,7 +185,7 @@ theme = "LoveIt"
   [params.social]
     GitHub = "mstfdzdr"
     Linkedin = "mstfdzdr"
-    Twitter = "mustafadizdar_"
+    Twitter = "mstfdzdr"
     Instagram = "mstfdzdr"
     Facebook = ""
     Telegram = ""
@@ -257,7 +257,7 @@ theme = "LoveIt"
     #  whether to enable twemoji
     twemoji = false
     # whether to enable lightgallery
-    lightgallery = false
+    lightgallery = true
     #  whether to enable the ruby extended syntax
     ruby = true
     #  whether to enable the fraction extended syntax
