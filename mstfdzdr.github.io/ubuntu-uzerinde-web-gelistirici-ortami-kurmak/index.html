@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Ubuntu üzerinde web geliştirici ortamı kurmak - mustafa dizdar - blog</title><meta name="Description" content="mustafa dizdar blog"><meta property="og:title" content="Ubuntu üzerinde web geliştirici ortamı kurmak" />
+<meta property="og:description" content="Ara ara live usb ya da virtual machine üzerinden deneyimlerim olsa da kalıcı olarak Linux kullanma fırsatım olmamıştı.
+Geçtiğimiz senenin sonunda nihayet bir masaüstü bilgisayar alınca notebooku farklı işletim sistemleri test etmek amaçlı kullanmaya başladım.
+Amacım macOS’a ulaşamayan içimdeki junior developer’ı Windows‘a göre daha rahat edebileceğim bir ortamda kodlamak için Ubuntu kurmak idi.
+Yazının bundan sonrası esasında bir anlamda kendime sonraki kurulumlarda rehber şeklinde 🙂" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/" /><meta property="og:image" content="https://mstfdzdr.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-12T13:23:30+03:00" />
+<meta property="article:modified_time" content="2023-01-30T13:23:30+03:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mstfdzdr.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Ubuntu üzerinde web geliştirici ortamı kurmak"/>
+<meta name="twitter:description" content="Ara ara live usb ya da virtual machine üzerinden deneyimlerim olsa da kalıcı olarak Linux kullanma fırsatım olmamıştı.
+Geçtiğimiz senenin sonunda nihayet bir masaüstü bilgisayar alınca notebooku farklı işletim sistemleri test etmek amaçlı kullanmaya başladım.
+Amacım macOS’a ulaşamayan içimdeki junior developer’ı Windows‘a göre daha rahat edebileceğim bir ortamda kodlamak için Ubuntu kurmak idi.
+Yazının bundan sonrası esasında bir anlamda kendime sonraki kurulumlarda rehber şeklinde 🙂"/>
+<meta name="application-name" content="mstfdzdr">
+<meta name="apple-mobile-web-app-title" content="mstfdzdr"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/" /><link rel="prev" href="https://mstfdzdr.github.io/yuksek-lisans-bitti-doktoraya-basladim/" /><link rel="next" href="https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Ubuntu üzerinde web geliştirici ortamı kurmak",
+        "inLanguage": "tr",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/mstfdzdr.github.io\/ubuntu-uzerinde-web-gelistirici-ortami-kurmak\/"
+        },"genre": "posts","keywords": "ubuntu, apache, php, localhost","wordcount":  432 ,
+        "url": "https:\/\/mstfdzdr.github.io\/ubuntu-uzerinde-web-gelistirici-ortami-kurmak\/","datePublished": "2021-06-12T13:23:30+03:00","dateModified": "2023-01-30T13:23:30+03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "mstfdzdr"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="mustafa dizdar - blog">mustafadizdar</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"><i class='fas fa-file-alt'></i> Yazılar </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> Etiketler </a><a class="menu-item" href="/categories/"><i class='fas fa-folder'></i> Kategoriler </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Başlık yada içerik arama..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Arama">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Temizle">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Temayı Değiştir">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="mustafa dizdar - blog">mustafadizdar</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Başlık yada içerik arama..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Arama">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Temizle">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        İptal
+                    </a>
+                </div><a class="menu-item" href="/posts/" title=""><i class='fas fa-file-alt'></i>Yazılar</a><a class="menu-item" href="/tags/" title=""><i class='fas fa-tags'></i>Etiketler</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-folder'></i>Kategoriler</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Temayı Değiştir">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">İçerikler</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Ubuntu üzerinde web geliştirici ortamı kurmak</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>mstfdzdr</a></span>&nbsp;<span class="post-category"><a href="/categories/linux/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Linux</a> kategorileri içinde</span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="06/12/2021">06/12/2021</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;432 kelime&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 dakika&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>İçerikler</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#terminal-ve-sistemi-güncelleme">Terminal ve sistemi güncelleme</a></li>
+        <li><a href="#nodejs">Node.js</a></li>
+        <li><a href="#apache">Apache</a></li>
+        <li><a href="#php">PHP</a></li>
+        <li><a href="#mysql">MySQL</a></li>
+        <li><a href="#phpmyadmin">PHPMyAdmin</a></li>
+        <li><a href="#ide-ve-browser">IDE ve Browser</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Ara ara live usb ya da virtual machine üzerinden deneyimlerim olsa da kalıcı olarak Linux kullanma fırsatım olmamıştı.
+Geçtiğimiz senenin sonunda nihayet bir masaüstü bilgisayar alınca notebooku farklı işletim sistemleri test etmek amaçlı kullanmaya başladım.</p>
+<p>Amacım macOS’a ulaşamayan içimdeki junior developer’ı Windows‘a göre daha rahat edebileceğim bir ortamda kodlamak için Ubuntu kurmak idi.
+Yazının bundan sonrası esasında bir anlamda kendime sonraki kurulumlarda rehber şeklinde 🙂</p>
+<h3 id="terminal-ve-sistemi-güncelleme">Terminal ve sistemi güncelleme</h3>
+<p>Öncelikle Linux dedik mi olayımız terminal. O yüzden önce terminali kullanarak sistem için güncellemeler , yükseltmeler var mı onu kontrol edelim.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt -y upgrade</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="nodejs">Node.js</h3>
+<p>Burada Node.js’in sürümünü özellikle seçmek istiyorsanız aşağıdaki komut satırı yerine <a href="https://github.com/nodesource/distributions" target="_blank" rel="noopener noreffer ">şuradan</a> github reposuna göz atmalısınız.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install nodejs</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Nodejs’i github reposundan indirmekte hata alırsanız curl kurmanız gerek. O yüzden aşağıdaki kodu çalıştırın.</p>
+<p><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install curl</span></span></code></pre></td></tr></table>
+</div>
+</div>
+Node sürümünü görmek için terminalde <strong>node -v</strong> npm sürümünü görmek için ise <strong>npm -v</strong> yazabilirsiniz.</p>
+<h3 id="apache">Apache</h3>
+<p>Apache web server’ı ayağa kaldırmak gerek.</p>
+<p><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install apache2</span></span></code></pre></td></tr></table>
+</div>
+</div>
+Bu adım tamamlandıktan sonra web tarayıcınızın adres çubuğuna localhost yazın ve Apache Home Page’ı görün.</p>
+<h3 id="php">PHP</h3>
+<p>Apache2 modlu PHP paketi kuruyoruz.
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install php libapache2-mod-php</span></span></code></pre></td></tr></table>
+</div>
+</div>
+Sonucu görmek için terminalde <strong>php -v</strong> yazabilirsiniz.</p>
+<p>PHP kurulumundan sonra apache servisini yeniden başlatmanız gerek. Onun için ise:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo service apache2 restart</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Bu aşamadan sonra apache klasörünüzde (muhtemelen: <em><strong>/var/www/html/</strong></em>) dosya izinlerini kendi kullanıcınız için almanız gerekecek. Bunun için ise:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chown KULLANICIADINIZ:KULLANICIADINIZ -R ./</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Kontrol etmek için terminalde <em><strong>ls -la</strong></em> komutunu deneyebilirsiniz.</p>
+<p>Daha sonrasında bir yetki işlemi daha yapmalıyız. Bunu apache klasöründeki envvars dosyası üzerinde satırlar değiştirerek yapacağız. Komutumuz şöyle:
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo gedit /etc/apache2/envvars</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<p>Açılan dosyada aşağıdaki görselde gördüğünüz kısımların varsayılan hali www-data şeklinde olacaktır. Siz <em><strong>KULLANICIADINIZ</strong></em> olarak değiştirmelisiniz.</p>
+<figure><img src="/images/apache-ayar.png"/>
+</figure>
+
+<p>Sonra tekrar apache’yi yeniden başlatıyoruz.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo service apache2 restart</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="mysql">MySQL</h3>
+<p>Eee veritabanı olmadan olmaz.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install mysql-server</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Her şey yolunda mı diye kontrol etmek için:
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo service mysql status</span></span></code></pre></td></tr></table>
+</div>
+</div></p>
+<h3 id="phpmyadmin">PHPMyAdmin</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install phpmyadmin</span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Kurulum esnasında gelecek Configuring phpmyadmin penceresinde <strong>boşluk tuşu</strong> ile apache2‘yi işaretliyoruz.
+Sonrasında gelecek pencerede <em>“Configure database for phpmyadmin with dbconfig-common?”</em> sorusuna da <em><strong>Yes</strong></em> deyip devam ediyoruz.
+Bir sonraki aşamada MySQL için bizden parola oluşturmamızı isteyecek. Şifrenizi oluşturun ve sonrasında tekrar aynı şifreyi girerek onaylayın.</p>
+<p>Web tarayıcınızdan localhost/phpmyadmin adresine girmeyi deneyin. Bir giriş ekranı ile karşılaşacaksınız. Buradaki kullanıcı adımız root.
+Şifreyi ise terminalde aşağıdaki kodları girerek tanımlıyoruz. (Parola phpmyadmin yüklerken girdiğiniz parola ile eşleşmeli!)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mysql
+</span></span><span class="line"><span class="cl">ALTER USER <span class="s1">&#39;root&#39;</span>@<span class="s1">&#39;localhost&#39;</span> IDENTIFIED WITH mysql_native_password BY <span class="s1">&#39;PAROLANIZ&#39;</span><span class="p">;</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="ide-ve-browser">IDE ve Browser</h3>
+<p>Buraya kadar her şey yolunda gitti ise kodlamaya başlamak için <a href="https://github.com/nodesource/distributions" target="_blank" rel="noopener noreffer ">Visual Studio Code</a>,
+ortaya çıkanları görmek için ise <a href="https://github.com/nodesource/distributions" target="_blank" rel="noopener noreffer ">Brave</a> tarayıcıyı öneririm.</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>01/30/2023 tarihinde güncellendi</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/index.md" target="_blank">Markdown Oku</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Şurada Paylaş Twitter" data-sharer="twitter" data-url="https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/" data-title="Ubuntu üzerinde web geliştirici ortamı kurmak" data-via="mstfdzdr" data-hashtags="ubuntu,apache,php,localhost"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş Facebook" data-sharer="facebook" data-url="https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/" data-hashtag="ubuntu"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş Linkedin" data-sharer="linkedin" data-url="https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş WhatsApp" data-sharer="whatsapp" data-url="https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/" data-title="Ubuntu üzerinde web geliştirici ortamı kurmak" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş Pocket" data-sharer="pocket" data-url="https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş Evernote" data-sharer="evernote" data-url="https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/" data-title="Ubuntu üzerinde web geliştirici ortamı kurmak"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş Trello" data-sharer="trello" data-url="https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/" data-title="Ubuntu üzerinde web geliştirici ortamı kurmak" data-description=""><i class="fab fa-trello fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/ubuntu/">ubuntu</a>,&nbsp;<a href="/tags/apache/">apache</a>,&nbsp;<a href="/tags/php/">php</a>,&nbsp;<a href="/tags/localhost/">localhost</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Geri</a></span>&nbsp;|&nbsp;<span><a href="/">Anasayfa</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/yuksek-lisans-bitti-doktoraya-basladim/" class="prev" rel="prev" title="Yüksek Lisans&#39;ı tamamladım. Doktora&#39;ya başladım!"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Yüksek Lisans'ı tamamladım. Doktora'ya başladım!</a>
+            <a href="/vs-code-koyu-acik-tema-ayari-yapmak/" class="next" rel="next" title="Visual Studio Code koyu tema/açık tema ayarı yapmak">Visual Studio Code koyu tema/açık tema ayarı yapmak<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> ile yapıldı | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">mstfdzdr</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Başa Dön">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Yorumları Gör">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Panoya kopyala","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"Sonuç bulunamadı","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

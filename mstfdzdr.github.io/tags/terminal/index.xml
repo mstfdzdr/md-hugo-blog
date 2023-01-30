@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>terminal - Etiket - mustafa dizdar - blog</title>
+        <link>https://mstfdzdr.github.io/tags/terminal/</link>
+        <description>terminal - Etiket - mustafa dizdar - blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 27 Jan 2023 14:57:05 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/tags/terminal/" rel="self" type="application/rss+xml" /><item>
+    <title>Windows Terminal’den uygulama güncellemek</title>
+    <link>https://mstfdzdr.github.io/windows-terminalden-uygulama-guncellemek/</link>
+    <pubDate>Fri, 27 Jan 2023 14:57:05 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/windows-terminalden-uygulama-guncellemek/</guid>
+    <description><![CDATA[Ubuntu kullananlar bilir, apt update ve apt upgrade çok sık yazdığımız komutlardır. Bunlar uygulamaları güncellemek için kullanılır. Malum Windows son zamanlarda WSL falan derken epey yanladı Linux cephesine 🙂 Şimdi de bu komut satırından güncelleme topuna girmiş gibi görünüyor.
+Nasıl yapıyoruz peki? Powershell’i açıp, “winget upgrade” yazıp enter’layın.]]></description>
+</item>
+</channel>
+</rss>

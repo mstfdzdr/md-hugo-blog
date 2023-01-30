@@ -90,7 +90,7 @@ Her adımdan sonra enterlayarak kodu terminale yollamayı unutmayın. Yavaş yav
 
 #### Permission Denied (publickey) hatası aldım
 
-Bu aslında bilgisayarınıda ***SSH Key** yok demek. Aşağıdaki adımlarla bilgisayarımıza ssh key oluşturup, github'a ekleyeceğiz bunu.
+Bu aslında bilgisayarınızda ***SSH Key** yok demek. Aşağıdaki adımlarla bilgisayarımıza ssh key oluşturup, github'a ekleyeceğiz bunu.
 
 1. Git Bash programını açın. Mac ve Linux'ta bu kendi terminal uygulaması üzerinden de yapılabiliyor(muş).
 

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Visual Studio Code koyu tema/açık tema ayarı yapmak - mustafa dizdar - blog</title><meta name="Description" content="mustafa dizdar blog"><meta property="og:title" content="Visual Studio Code koyu tema/açık tema ayarı yapmak" />
+<meta property="og:description" content="Bir önceki yazımda belirttiğim Windows’ta koyu/açık tema ayarını otomatikleştirdikten sonra Visual Studio Code için de bu özellik bir ihtiyaç haline geldi. Gün içinde yansımaları vb. engellemek gece ise gözümüzü daha az yormak için bunu nasıl yapabiliriz diye araştırırken meğer Visual Studio Code’un kendi içinde böyle bir ayar olduğunu fark ettim.
+Peki nasıl yapacağız? Visual Studio Code’da ayarları açıp, arama kutusuna auto detect yazarak aratalım.
+Yukarıdaki görselde görüleceği üzere gelen ayarlardan Windows: Auto Detect Color Scheme seçeneğini işaretleyelim." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/" /><meta property="og:image" content="https://mstfdzdr.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-26T16:06:59+03:00" />
+<meta property="article:modified_time" content="2023-01-30T16:06:59+03:00" /><meta property="og:site_name" content="My cool site" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://mstfdzdr.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Visual Studio Code koyu tema/açık tema ayarı yapmak"/>
+<meta name="twitter:description" content="Bir önceki yazımda belirttiğim Windows’ta koyu/açık tema ayarını otomatikleştirdikten sonra Visual Studio Code için de bu özellik bir ihtiyaç haline geldi. Gün içinde yansımaları vb. engellemek gece ise gözümüzü daha az yormak için bunu nasıl yapabiliriz diye araştırırken meğer Visual Studio Code’un kendi içinde böyle bir ayar olduğunu fark ettim.
+Peki nasıl yapacağız? Visual Studio Code’da ayarları açıp, arama kutusuna auto detect yazarak aratalım.
+Yukarıdaki görselde görüleceği üzere gelen ayarlardan Windows: Auto Detect Color Scheme seçeneğini işaretleyelim."/>
+<meta name="application-name" content="mstfdzdr">
+<meta name="apple-mobile-web-app-title" content="mstfdzdr"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/" /><link rel="prev" href="https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/" /><link rel="next" href="https://mstfdzdr.github.io/mongodb-ye-uzaktan-erisim-vermek/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Visual Studio Code koyu tema/açık tema ayarı yapmak",
+        "inLanguage": "tr",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/mstfdzdr.github.io\/vs-code-koyu-acik-tema-ayari-yapmak\/"
+        },"genre": "posts","wordcount":  117 ,
+        "url": "https:\/\/mstfdzdr.github.io\/vs-code-koyu-acik-tema-ayari-yapmak\/","datePublished": "2021-11-26T16:06:59+03:00","dateModified": "2023-01-30T16:06:59+03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "mstfdzdr"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="mustafa dizdar - blog">mustafadizdar</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"><i class='fas fa-file-alt'></i> Yazılar </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> Etiketler </a><a class="menu-item" href="/categories/"><i class='fas fa-folder'></i> Kategoriler </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Başlık yada içerik arama..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Arama">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Temizle">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Temayı Değiştir">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="mustafa dizdar - blog">mustafadizdar</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Başlık yada içerik arama..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Arama">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Temizle">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        İptal
+                    </a>
+                </div><a class="menu-item" href="/posts/" title=""><i class='fas fa-file-alt'></i>Yazılar</a><a class="menu-item" href="/tags/" title=""><i class='fas fa-tags'></i>Etiketler</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-folder'></i>Kategoriler</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Temayı Değiştir">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Visual Studio Code koyu tema/açık tema ayarı yapmak</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>mstfdzdr</a></span>&nbsp;<span class="post-category"><a href="/categories/nas%C4%B1l-yap%C4%B1l%C4%B1r/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Nasıl Yapılır</a> kategorileri içinde</span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="11/26/2021">11/26/2021</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;117 kelime&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;Bir dakika&nbsp;</div>
+        </div><div class="content" id="content"><p>Bir önceki yazımda belirttiğim Windows’ta koyu/açık tema ayarını otomatikleştirdikten sonra Visual Studio Code için de bu özellik bir ihtiyaç haline geldi.
+Gün içinde yansımaları vb. engellemek gece ise gözümüzü daha az yormak için bunu nasıl yapabiliriz diye araştırırken meğer Visual Studio Code’un kendi içinde böyle bir ayar olduğunu fark ettim.</p>
+<h3 id="peki-nasıl-yapacağız">Peki nasıl yapacağız?</h3>
+<p>Visual Studio Code’da ayarları açıp, arama kutusuna auto detect yazarak aratalım.</p>
+<figure><img src="/images/vs_code_dark_mode.png"/>
+</figure>
+
+<p>Yukarıdaki görselde görüleceği üzere gelen ayarlardan <em><strong>Windows: Auto Detect Color Scheme</strong></em> seçeneğini işaretleyelim.</p>
+<p>Daha sonra <em><strong>Workbench</strong></em> ayarları altında <em><strong>Appearance</strong></em>‘a tıklayalım ve aşağıdaki görselde görünen <em><strong>Preffered Dark Color Theme</strong></em> ve <em><strong>Preffered Light Color Theme</strong></em> ayarlarını keyfimize göre kişiselleştirelim.</p>
+<figure><img src="/images/vs_code_dark_mode_1.png"/>
+</figure>
+
+<p>Hepsi bu kadar artık Windows koyu/açık modu değiştikçe seçtiğimiz temalar Visual Studio Code üzerinde de etkinleşecektir.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>01/30/2023 tarihinde güncellendi</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/vs-code-koyu-acik-tema-ayari-yapmak/index.md" target="_blank">Markdown Oku</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Şurada Paylaş Twitter" data-sharer="twitter" data-url="https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/" data-title="Visual Studio Code koyu tema/açık tema ayarı yapmak" data-via="mstfdzdr"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş Facebook" data-sharer="facebook" data-url="https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş Linkedin" data-sharer="linkedin" data-url="https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş WhatsApp" data-sharer="whatsapp" data-url="https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/" data-title="Visual Studio Code koyu tema/açık tema ayarı yapmak" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş Pocket" data-sharer="pocket" data-url="https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/"><i class="fab fa-get-pocket fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş Evernote" data-sharer="evernote" data-url="https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/" data-title="Visual Studio Code koyu tema/açık tema ayarı yapmak"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Şurada Paylaş Trello" data-sharer="trello" data-url="https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/" data-title="Visual Studio Code koyu tema/açık tema ayarı yapmak" data-description=""><i class="fab fa-trello fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Geri</a></span>&nbsp;|&nbsp;<span><a href="/">Anasayfa</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/" class="prev" rel="prev" title="Ubuntu üzerinde web geliştirici ortamı kurmak"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Ubuntu üzerinde web geliştirici ortamı kurmak</a>
+            <a href="/mongodb-ye-uzaktan-erisim-vermek/" class="next" rel="next" title="MongoDB&#39;ye Uzaktan Erişim Vermek">MongoDB'ye Uzaktan Erişim Vermek<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> ile yapıldı | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">mstfdzdr</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Başa Dön">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Yorumları Gör">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Panoya kopyala","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"Sonuç bulunamadı","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

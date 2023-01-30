@@ -57,6 +57,27 @@ olsam teyit etmek amaçlı dokümantasyonlardan kontrol ediyorum. Bu yüzden der
     <description><![CDATA[<p>Windows sunucuda çalıştırdığımız MongoDB’ye uzaktan erişmemiz gerekti. Nasıl yapılır diye araştırırken, buraya da not alayım istedim.</p>]]></description>
 </item>
 <item>
+    <title>Visual Studio Code koyu tema/açık tema ayarı yapmak</title>
+    <link>https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/</link>
+    <pubDate>Fri, 26 Nov 2021 16:06:59 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/vs-code-koyu-acik-tema-ayari-yapmak/</guid>
+    <description><![CDATA[Bir önceki yazımda belirttiğim Windows’ta koyu/açık tema ayarını otomatikleştirdikten sonra Visual Studio Code için de bu özellik bir ihtiyaç haline geldi. Gün içinde yansımaları vb. engellemek gece ise gözümüzü daha az yormak için bunu nasıl yapabiliriz diye araştırırken meğer Visual Studio Code’un kendi içinde böyle bir ayar olduğunu fark ettim.
+Peki nasıl yapacağız? Visual Studio Code’da ayarları açıp, arama kutusuna auto detect yazarak aratalım.
+Yukarıdaki görselde görüleceği üzere gelen ayarlardan Windows: Auto Detect Color Scheme seçeneğini işaretleyelim.]]></description>
+</item>
+<item>
+    <title>Ubuntu üzerinde web geliştirici ortamı kurmak</title>
+    <link>https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/</link>
+    <pubDate>Sat, 12 Jun 2021 13:23:30 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/</guid>
+    <description><![CDATA[<p>Ara ara live usb ya da virtual machine üzerinden deneyimlerim olsa da kalıcı olarak Linux kullanma fırsatım olmamıştı.
+Geçtiğimiz senenin sonunda nihayet bir masaüstü bilgisayar alınca notebooku farklı işletim sistemleri test etmek amaçlı kullanmaya başladım.</p>
+<p>Amacım macOS’a ulaşamayan içimdeki junior developer’ı Windows‘a göre daha rahat edebileceğim bir ortamda kodlamak için Ubuntu kurmak idi.
+Yazının bundan sonrası esasında bir anlamda kendime sonraki kurulumlarda rehber şeklinde 🙂</p>]]></description>
+</item>
+<item>
     <title>Yüksek Lisans&#39;ı tamamladım. Doktora&#39;ya başladım!</title>
     <link>https://mstfdzdr.github.io/yuksek-lisans-bitti-doktoraya-basladim/</link>
     <pubDate>Thu, 01 Apr 2021 02:06:29 &#43;0300</pubDate>
@@ -71,22 +92,6 @@ olsam teyit etmek amaçlı dokümantasyonlardan kontrol ediyorum. Bu yüzden der
     <author>mstfdzdr</author>
     <guid>https://mstfdzdr.github.io/css-temel-olcu-birimleri/</guid>
     <description><![CDATA[<p>Hiç bi zaman aram iyi olmadı CSS ile ta ki <a href="https://ademilter.com/" target="_blank" rel="noopener noreffer ">Adem İlter</a>&lsquo;i takip edene kadar :) Hem öğreniyorum hem de kendime not olsun diye buraya bırakayım.</p>]]></description>
-</item>
-<item>
-    <title>[Çözüldü!] Logitech M560 mouse Button 5 problemi</title>
-    <link>https://mstfdzdr.github.io/solved-my-logitech-mouse-problem/</link>
-    <pubDate>Sun, 13 Dec 2020 01:37:16 &#43;0300</pubDate>
-    <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/solved-my-logitech-mouse-problem/</guid>
-    <description><![CDATA[<p>Uzun zamandır kablolu standart mouse kullanıyordum. Geçenlerde sorunsuz şekilde dolaba kaldırdığım Logitech M560&rsquo;ımı tekrar kullanmaya başlayayım dedim. Olmadı&hellip;</p>]]></description>
-</item>
-<item>
-    <title>Gigabyte B450 anakartta virtualization açma</title>
-    <link>https://mstfdzdr.github.io/gigabyte-virtualization-acma/</link>
-    <pubDate>Fri, 20 Nov 2020 19:23:28 &#43;0300</pubDate>
-    <author>mstfdzdr</author>
-    <guid>https://mstfdzdr.github.io/gigabyte-virtualization-acma/</guid>
-    <description><![CDATA[<p>Bu aralar Android Studio ile biraz flörtleşiyoruz. Emülatör için virtualization teknolojisini açmak icap etti. Biraz uğraştırdı&hellip;</p>]]></description>
 </item>
 </channel>
 </rss>

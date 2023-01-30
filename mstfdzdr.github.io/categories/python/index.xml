@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Python - Kategori - mustafa dizdar - blog</title>
+        <link>https://mstfdzdr.github.io/categories/python/</link>
+        <description>Python - Kategori - mustafa dizdar - blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 27 Jan 2023 13:49:23 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/categories/python/" rel="self" type="application/rss+xml" /><item>
+    <title>Python: Ayın Son Gününü Bulmak</title>
+    <link>https://mstfdzdr.github.io/python-ayin-son-gununu-bulmak/</link>
+    <pubDate>Fri, 27 Jan 2023 13:49:23 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/python-ayin-son-gununu-bulmak/</guid>
+    <description><![CDATA[<p>Bir iş için girilen bir ayın son gününü bulmam gerekti. Kendime not olsun diye buraya da ekleyeyim istedim.</p>]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>python - Etiket - mustafa dizdar - blog</title>
+        <link>https://mstfdzdr.github.io/tags/python/</link>
+        <description>python - Etiket - mustafa dizdar - blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 27 Jan 2023 13:52:29 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>Yeni Django Projesine Başlamak</title>
+    <link>https://mstfdzdr.github.io/yeni-django-projesine-baslamak/</link>
+    <pubDate>Fri, 27 Jan 2023 13:52:29 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/yeni-django-projesine-baslamak/</guid>
+    <description><![CDATA[<p>Herkese selam, bu yazı aslında kendime not gibi olacak çünkü her yeni projeye başlarken komutları biliyor da
+olsam teyit etmek amaçlı dokümantasyonlardan kontrol ediyorum. Bu yüzden derli toplu bir şekilde blogta dursun istedim.</p>]]></description>
+</item>
+</channel>
+</rss>
