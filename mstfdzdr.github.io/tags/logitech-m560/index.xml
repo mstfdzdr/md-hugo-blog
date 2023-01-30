@@ -1,14 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>logitech m560 - Tag - mustafa dizdar - blog</title>
+        <title>logitech m560 - Etiket - mustafa dizdar - blog</title>
         <link>https://mstfdzdr.github.io/tags/logitech-m560/</link>
-        <description>logitech m560 - Tag - mustafa dizdar - blog</description>
+        <description>logitech m560 - Etiket - mustafa dizdar - blog</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Sun, 13 Dec 2020 01:37:16 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/tags/logitech-m560/" rel="self" type="application/rss+xml" /><item>
     <title>[Çözüldü!] Logitech M560 mouse Button 5 problemi</title>
     <link>https://mstfdzdr.github.io/solved-my-logitech-mouse-problem/</link>
     <pubDate>Sun, 13 Dec 2020 01:37:16 &#43;0300</pubDate>
-    <author>Author</author>
+    <author>mstfdzdr</author>
     <guid>https://mstfdzdr.github.io/solved-my-logitech-mouse-problem/</guid>
     <description><![CDATA[<p>Uzun zamandır kablolu standart mouse kullanıyordum. Geçenlerde sorunsuz şekilde dolaba kaldırdığım Logitech M560&rsquo;ımı tekrar kullanmaya başlayayım dedim. Olmadı&hellip;</p>]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

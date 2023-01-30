@@ -1,21 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>hugo - Tag - mustafa dizdar - blog</title>
+        <title>hugo - Etiket - mustafa dizdar - blog</title>
         <link>https://mstfdzdr.github.io/tags/hugo/</link>
-        <description>hugo - Tag - mustafa dizdar - blog</description>
+        <description>hugo - Etiket - mustafa dizdar - blog</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Thu, 12 Nov 2020 02:27:24 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
     <title>Bu site nasıl çalışıyor?</title>
     <link>https://mstfdzdr.github.io/bu-siteyi-nasil-ayaga-kaldirdim/</link>
     <pubDate>Thu, 12 Nov 2020 02:27:24 &#43;0300</pubDate>
-    <author>Author</author>
+    <author>mstfdzdr</author>
     <guid>https://mstfdzdr.github.io/bu-siteyi-nasil-ayaga-kaldirdim/</guid>
     <description><![CDATA[<p>Bilmediğim bilmediğim işler :) Oraya bak burdan oku derken nihayet canlıya çıkarabildim blogu. Ama nasıl&hellip;</p>]]></description>
-</item><item>
+</item>
+<item>
     <title>Merhaba Hugo</title>
     <link>https://mstfdzdr.github.io/merhaba-hugo/</link>
     <pubDate>Wed, 11 Nov 2020 01:43:26 &#43;0300</pubDate>
-    <author>Author</author>
+    <author>mstfdzdr</author>
     <guid>https://mstfdzdr.github.io/merhaba-hugo/</guid>
-    <description><![CDATA[<p>Yazmayı çok seviyorum ama bir türlü bu blog işlerini tutturamadım. Bilmem kaç senesinden bu yana <a href="https://tr.wordpress.org/" target="_blank" rel="noopener noreffer">wordpress</a> kullarak yazmaya çalıştığım blog için artık yeni kararlar aldım.</p>]]></description>
-</item></channel>
+    <description><![CDATA[<p>Yazmayı çok seviyorum ama bir türlü bu blog işlerini tutturamadım. Bilmem kaç senesinden bu yana <a href="https://tr.wordpress.org/" target="_blank" rel="noopener noreffer ">wordpress</a> kullarak yazmaya çalıştığım blog için artık yeni kararlar aldım.</p>]]></description>
+</item>
+</channel>
 </rss>

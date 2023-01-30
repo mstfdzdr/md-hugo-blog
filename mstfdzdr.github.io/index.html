@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="tr">
     <head>
-	<meta name="generator" content="Hugo 0.77.0" />
+	<meta name="generator" content="Hugo 0.101.0" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>mustafa dizdar - blog</title><meta name="Description" content="mustafa dizdar blog"><meta property="og:title" content="mustafa dizdar - blog" />
 <meta property="og:description" content="mustafa dizdar blog" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://mstfdzdr.github.io/" />
-<meta property="og:image" content="https://mstfdzdr.github.io/logo.png"/>
-<meta property="og:updated_time" content="2021-04-01T02:06:29+03:00" />
+<meta property="og:url" content="https://mstfdzdr.github.io/" /><meta property="og:image" content="https://mstfdzdr.github.io/logo.png"/><meta property="og:site_name" content="My cool site" />
+
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://mstfdzdr.github.io/logo.png"/>
 
@@ -21,7 +19,9 @@
 <meta name="apple-mobile-web-app-title" content="mstfdzdr"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://mstfdzdr.github.io/" /><link rel="alternate" href="/index.xml" type="application/rss+xml" title="mustafa dizdar - blog">
-    <link rel="feed" href="/index.xml" type="application/rss+xml" title="mustafa dizdar - blog"><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    <link rel="feed" href="/index.xml" type="application/rss+xml" title="mustafa dizdar - blog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "WebSite",
@@ -31,7 +31,7 @@
             },"description": "mustafa dizdar blog","name": "mustafa dizdar - blog"
     }
     </script></head>
-    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -40,20 +40,19 @@
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"><i class='fas fa-file-alt'></i> Yazılar </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> Etiketler </a><a class="menu-item" href="/categories/"><i class='fas fa-folder'></i> Kategoriler </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
+                        <input type="text" placeholder="Başlık yada içerik arama..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Arama">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Temizle">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
@@ -68,70 +67,61 @@
         </div>
         <div class="menu" id="menu-mobile"><div class="search-wrapper">
                     <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
-                            <i class="fas fa-search fa-fw"></i>
+                        <input type="text" placeholder="Başlık yada içerik arama..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Arama">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
                         </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
-                            <i class="fas fa-times-circle fa-fw"></i>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Temizle">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
                         </a>
                         <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
                         </span>
                     </div>
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        Cancel
+                        İptal
                     </a>
                 </div><a class="menu-item" href="/posts/" title=""><i class='fas fa-file-alt'></i>Yazılar</a><a class="menu-item" href="/tags/" title=""><i class='fas fa-tags'></i>Etiketler</a><a class="menu-item" href="/categories/" title=""><i class='fas fa-folder'></i>Kategoriler</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-                <div class="container"><div class="page home" posts><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="Yazılar"><img
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="Yazılar"><img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="https://www.gravatar.com/avatar/15e166b5f6b79314d43280d7032210ef?s=240&amp;d=mp"
         data-srcset="https://www.gravatar.com/avatar/15e166b5f6b79314d43280d7032210ef?s=240&amp;d=mp, https://www.gravatar.com/avatar/15e166b5f6b79314d43280d7032210ef?s=240&amp;d=mp 1.5x, https://www.gravatar.com/avatar/15e166b5f6b79314d43280d7032210ef?s=240&amp;d=mp 2x"
         data-sizes="auto"
         alt="https://www.gravatar.com/avatar/15e166b5f6b79314d43280d7032210ef?s=240&amp;d=mp"
-        title="https://www.gravatar.com/avatar/15e166b5f6b79314d43280d7032210ef?s=240&amp;d=mp" /></a></div><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/mstfdzdr" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/mstfdzdr" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="https://twitter.com/mustafadizdar_" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw"></i></a><a href="https://www.instagram.com/mstfdzdr" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
+        title="https://www.gravatar.com/avatar/15e166b5f6b79314d43280d7032210ef?s=240&amp;d=mp" /></a></div><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/mstfdzdr" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="https://linkedin.com/in/mstfdzdr" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="https://twitter.com/mstfdzdr" title="Twitter" target="_blank" rel="noopener noreffer me"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="https://www.instagram.com/mstfdzdr" title="Instagram" target="_blank" rel="noopener noreffer me"><i class="fab fa-instagram fa-fw" aria-hidden="true"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/yuksek-lisans-bitti-doktoraya-basladim/">Yüksek Lisans&#39;ı tamamladım. Doktora&#39;ya başladım!</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish">published on <time datetime="04/01/2021">04/01/2021</time></span>&nbsp;<span class="post-category">included in <a href="/categories/ki%C5%9Fisel/"><i class="far fa-folder fa-fw"></i>Kişisel</a>&nbsp;<a href="/categories/bilgisayar-ve-%C3%B6%C4%9Fretim-teknolojileri/"><i class="far fa-folder fa-fw"></i>Bilgisayar ve Öğretim Teknolojileri</a></span></div><div class="content"><p>Son blog girdisinden bu yana epey vakit geçmiş. Aslında planım bu yönde değildi burayı ayağa kaldırdığımda. Bu yazıda hem bu uzun aradan hem de bu aranın oluşma sebebi olan eğitim hayatımdaki gelişmelerden bahsetmek istiyorum.</p></div><div class="post-footer">
-        <a href="/yuksek-lisans-bitti-doktoraya-basladim/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/b%C3%B6te-y%C3%BCksek-lisans/">böte yüksek lisans</a>,&nbsp;<a href="/tags/b%C3%B6te-doktora/">böte doktora</a>,&nbsp;<a href="/tags/lisans%C3%BCst%C3%BC-e%C4%9Fitim/">lisansüstü eğitim</a></div></div>
+        <a href="/windows-terminalden-uygulama-guncellemek/">Windows Terminal’den uygulama güncellemek</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish"><time datetime="01/27/2023">01/27/2023</time> tarihinde paylaşıldı</span></div><div class="content">Ubuntu kullananlar bilir, apt update ve apt upgrade çok sık yazdığımız komutlardır. Bunlar uygulamaları güncellemek için kullanılır. Malum Windows son zamanlarda WSL falan derken epey yanladı Linux cephesine 🙂 Şimdi de bu komut satırından güncelleme topuna girmiş gibi görünüyor.
+Nasıl yapıyoruz peki? Powershell’i açıp, “winget upgrade” yazıp enter’layın.</div><div class="post-footer">
+        <a href="/windows-terminalden-uygulama-guncellemek/">Daha fazla oku</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/css-temel-olcu-birimleri/">CSS temel ölçü birimleri</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish">published on <time datetime="12/18/2020">12/18/2020</time></span>&nbsp;<span class="post-category">included in <a href="/categories/css/"><i class="far fa-folder fa-fw"></i>CSS</a></span></div><div class="content"><p>Hiç bi zaman aram iyi olmadı CSS ile ta ki <a href="https://ademilter.com/" target="_blank" rel="noopener noreffer">Adem İlter</a>&lsquo;i takip edene kadar :) Hem öğreniyorum hem de kendime not olsun diye buraya bırakayım.</p></div><div class="post-footer">
-        <a href="/css-temel-olcu-birimleri/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/css-temel-%C3%B6l%C3%A7%C3%BCler/">css temel ölçüler</a>,&nbsp;<a href="/tags/responsive/">responsive</a></div></div>
+        <a href="/flutter-telefon-aramasi-yaptirmak/">Flutter Telefon Araması Yaptırmak</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish"><time datetime="01/27/2023">01/27/2023</time> tarihinde paylaşıldı</span>&nbsp;<span class="post-category"><a href="/categories/flutter/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Flutter</a> kategorileri içinde</span></div><div class="content"><p>Geçenlerde bir proje için modelden gelen numarayı arama ihtiyacı doğdu. Sonrasında araştırınca url launcher paketi ile bunun gerçekleştirildiğini gördüm.
+Hatta paket sadece arama yapmak için değil, adı gibi tüm url açma işlemleri için kullanılıyor. Örn: web linkleri açmak, sms atmak, e-mail göndermek gibi.</p></div><div class="post-footer">
+        <a href="/flutter-telefon-aramasi-yaptirmak/">Daha fazla oku</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/solved-my-logitech-mouse-problem/">[Çözüldü!] Logitech M560 mouse Button 5 problemi</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish">published on <time datetime="12/13/2020">12/13/2020</time></span>&nbsp;<span class="post-category">included in <a href="/categories/nas%C4%B1l-yap%C4%B1l%C4%B1r/"><i class="far fa-folder fa-fw"></i>Nasıl Yapılır</a></span></div><div class="content"><p>Uzun zamandır kablolu standart mouse kullanıyordum. Geçenlerde sorunsuz şekilde dolaba kaldırdığım Logitech M560&rsquo;ımı tekrar kullanmaya başlayayım dedim. Olmadı&hellip;</p></div><div class="post-footer">
-        <a href="/solved-my-logitech-mouse-problem/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/logitech-m560/">logitech m560</a>,&nbsp;<a href="/tags/hardware/">hardware</a>,&nbsp;<a href="/tags/button-5-not-working/">button 5 not working</a></div></div>
+        <a href="/yeni-django-projesine-baslamak/">Yeni Django Projesine Başlamak</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish"><time datetime="01/27/2023">01/27/2023</time> tarihinde paylaşıldı</span></div><div class="content"><p>Herkese selam, bu yazı aslında kendime not gibi olacak çünkü her yeni projeye başlarken komutları biliyor da
+olsam teyit etmek amaçlı dokümantasyonlardan kontrol ediyorum. Bu yüzden derli toplu bir şekilde blogta dursun istedim.</p></div><div class="post-footer">
+        <a href="/yeni-django-projesine-baslamak/">Daha fazla oku</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/gigabyte-virtualization-acma/">Gigabyte B450 anakartta virtualization açma</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish">published on <time datetime="11/20/2020">11/20/2020</time></span>&nbsp;<span class="post-category">included in <a href="/categories/nas%C4%B1l-yap%C4%B1l%C4%B1r/"><i class="far fa-folder fa-fw"></i>Nasıl Yapılır</a></span></div><div class="content"><p>Bu aralar Android Studio ile biraz flörtleşiyoruz. Emülatör için virtualization teknolojisini açmak icap etti. Biraz uğraştırdı&hellip;</p></div><div class="post-footer">
-        <a href="/gigabyte-virtualization-acma/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/amd/">amd</a>,&nbsp;<a href="/tags/gigabyte-b450/">gigabyte b450</a>,&nbsp;<a href="/tags/virtualization/">virtualization</a></div></div>
+        <a href="/python-ayin-son-gununu-bulmak/">Python: Ayın Son Gününü Bulmak</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish"><time datetime="01/27/2023">01/27/2023</time> tarihinde paylaşıldı</span></div><div class="content"><p>Bir iş için girilen bir ayın son gününü bulmam gerekti. Kendime not olsun diye buraya da ekleyeyim istedim.</p></div><div class="post-footer">
+        <a href="/python-ayin-son-gununu-bulmak/">Daha fazla oku</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/bu-siteyi-nasil-ayaga-kaldirdim/">Bu site nasıl çalışıyor?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish">published on <time datetime="11/12/2020">11/12/2020</time></span>&nbsp;<span class="post-category">included in <a href="/categories/web-programlama/"><i class="far fa-folder fa-fw"></i>Web Programlama</a>&nbsp;<a href="/categories/nas%C4%B1l-yap%C4%B1l%C4%B1r/"><i class="far fa-folder fa-fw"></i>Nasıl Yapılır</a></span></div><div class="content"><p>Bilmediğim bilmediğim işler :) Oraya bak burdan oku derken nihayet canlıya çıkarabildim blogu. Ama nasıl&hellip;</p></div><div class="post-footer">
-        <a href="/bu-siteyi-nasil-ayaga-kaldirdim/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">hugo</a>,&nbsp;<a href="/tags/statik-blog/">statik blog</a>,&nbsp;<a href="/tags/github-pages/">github pages</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/whatsapp-yedegi-drivedan-nasil-silinir/">WhatsApp yedeği Google Drive ve telefondan nasıl silinir?</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish">published on <time datetime="11/11/2020">11/11/2020</time></span>&nbsp;<span class="post-category">included in <a href="/categories/nas%C4%B1l-yap%C4%B1l%C4%B1r/"><i class="far fa-folder fa-fw"></i>Nasıl Yapılır</a></span></div><div class="content"><p>Telefon değiştirme esnasında bazen bu yedekler oldukça sıkıntı çıkarabiliyor. Yerel yedek daha güncel oluyor, cloud&rsquo;dakini çekmeye çalışıyor kurulumda falan&hellip;</p></div><div class="post-footer">
-        <a href="/whatsapp-yedegi-drivedan-nasil-silinir/">Read More</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/whatsapp/">whatsapp</a>,&nbsp;<a href="/tags/temiz-kurulum/">temiz kurulum</a></div></div>
+        <a href="/django-veritabanini-resetlemek/">Django: Veritabanını Resetlemek</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>mstfdzdr</a></span>&nbsp;<span class="post-publish"><time datetime="01/27/2023">01/27/2023</time> tarihinde paylaşıldı</span></div><div class="content"><p>Bir proje olgunlaşırken gerek db model üzerinden gerekse data üzerinde sürekli değişiklikler oluyor ve bir yerden sonra test için veri çok anlamsız hâle gelebiliyor. Bu gibi durumlarda veritabanınızı resetlemek (sıfırlamak) ihtiyacı doğabilir. Bunun için birkaç farklı yöntem bulunuyor.</p></div><div class="post-footer">
+        <a href="/django-veritabanini-resetlemek/">Daha fazla oku</a></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -140,17 +130,21 @@
                     <span class="page-link">
                         <a href="/page/2/">2</a>
                     </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/3/">3</a>
+                    </span>
                 </li></ul></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.77.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">mstfdzdr</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line"><a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> ile yapıldı | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2020 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">mstfdzdr</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw"></i>
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Başa Dön">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Yorumları Gör">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/typeit.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"data":{"id-1":"PhD. Student - Junior Developer - Sometimes Teacher"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/typeit/index.umd.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Panoya kopyala","maxShownLines":10},"data":{"id-1":"PhD. Student - Junior Developer - Sometimes Teacher"},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"Sonuç bulunamadı","snippetLength":30,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

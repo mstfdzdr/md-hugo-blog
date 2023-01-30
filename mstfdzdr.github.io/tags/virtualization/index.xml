@@ -1,14 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>virtualization - Tag - mustafa dizdar - blog</title>
+        <title>virtualization - Etiket - mustafa dizdar - blog</title>
         <link>https://mstfdzdr.github.io/tags/virtualization/</link>
-        <description>virtualization - Tag - mustafa dizdar - blog</description>
+        <description>virtualization - Etiket - mustafa dizdar - blog</description>
         <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 20 Nov 2020 19:23:28 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/tags/virtualization/" rel="self" type="application/rss+xml" /><item>
     <title>Gigabyte B450 anakartta virtualization açma</title>
     <link>https://mstfdzdr.github.io/gigabyte-virtualization-acma/</link>
     <pubDate>Fri, 20 Nov 2020 19:23:28 &#43;0300</pubDate>
-    <author>Author</author>
+    <author>mstfdzdr</author>
     <guid>https://mstfdzdr.github.io/gigabyte-virtualization-acma/</guid>
     <description><![CDATA[<p>Bu aralar Android Studio ile biraz flörtleşiyoruz. Emülatör için virtualization teknolojisini açmak icap etti. Biraz uğraştırdı&hellip;</p>]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

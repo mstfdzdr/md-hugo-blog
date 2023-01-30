@@ -3,56 +3,90 @@
         <title>mustafa dizdar - blog</title>
         <link>https://mstfdzdr.github.io/</link>
         <description>mustafa dizdar blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Thu, 01 Apr 2021 02:06:29 &#43;0300</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 27 Jan 2023 14:57:05 &#43;0300</lastBuildDate>
             <atom:link href="https://mstfdzdr.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Windows Terminal’den uygulama güncellemek</title>
+    <link>https://mstfdzdr.github.io/windows-terminalden-uygulama-guncellemek/</link>
+    <pubDate>Fri, 27 Jan 2023 14:57:05 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/windows-terminalden-uygulama-guncellemek/</guid>
+    <description><![CDATA[Ubuntu kullananlar bilir, apt update ve apt upgrade çok sık yazdığımız komutlardır. Bunlar uygulamaları güncellemek için kullanılır. Malum Windows son zamanlarda WSL falan derken epey yanladı Linux cephesine 🙂 Şimdi de bu komut satırından güncelleme topuna girmiş gibi görünüyor.
+Nasıl yapıyoruz peki? Powershell’i açıp, “winget upgrade” yazıp enter’layın.]]></description>
+</item>
+<item>
+    <title>Flutter Telefon Araması Yaptırmak</title>
+    <link>https://mstfdzdr.github.io/flutter-telefon-aramasi-yaptirmak/</link>
+    <pubDate>Fri, 27 Jan 2023 14:15:22 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/flutter-telefon-aramasi-yaptirmak/</guid>
+    <description><![CDATA[<p>Geçenlerde bir proje için modelden gelen numarayı arama ihtiyacı doğdu. Sonrasında araştırınca url launcher paketi ile bunun gerçekleştirildiğini gördüm.
+Hatta paket sadece arama yapmak için değil, adı gibi tüm url açma işlemleri için kullanılıyor. Örn: web linkleri açmak, sms atmak, e-mail göndermek gibi.</p>]]></description>
+</item>
+<item>
+    <title>Yeni Django Projesine Başlamak</title>
+    <link>https://mstfdzdr.github.io/yeni-django-projesine-baslamak/</link>
+    <pubDate>Fri, 27 Jan 2023 13:52:29 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/yeni-django-projesine-baslamak/</guid>
+    <description><![CDATA[<p>Herkese selam, bu yazı aslında kendime not gibi olacak çünkü her yeni projeye başlarken komutları biliyor da
+olsam teyit etmek amaçlı dokümantasyonlardan kontrol ediyorum. Bu yüzden derli toplu bir şekilde blogta dursun istedim.</p>]]></description>
+</item>
+<item>
+    <title>Python: Ayın Son Gününü Bulmak</title>
+    <link>https://mstfdzdr.github.io/python-ayin-son-gununu-bulmak/</link>
+    <pubDate>Fri, 27 Jan 2023 13:49:23 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/python-ayin-son-gununu-bulmak/</guid>
+    <description><![CDATA[<p>Bir iş için girilen bir ayın son gününü bulmam gerekti. Kendime not olsun diye buraya da ekleyeyim istedim.</p>]]></description>
+</item>
+<item>
+    <title>Django: Veritabanını Resetlemek</title>
+    <link>https://mstfdzdr.github.io/django-veritabanini-resetlemek/</link>
+    <pubDate>Fri, 27 Jan 2023 13:41:55 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/django-veritabanini-resetlemek/</guid>
+    <description><![CDATA[<p>Bir proje olgunlaşırken gerek db model üzerinden gerekse data üzerinde sürekli değişiklikler oluyor ve bir yerden sonra test için veri çok anlamsız hâle gelebiliyor. Bu gibi durumlarda veritabanınızı resetlemek (sıfırlamak) ihtiyacı doğabilir. Bunun için birkaç farklı yöntem bulunuyor.</p>]]></description>
+</item>
+<item>
+    <title>MongoDB&#39;ye Uzaktan Erişim Vermek</title>
+    <link>https://mstfdzdr.github.io/mongodb-ye-uzaktan-erisim-vermek/</link>
+    <pubDate>Fri, 27 Jan 2023 13:25:01 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/mongodb-ye-uzaktan-erisim-vermek/</guid>
+    <description><![CDATA[<p>Windows sunucuda çalıştırdığımız MongoDB’ye uzaktan erişmemiz gerekti. Nasıl yapılır diye araştırırken, buraya da not alayım istedim.</p>]]></description>
+</item>
+<item>
     <title>Yüksek Lisans&#39;ı tamamladım. Doktora&#39;ya başladım!</title>
     <link>https://mstfdzdr.github.io/yuksek-lisans-bitti-doktoraya-basladim/</link>
     <pubDate>Thu, 01 Apr 2021 02:06:29 &#43;0300</pubDate>
-    <author>Author</author>
+    <author>mstfdzdr</author>
     <guid>https://mstfdzdr.github.io/yuksek-lisans-bitti-doktoraya-basladim/</guid>
     <description><![CDATA[<p>Son blog girdisinden bu yana epey vakit geçmiş. Aslında planım bu yönde değildi burayı ayağa kaldırdığımda. Bu yazıda hem bu uzun aradan hem de bu aranın oluşma sebebi olan eğitim hayatımdaki gelişmelerden bahsetmek istiyorum.</p>]]></description>
-</item><item>
+</item>
+<item>
     <title>CSS temel ölçü birimleri</title>
     <link>https://mstfdzdr.github.io/css-temel-olcu-birimleri/</link>
     <pubDate>Fri, 18 Dec 2020 03:45:13 &#43;0300</pubDate>
-    <author>Author</author>
+    <author>mstfdzdr</author>
     <guid>https://mstfdzdr.github.io/css-temel-olcu-birimleri/</guid>
-    <description><![CDATA[<p>Hiç bi zaman aram iyi olmadı CSS ile ta ki <a href="https://ademilter.com/" target="_blank" rel="noopener noreffer">Adem İlter</a>&lsquo;i takip edene kadar :) Hem öğreniyorum hem de kendime not olsun diye buraya bırakayım.</p>]]></description>
-</item><item>
+    <description><![CDATA[<p>Hiç bi zaman aram iyi olmadı CSS ile ta ki <a href="https://ademilter.com/" target="_blank" rel="noopener noreffer ">Adem İlter</a>&lsquo;i takip edene kadar :) Hem öğreniyorum hem de kendime not olsun diye buraya bırakayım.</p>]]></description>
+</item>
+<item>
     <title>[Çözüldü!] Logitech M560 mouse Button 5 problemi</title>
     <link>https://mstfdzdr.github.io/solved-my-logitech-mouse-problem/</link>
     <pubDate>Sun, 13 Dec 2020 01:37:16 &#43;0300</pubDate>
-    <author>Author</author>
+    <author>mstfdzdr</author>
     <guid>https://mstfdzdr.github.io/solved-my-logitech-mouse-problem/</guid>
     <description><![CDATA[<p>Uzun zamandır kablolu standart mouse kullanıyordum. Geçenlerde sorunsuz şekilde dolaba kaldırdığım Logitech M560&rsquo;ımı tekrar kullanmaya başlayayım dedim. Olmadı&hellip;</p>]]></description>
-</item><item>
+</item>
+<item>
     <title>Gigabyte B450 anakartta virtualization açma</title>
     <link>https://mstfdzdr.github.io/gigabyte-virtualization-acma/</link>
     <pubDate>Fri, 20 Nov 2020 19:23:28 &#43;0300</pubDate>
-    <author>Author</author>
+    <author>mstfdzdr</author>
     <guid>https://mstfdzdr.github.io/gigabyte-virtualization-acma/</guid>
     <description><![CDATA[<p>Bu aralar Android Studio ile biraz flörtleşiyoruz. Emülatör için virtualization teknolojisini açmak icap etti. Biraz uğraştırdı&hellip;</p>]]></description>
-</item><item>
-    <title>Bu site nasıl çalışıyor?</title>
-    <link>https://mstfdzdr.github.io/bu-siteyi-nasil-ayaga-kaldirdim/</link>
-    <pubDate>Thu, 12 Nov 2020 02:27:24 &#43;0300</pubDate>
-    <author>Author</author>
-    <guid>https://mstfdzdr.github.io/bu-siteyi-nasil-ayaga-kaldirdim/</guid>
-    <description><![CDATA[<p>Bilmediğim bilmediğim işler :) Oraya bak burdan oku derken nihayet canlıya çıkarabildim blogu. Ama nasıl&hellip;</p>]]></description>
-</item><item>
-    <title>WhatsApp yedeği Google Drive ve telefondan nasıl silinir?</title>
-    <link>https://mstfdzdr.github.io/whatsapp-yedegi-drivedan-nasil-silinir/</link>
-    <pubDate>Wed, 11 Nov 2020 15:55:03 &#43;0300</pubDate>
-    <author>Author</author>
-    <guid>https://mstfdzdr.github.io/whatsapp-yedegi-drivedan-nasil-silinir/</guid>
-    <description><![CDATA[<p>Telefon değiştirme esnasında bazen bu yedekler oldukça sıkıntı çıkarabiliyor. Yerel yedek daha güncel oluyor, cloud&rsquo;dakini çekmeye çalışıyor kurulumda falan&hellip;</p>]]></description>
-</item><item>
-    <title>Merhaba Hugo</title>
-    <link>https://mstfdzdr.github.io/merhaba-hugo/</link>
-    <pubDate>Wed, 11 Nov 2020 01:43:26 &#43;0300</pubDate>
-    <author>Author</author>
-    <guid>https://mstfdzdr.github.io/merhaba-hugo/</guid>
-    <description><![CDATA[<p>Yazmayı çok seviyorum ama bir türlü bu blog işlerini tutturamadım. Bilmem kaç senesinden bu yana <a href="https://tr.wordpress.org/" target="_blank" rel="noopener noreffer">wordpress</a> kullarak yazmaya çalıştığım blog için artık yeni kararlar aldım.</p>]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

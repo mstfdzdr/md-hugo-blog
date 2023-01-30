@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>md kimdir? - Etiket - mustafa dizdar - blog</title>
+        <link>https://mstfdzdr.github.io/tags/md-kimdir/</link>
+        <description>md kimdir? - Etiket - mustafa dizdar - blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>tr</language><lastBuildDate>Fri, 27 Jan 2023 13:10:03 &#43;0300</lastBuildDate><atom:link href="https://mstfdzdr.github.io/tags/md-kimdir/" rel="self" type="application/rss+xml" /><item>
+    <title>Hakkımda</title>
+    <link>https://mstfdzdr.github.io/about/</link>
+    <pubDate>Fri, 27 Jan 2023 13:10:03 &#43;0300</pubDate>
+    <author>mstfdzdr</author>
+    <guid>https://mstfdzdr.github.io/about/</guid>
+    <description><![CDATA[Ben Mustafa 🙂 93 senesinin ağustosunda Giresun’da dünyaya gelmişim. Ortalama bir öğrenciyken ortaokul son sınıfta anlattıkları projeler sebebiyle o dönemin anadolu liselerinden birini kazanma ihtimalim varken Giresun 125. Yıl Anadolu Teknik Lisesini tercih ettim. Burada Veri Tabanı Programcılığı alanına yöneldim ve Visual Basic, C#, MSSQL gibi programlama ve veritabanı araçları ile uğraştım.
+Daha sonra lisans eğitimi için Karadeniz Teknik Üniversitesini tercih ettim ve burada -ne yazık ki mühendislik kazanamadığım için- Bilgisayar ve Eğitim Teknolojileri Öğretmenliği okudum.]]></description>
+</item>
+</channel>
+</rss>

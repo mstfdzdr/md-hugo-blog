@@ -2,16 +2,25 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://mstfdzdr.github.io/categories/bilgisayar-ve-%C3%B6%C4%9Fretim-teknolojileri/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mstfdzdr.github.io/tags/b%C3%B6te-doktora/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mstfdzdr.github.io/tags/b%C3%B6te-y%C3%BCksek-lisans/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mstfdzdr.github.io/categories/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mstfdzdr.github.io/categories/ki%C5%9Fisel/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mstfdzdr.github.io/tags/lisans%C3%BCst%C3%BC-e%C4%9Fitim/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mstfdzdr.github.io/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mstfdzdr.github.io/posts/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mstfdzdr.github.io/tags/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://mstfdzdr.github.io/yuksek-lisans-bitti-doktoraya-basladim/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/</loc><lastmod>2023-01-27T14:57:05&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/posts/</loc><lastmod>2023-01-27T14:57:05&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/windows-terminalden-uygulama-guncellemek/</loc><lastmod>2023-01-27T14:57:05&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/categories/</loc><lastmod>2023-01-27T14:15:22&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/categories/flutter/</loc><lastmod>2023-01-27T14:15:22&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/flutter-telefon-aramasi-yaptirmak/</loc><lastmod>2023-01-27T14:15:22&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/yeni-django-projesine-baslamak/</loc><lastmod>2023-01-27T13:52:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/python-ayin-son-gununu-bulmak/</loc><lastmod>2023-01-27T13:49:23&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/django-veritabanini-resetlemek/</loc><lastmod>2023-01-27T13:41:55&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/mongodb-ye-uzaktan-erisim-vermek/</loc><lastmod>2023-01-27T13:25:01&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/about/</loc><lastmod>2023-01-27T13:10:03&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/tags/md-kimdir/</loc><lastmod>2023-01-27T13:10:03&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/tags/</loc><lastmod>2023-01-27T13:10:03&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://mstfdzdr.github.io/categories/bilgisayar-ve-%C3%B6%C4%9Fretim-teknolojileri/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://mstfdzdr.github.io/tags/b%C3%B6te-doktora/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://mstfdzdr.github.io/tags/b%C3%B6te-y%C3%BCksek-lisans/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://mstfdzdr.github.io/categories/ki%C5%9Fisel/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://mstfdzdr.github.io/tags/lisans%C3%BCst%C3%BC-e%C4%9Fitim/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://mstfdzdr.github.io/yuksek-lisans-bitti-doktoraya-basladim/</loc><lastmod>2021-04-01T02:06:29&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://mstfdzdr.github.io/categories/css/</loc><lastmod>2020-12-18T03:45:13&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://mstfdzdr.github.io/css-temel-olcu-birimleri/</loc><lastmod>2020-12-18T03:45:13&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://mstfdzdr.github.io/tags/css-temel-%C3%B6l%C3%A7%C3%BCler/</loc><lastmod>2020-12-18T03:45:13&#43;03:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
