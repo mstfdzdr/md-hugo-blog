@@ -1,5 +1,5 @@
 baseURL = "https://dizdar.dev/"
-publishDir = "mstfdzdr.github.io"
+publishDir = "../mstfdzdr.github.io"
 # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "tr"
 # language code
