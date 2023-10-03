@@ -41,7 +41,7 @@ burada -ne yazık ki mühendislik kazanamadığım için- Bilgisayar ve Eğitim 
 
 | Zaman Aralığı       | Derece        | Kurum                                                                                                                         | Bitirme Notu |
 |---------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------|--------------|
-| 2021 - Devam Ediyor | Doktora       | Trabzon Üniversitesi, Lisansüstü Eğitim Enstitüsü, Bilgisayar ve Öğretim Teknolojileri Eğitimi Tezli Doktora Programı         | -            |
+| 2021 - Atıldım.. | Doktora       | Trabzon Üniversitesi, Lisansüstü Eğitim Enstitüsü, Bilgisayar ve Öğretim Teknolojileri Eğitimi Tezli Doktora Programı         | -            |
 | 2017 - 2021         | Yüksek Lisans | Karadeniz Teknik Üniversitesi, Eğitim Bilimleri Enstitüsü, Bilgisayar ve Öğretim Teknolojileri Eğitimi Yüksek Lisans Programı | 3,14 / 4     |
 | 2012 - 2017         | Lisans        | Karadeniz Teknik Üniversitesi, Fatih Eğitim Fakültesi, Bilgisayar ve Öğretim Teknolojileri Eğitimi                            | 3,23 / 4     |
 | 2008 - 2011         | Ortaöğretim   | Giresun 125. Yıl Mesleki ve Teknik Anadolu Lisesi, Bilişim Teknolojileri Alanı, Veri Tabanı Programcılığı Bölümü              | 71,54 / 100  |
