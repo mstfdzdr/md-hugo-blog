@@ -24,7 +24,7 @@ Burada Veri Tabanı Programcılığı alanına yöneldim ve Visual Basic, C#, MS
 
 Daha sonra lisans eğitimi için Karadeniz Teknik Üniversitesini tercih ettim ve
 burada -ne yazık ki mühendislik kazanamadığım için- Bilgisayar ve Eğitim Teknolojileri Öğretmenliği okudum.
-Yeap, ponçik bir öğretmenim yani 🙂
+
 
 Şu an kendi alanımda doktora yapmaktayım. Daha fazla detay ve iş deneyimi için: [linked-in profilim](https://www.linkedin.com/in/mstfdzdr/)
 
