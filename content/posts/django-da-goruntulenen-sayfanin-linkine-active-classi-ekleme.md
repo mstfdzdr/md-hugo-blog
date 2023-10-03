@@ -33,7 +33,8 @@ path('index', views.index),
 ### Navigasyon linklerinin bulunduğu örnek html dosyası
 
 
-{{< highlight html >}}
+{{< highlight python >}}
+
 {% with request.resolver_match.url_name as url_name %}
 <ul class="navbar-nav">
     <li class="nav-item">
