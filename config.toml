@@ -50,7 +50,7 @@ theme = "LoveIt"
 
 [params]
   #  LoveIt theme version
-  version = "0.2.X"
+  version = "0.3.X"
   # site description
   description = "mustafa dizdar blog"
   # site keywords
@@ -63,7 +63,7 @@ theme = "LoveIt"
   # ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
   #  date format
-  dateFormat = "01/02/2006"
+  dateFormat = "02 January 2006, Monday"
   # website images for Open Graph and Twitter Cards
   images = ["/logo.png"]
 
@@ -115,7 +115,7 @@ theme = "LoveIt"
       # URL of the LOGO
       logo = ""
       # title name
-      name = "mustafadizdar"
+      name = "dizdardev"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -171,9 +171,9 @@ theme = "LoveIt"
       # URL of avatar shown in home page
       avatarURL = "/images/avatar.png"
       #  title shown in home page (HTML format is supported)
-      title = ""
+      title = "Mustafa Dizdar"
       # subtitle shown in home page
-      subtitle = "PhD. Student - Junior Developer - Sometimes Teacher"
+      subtitle = "Full Stack Developer - Always Student"
       # whether to use typeit animation for subtitle
       typeit = true
       # whether to show social links
@@ -184,7 +184,7 @@ theme = "LoveIt"
     [params.home.posts]
       enable = true
       # special amount of posts in each home posts page
-      paginate = 5
+      paginate = 10
       #  replaced with hiddenFromHomePage in params.page
       # default behavior when you don't set "hiddenFromHomePage" in front matter
       defaultHiddenFromHomePage = false
@@ -532,7 +532,7 @@ theme = "LoveIt"
     endLevel = 6
 
 # Author config
-[author]
+[params.author]
   name = "mstfdzdr"
   email = ""
   link = ""
@@ -553,7 +553,7 @@ theme = "LoveIt"
   #  privacy of the Google Analytics (replaced by params.analytics.google)
   [privacy.googleAnalytics]
     # ...
-  [privacy.twitter]
+  [privacy.x]
     enableDNT = true
   [privacy.youtube]
     privacyEnhanced = true
@@ -576,4 +576,3 @@ theme = "LoveIt"
   page = ["HTML", "MarkDown"]
   section = ["HTML", "RSS"]
   taxonomy = ["HTML", "RSS"]
-  taxonomyTerm = ["HTML"]

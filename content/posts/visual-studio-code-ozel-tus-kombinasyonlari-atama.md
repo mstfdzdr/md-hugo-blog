@@ -24,27 +24,27 @@ Bunun için Visual Studio Code'da tuş atamalarının bulunduğu menüden özel 
 
 SHIFT + SHIFT: VS Code Quick Open Menüsü
 
-{{< highlight json >}}
+```json
 {
     "key": "shift shift",
     "command": "workbench.action.quickOpen"
 }
-{{< /highlight >}}
+```
 
 ALT + ALT: VS Code Command Menüsü
 
-{{< highlight json >}}
+```json
 {
     "key": "alt alt",
     "command": "workbench.action.showCommands"
 }
-{{< /highlight >}}
+```
 
 CTRL + CTRL: VS Code Sidebar Gizle/Göster
 
-{{< highlight json >}}
+```json
 {
     "key": "ctrl ctrl",
     "command": "workbench.action.toggleSidebarVisibility"
 }
-{{< /highlight >}}
+```

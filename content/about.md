@@ -2,7 +2,7 @@
 title: "Hakkımda"
 subtitle: "~"
 date: 2023-01-27T13:41:55+03:00
-lastmod: 2023-01-27T13:41:55+03:00
+lastmod: 2025-11-01T18:22:55+03:00
 tags: []
 categories: ["mustafa dizdar kimdir?"]
 featuredImage: ""
@@ -32,7 +32,8 @@ burada -ne yazık ki mühendislik kazanamadığım için- Bilgisayar ve Eğitim 
 
 | Zaman Aralığı             | Görev / Unvan                | Kurum                                                           |
 |---------------------------|------------------------------|-----------------------------------------------------------------|
-| Ekim 2021 - Devam Ediyor  | Öğretim Görevlisi            | Recep Tayyip Erdoğan Üniversitesi, Bilgi İşlem Daire Başkanlığı |
+| Ağustos 2024 - Devam Ediyor  | Öğretim Görevlisi            | Karadeniz Teknik Üniversitesi, Bilgi İşlem Daire Başkanlığı |
+| Ekim 2021 - Ağustos 2024  | Öğretim Görevlisi            | Recep Tayyip Erdoğan Üniversitesi, Bilgi İşlem Daire Başkanlığı |
 | Eylül 2018 - Temmuz 2020  | Robotik ve Kodlama Öğretmeni | Trabzon Bahçeşehir Koleji                                       |
 | Şubat 2017 - Haziran 2017 | Stajyer Öğretmen             | Teknik Lise Ve Endüstri Meslek Lisesi                           |
 | Eylül 2016 - Ocak 2017    | Stajyer Öğretmen             | Cumhuriyet Ortaokulu                                            |
@@ -41,7 +42,7 @@ burada -ne yazık ki mühendislik kazanamadığım için- Bilgisayar ve Eğitim 
 
 | Zaman Aralığı       | Derece        | Kurum                                                                                                                         | Bitirme Notu |
 |---------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------|--------------|
-| 2021 - Atıldım.. | Doktora       | Trabzon Üniversitesi, Lisansüstü Eğitim Enstitüsü, Bilgisayar ve Öğretim Teknolojileri Eğitimi Tezli Doktora Programı         | -            |
+| 2021 - 2023 | Doktora       | Trabzon Üniversitesi, Lisansüstü Eğitim Enstitüsü, Bilgisayar ve Öğretim Teknolojileri Eğitimi Tezli Doktora Programı         | Devamsızlıktan atıldım           |
 | 2017 - 2021         | Yüksek Lisans | Karadeniz Teknik Üniversitesi, Eğitim Bilimleri Enstitüsü, Bilgisayar ve Öğretim Teknolojileri Eğitimi Yüksek Lisans Programı | 3,14 / 4     |
 | 2012 - 2017         | Lisans        | Karadeniz Teknik Üniversitesi, Fatih Eğitim Fakültesi, Bilgisayar ve Öğretim Teknolojileri Eğitimi                            | 3,23 / 4     |
 | 2008 - 2011         | Ortaöğretim   | Giresun 125. Yıl Mesleki ve Teknik Anadolu Lisesi, Bilişim Teknolojileri Alanı, Veri Tabanı Programcılığı Bölümü              | 71,54 / 100  |
