@@ -8,6 +8,7 @@ categories: []
 featuredImage: ""
 featuredImagePreview: ""
 draft: true
+hiddenFromHomePage: false
 toc:
     enable: false
     auto: false
