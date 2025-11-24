@@ -7,7 +7,7 @@ tags: [django]
 categories: [django]
 featuredImage: ""
 featuredImagePreview: ""
-draft: false
+draft: true
 toc:
     enable: true
     auto: false

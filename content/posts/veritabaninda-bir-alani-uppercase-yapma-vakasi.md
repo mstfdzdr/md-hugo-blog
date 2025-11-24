@@ -4,7 +4,7 @@ subtitle: ""
 date: 2025-11-14T00:32:06+03:00
 lastmod: 2025-11-14T00:32:06+03:00
 tags: [oracle]
-categories: [veritabani]
+categories: [veritabanı]
 featuredImage: ""
 featuredImagePreview: ""
 draft: false
