@@ -193,7 +193,7 @@ theme = "LoveIt"
   [params.social]
     GitHub = "mstfdzdr"
     Linkedin = "mstfdzdr"
-    Twitter = "mstfdzdr"
+    X = "mstfdzdr"
     Instagram = "mstfdzdr"
     Facebook = ""
     Telegram = ""
@@ -254,7 +254,7 @@ theme = "LoveIt"
     Matrix = ""
     Bilibili = ""
     Email = ""
-    RSS = true #
+    RSS = true
 
   #  Page config
   [params.page]
@@ -271,7 +271,7 @@ theme = "LoveIt"
     #  whether to enable the fraction extended syntax
     fraction = true
     #  whether to enable the fontawesome extended syntax
-    fontawesome = true
+    fontawesome = false
     # whether to show link to Raw Markdown content of the content
     linkToMarkdown = true
     #  whether to show the full text content in RSS
@@ -322,7 +322,7 @@ theme = "LoveIt"
     #  social share links in post page
     [params.page.share]
       enable = true
-      Twitter = true
+      X = true
       Facebook = true
       Linkedin = true
       Whatsapp = true
@@ -494,6 +494,8 @@ theme = "LoveIt"
     # you can store your own data files in the same path under your project:
     # "assets/data/cdn/"
     data = ""
+    fontawesomeFreeCSS = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+
 
   #  Compatibility config
   [params.compatibility]
