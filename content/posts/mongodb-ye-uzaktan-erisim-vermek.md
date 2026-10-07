@@ -2,6 +2,7 @@
 title: "MongoDB'ye Uzaktan Erişim Vermek"
 subtitle: ""
 date: 2023-01-27T13:25:01+03:00
+aliases: ["/mongodb-ye-uzaktan-erisim-vermek/"]
 lastmod: 2023-01-27T13:25:01+03:00
 tags: ["mongodb", "remote access"]
 categories: ["Veritabanı"]

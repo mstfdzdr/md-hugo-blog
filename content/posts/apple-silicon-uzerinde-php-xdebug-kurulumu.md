@@ -2,6 +2,7 @@
 title: "Apple Silicon işlemcili bilgisayarda PHP ve XDebug kurulumu macerası"
 subtitle: ""
 date: 2023-02-07T15:46:21+03:00
+aliases: ["/apple-silicon-uzerinde-php-xdebug-kurulumu/"]
 lastmod: 2023-02-07T15:46:21+03:00
 tags: ["xdebug", "php debugger"]
 categories: ["PHP"]

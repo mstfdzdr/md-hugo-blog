@@ -1,6 +1,7 @@
 ---
 title: "CSS temel ölçü birimleri"
 date: 2020-12-18T03:45:13+03:00
+aliases: ["/css-temel-olcu-birimleri/"]
 draft: false
 description: "CSS Temel Ölçü Birimleri nelermiş öğrendim."
 tags: ["css temel ölçüler", "responsive"]

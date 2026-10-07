@@ -1,6 +1,7 @@
 ---
 title: "Bu site nasıl çalışıyor?"
 date: 2020-11-12T02:27:24+03:00
+aliases: ["/bu-siteyi-nasil-ayaga-kaldirdim/"]
 draft: false
 description: "Hugo ile Github Pages'i nasıl konuşturdum?"
 tags: ["hugo", "statik blog","github pages"]

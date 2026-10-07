@@ -1,6 +1,7 @@
 ---
 title: "Yüksek Lisans'ı tamamladım. Doktora'ya başladım!"
 date: 2021-04-01T02:06:29+03:00
+aliases: ["/yuksek-lisans-bitti-doktoraya-basladim/"]
 draft: false
 description: "Eğitim hayatımdaki bazı gelişmelerden bahsettiğim blog yazısı.."
 tags: ["böte yüksek lisans", "böte doktora","lisansüstü eğitim"]

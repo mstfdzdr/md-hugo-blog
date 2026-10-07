@@ -1,6 +1,7 @@
 ---
 title: "WhatsApp yedeği Google Drive ve telefondan nasıl silinir?"
 date: 2020-11-11T15:55:03+03:00
+aliases: ["/whatsapp-yedegi-drivedan-nasil-silinir/"]
 draft: false
 description: "WhatsApp Yedeği Google Drive ve telefondan nasıl silinir, onu anlatıyorum."
 tags: ["whatsapp", "temiz kurulum"]

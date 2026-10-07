@@ -2,6 +2,7 @@
 title: "Visual Studio Code'a Özel Tuş Kombinasyonları Atama"
 subtitle: ""
 date: 2023-05-29T11:01:51+03:00
+aliases: ["/visual-studio-code-ozel-tus-kombinasyonlari-atama/"]
 lastmod: 2023-05-29T11:01:51+03:00
 tags: ["visual studio code"]
 categories: ["Nasıl Yapılır"]

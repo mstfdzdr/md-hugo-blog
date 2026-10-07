@@ -2,12 +2,13 @@
 title: "Django, DEBUG:False Durumunda Statik Dosyaları Göstermeme Sorunu"
 subtitle: ""
 date: 2023-01-30T16:16:22+03:00
+aliases: ["/django-debug-false-durumunda-statik-dosyalari-gostermeme-sorunu/"]
 lastmod: 2023-01-30T16:16:22+03:00
 tags: []
 categories: ["Django"]
 featuredImage: ""
 featuredImagePreview: ""
-draft: true
+draft: false
 toc:
     enable: true
     auto: true

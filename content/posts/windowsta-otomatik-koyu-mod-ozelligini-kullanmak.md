@@ -2,12 +2,13 @@
 title: "Windows’ta otomatik koyu mod özelliğini kullanmak"
 subtitle: ""
 date: 2021-11-27T16:03:09+03:00
+aliases: ["/windowsta-otomatik-koyu-mod-ozelligini-kullanmak/"]
 lastmod: 2023-01-30T16:03:09+03:00
 tags: ["windows", "dark theme"]
 categories: ["Nasıl Yapılır"]
 featuredImage: ""
 featuredImagePreview: ""
-draft: true
+draft: false
 toc:
     enable: false
     auto: false

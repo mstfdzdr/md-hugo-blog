@@ -1,6 +1,7 @@
 ---
 title: "Merhaba Hugo"
 date: 2020-11-11T01:43:26+03:00
+aliases: ["/merhaba-hugo/"]
 draft: false
 description: "Çok başka işlerle tekrardan bloglamaya karar verdim!"
 tags: ["hugo", "statik blog","mustafa dizdar"]
