@@ -1,0 +1,19 @@
+{{- /*
+Featured image from front matter (featuredImage / featuredImagePreview) or a
+page resource named featured-image.* / featured-image-preview.*.
+Pass (dict "page" . "preview" true) on list pages.
+*/ -}}
+{{- $page := .page -}}
+{{- $src := $page.Params.featuredImage -}}
+{{- with $page.Resources.GetMatch "featured-image.*" }}{{ $src = .RelPermalink }}{{ end -}}
+{{- if .preview }}
+  {{- with $page.Params.featuredImagePreview }}{{ $src = . }}{{ end }}
+  {{- with $page.Resources.GetMatch "featured-image-preview.*" }}{{ $src = .RelPermalink }}{{ end }}
+{{- end -}}
+{{- with $src }}
+  <div class="mb-5 overflow-hidden rounded-md">
+    {{- if $.preview }}<a href="{{ $page.RelPermalink }}">{{ end -}}
+    <img src="{{ . }}" alt="{{ $page.Title }}" class="w-full object-cover" loading="lazy">
+    {{- if $.preview }}</a>{{ end -}}
+  </div>
+{{- end -}}

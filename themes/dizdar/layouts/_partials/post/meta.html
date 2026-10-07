@@ -1,0 +1,26 @@
+{{- /* Date and categories; word count and reading time unless compact. */ -}}
+{{- $page := .page -}}
+<div class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted">
+  <span class="flex items-center gap-1.5">
+    {{- partial "icon.html" (dict "name" "calendar" "class" "size-3.5") -}}
+    <time datetime="{{ $page.Date.Format "2006-01-02T15:04:05-07:00" }}">{{ time.Format ":date_long" $page.Date }}</time>
+  </span>
+  {{- with $page.GetTerms "categories" }}
+    <span class="flex items-center gap-1.5">
+      {{- partial "icon.html" (dict "name" "folder" "class" "size-3.5") -}}
+      <span>
+        {{- range $i, $term := . }}{{ if $i }}, {{ end }}<a href="{{ .RelPermalink }}" class="hover:text-accent">{{ .LinkTitle }}</a>{{ end -}}
+      </span>
+    </span>
+  {{- end }}
+  {{- if not .compact }}
+    <span class="flex items-center gap-1.5">
+      {{- partial "icon.html" (dict "name" "pencil" "class" "size-3.5") -}}
+      {{ T "wordCount" $page.WordCount }}
+    </span>
+    <span class="flex items-center gap-1.5">
+      {{- partial "icon.html" (dict "name" "clock" "class" "size-3.5") -}}
+      {{ T "readingTime" $page.ReadingTime }}
+    </span>
+  {{- end }}
+</div>

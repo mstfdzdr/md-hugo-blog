@@ -1,0 +1,27 @@
+{{- $page := . -}}
+<header class="fixed inset-x-0 top-0 z-40 bg-header/95 backdrop-blur" data-header>
+  <div class="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+    <a href="{{ site.Home.RelPermalink }}" class="text-2xl font-bold text-strong hover:text-accent" title="{{ site.Title }}">
+      {{- site.Params.logoText | default site.Title -}}
+    </a>
+
+    {{- /* Desktop navigation */}}
+    <nav class="hidden items-center gap-5 md:flex" aria-label="{{ T "mainMenu" }}">
+      {{- partial "header/menu.html" (dict "page" $page "itemClass" "flex items-center gap-1.5 hover:text-accent") }}
+      <span class="h-5 border-l border-line" aria-hidden="true"></span>
+      {{- partial "header/tools.html" $page }}
+    </nav>
+
+    {{- /* Mobile: tools + menu toggle */}}
+    <div class="flex items-center gap-4 md:hidden">
+      {{- partial "header/tools.html" $page }}
+      <button type="button" class="cursor-pointer hover:text-accent" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" title="{{ T "mainMenu" }}">
+        {{- partial "icon.html" (dict "name" "menu" "class" "size-6") -}}
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-menu" class="hidden border-t border-line bg-header px-4 pb-3 md:hidden" aria-label="{{ T "mainMenu" }}">
+    {{- partial "header/menu.html" (dict "page" $page "itemClass" "flex items-center gap-2 py-2.5 hover:text-accent") }}
+  </nav>
+</header>

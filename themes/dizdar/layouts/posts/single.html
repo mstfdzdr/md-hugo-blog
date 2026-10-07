@@ -1,0 +1,49 @@
+{{ define "main" }}
+  {{- /* toc: true/false or toc: {enable: bool} in front matter; site default in params.page.toc */}}
+  {{- $toc := site.Params.page.toc | default false }}
+  {{- if isset .Params "toc" }}
+    {{- $toc = .Params.toc }}
+    {{- if reflect.IsMap $toc }}{{ $toc = index $toc "enable" | default false }}{{ end }}
+  {{- end }}
+  {{- $toc = and $toc (strings.Contains .TableOfContents "<li>") }}
+
+  <article class="relative">
+    <header>
+      <h1 class="text-3xl leading-tight font-bold text-strong sm:text-4xl">{{ .Title }}</h1>
+      {{- with .Params.subtitle }}
+        <p class="mt-2 text-lg text-muted">{{ . }}</p>
+      {{- end }}
+      {{- partial "post/meta.html" (dict "page" .) }}
+      {{- partial "post/translations.html" . }}
+    </header>
+
+    <div class="mt-6">
+      {{- partial "post/featured-image.html" (dict "page" .) }}
+    </div>
+
+    {{- if $toc }}
+      {{- /* Narrow screens: collapsible box above the content */}}
+      <details class="toc mb-6 rounded-md bg-header px-4 py-3 min-[1320px]:hidden">
+        <summary class="cursor-pointer font-semibold text-strong">{{ T "contents" }}</summary>
+        <div class="mt-2 text-sm">{{ .TableOfContents }}</div>
+      </details>
+      {{- /* Wide screens: sticky sidebar to the right of the article */}}
+      <aside class="absolute top-0 left-full ml-10 hidden h-full w-60 min-[1320px]:block">
+        <div class="toc sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto text-sm" data-toc>
+          <h2 class="mb-3 font-semibold tracking-wide text-strong uppercase">{{ T "contents" }}</h2>
+          {{ .TableOfContents }}
+        </div>
+      </aside>
+    {{- end }}
+
+    {{- if eq (.Params.postType | lower) "video" }}
+      <div class="mb-6">{{ partial "post/video.html" . }}</div>
+    {{- end }}
+
+    <div class="content" data-max-lines="{{ partial "post/max-lines.html" . }}">
+      {{- .Content -}}
+    </div>
+
+    {{- partial "post/footer.html" . }}
+  </article>
+{{ end }}

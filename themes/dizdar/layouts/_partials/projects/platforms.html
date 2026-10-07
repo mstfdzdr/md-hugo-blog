@@ -1,0 +1,7 @@
+{{- with .Params.platforms }}
+<div class="mt-2 flex flex-wrap gap-1.5">
+  {{- range . }}
+    <span class="rounded bg-header px-2 py-0.5 text-xs font-medium text-muted">{{ . }}</span>
+  {{- end }}
+</div>
+{{- end }}

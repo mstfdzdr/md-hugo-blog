@@ -1,0 +1,7 @@
+{{- partial "post/summary-header.html" (dict "page" . "badge" "code" "label" (T "postTypeSnippet")) }}
+<div class="content mt-3" data-max-lines="{{ partial "post/max-lines.html" . }}">
+  {{- .Content -}}
+</div>
+<footer class="mt-4 flex flex-wrap items-center justify-end gap-2 text-sm">
+  {{- partial "post/tags.html" . }}
+</footer>

@@ -1,0 +1,16 @@
+<footer class="px-4 py-8 text-center text-sm text-muted">
+  <p>
+    {{- $hugo := printf `<a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" class="hover:text-accent" title="Hugo %s">Hugo</a>` hugo.Version }}
+    {{- $theme := `<a href="https://github.com/mstfdzdr/md-hugo-blog/tree/master/themes/dizdar" target="_blank" rel="noopener noreferrer" class="hover:text-accent">dizdar</a>` }}
+    {{- T "poweredBy" (dict "Hugo" $hugo "Theme" $theme) | safeHTML -}}
+  </p>
+  <p class="mt-1">
+    &copy; {{ with site.Params.since }}{{ if lt . now.Year }}{{ . }} - {{ end }}{{ end }}{{ now.Year }}
+    <a href="{{ site.Home.RelPermalink }}" class="hover:text-accent">{{ site.Params.author.name }}</a>
+    {{- with site.Params.license }} | {{ . | safeHTML }}{{ end }}
+  </p>
+</footer>
+
+<button type="button" class="pointer-events-none fixed right-4 bottom-4 z-30 flex size-10 cursor-pointer items-center justify-center rounded-full bg-header text-fg opacity-0 shadow-md transition-opacity hover:text-accent" data-back-to-top title="{{ T "backToTop" }}" aria-label="{{ T "backToTop" }}">
+  {{- partial "icon.html" (dict "name" "arrow-up" "class" "size-5") -}}
+</button>

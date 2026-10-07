@@ -1,0 +1,20 @@
+{{- /* Title + meta line of a home page entry. Accepts a page, or a dict with page/badge/label. */ -}}
+{{- $page := . -}}
+{{- $badge := "" -}}
+{{- $label := "" -}}
+{{- if reflect.IsMap . }}
+  {{- $page = .page }}
+  {{- $badge = .badge }}
+  {{- $label = .label }}
+{{- end }}
+<h2 class="text-2xl leading-snug font-bold text-strong">
+  <a href="{{ $page.RelPermalink }}" class="hover:text-accent">
+    {{- with $badge }}
+      <span class="mr-1 inline-flex translate-y-[-2px] items-center gap-1 rounded bg-accent/15 px-1.5 py-0.5 align-middle text-xs font-semibold text-accent" title="{{ $label }}">
+        {{- partial "icon.html" (dict "name" . "class" "size-3.5") }}<span>{{ $label }}</span>
+      </span>
+    {{- end -}}
+    {{ $page.Title }}
+  </a>
+</h2>
+{{- partial "post/meta.html" (dict "page" $page "compact" true) }}

@@ -1,0 +1,75 @@
+# Header / footer
+mainMenu = "Menu"
+search = "Search"
+searchPlaceholder = "Search titles or content..."
+cancel = "Cancel"
+noResultsFound = "No results found"
+switchTheme = "Switch theme"
+poweredBy = "Powered by {{ .Hugo }} | Theme - {{ .Theme }}"
+backToTop = "Back to top"
+
+# Lists
+noPosts = "No posts yet."
+readMore = "Read more"
+more = "More"
+pagination = "Pages"
+previous = "Previous"
+next = "Next"
+tag = "Tag"
+category = "Category"
+allTags = "All Tags"
+allCategories = "All Categories"
+
+# Post types
+postTypeSnippet = "Snippet"
+postTypeVideo = "Video"
+playVideo = "Play video"
+
+# Posts
+contents = "Contents"
+alsoAvailableIn = "Also available in:"
+updatedOn = "Updated on {{ .Date }}"
+readMarkdown = "Read Markdown"
+morePosts = "More posts"
+shareOn = "Share on"
+copyToClipboard = "Copy"
+copied = "Copied"
+expandCode = "Show all"
+collapseCode = "Collapse"
+close = "Close"
+
+# Projects
+noProjects = "No projects yet."
+website = "Website"
+screenshots = "Screenshots"
+legal = "Legal"
+
+# 404
+pageNotFound = "Page not found"
+pageNotFoundText = "Sorry, the page you are looking for does not exist."
+home = "Home"
+
+# Alerts: > [!TYPE]
+note = "Note"
+info = "Info"
+abstract = "Abstract"
+tip = "Tip"
+success = "Success"
+question = "Question"
+important = "Important"
+warning = "Warning"
+caution = "Caution"
+failure = "Failure"
+danger = "Danger"
+bug = "Bug"
+example = "Example"
+quote = "Quote"
+
+# Plurals (tables must come last in TOML)
+[wordCount]
+one = "1 word"
+other = "{{ .Count }} words"
+
+[readingTime]
+one = "1 minute read"
+other = "{{ .Count }} minute read"

@@ -1,0 +1,25 @@
+<section class="flex flex-col items-center pt-4 text-center">
+  {{- with site.Params.author.gravatarEmail }}
+    {{- $src := printf "https://www.gravatar.com/avatar/%s?s=240&d=mp" (md5 (lower (trim . " "))) }}
+    <img src="{{ $src }}" alt="{{ site.Params.home.title | default site.Params.author.name }}" width="96" height="96" class="size-24 rounded-full shadow-lg ring-4 ring-page" loading="eager">
+  {{- end }}
+  {{- with site.Params.home.title }}
+    <h1 class="mt-5 text-2xl font-bold text-strong">{{ . }}</h1>
+  {{- end }}
+  {{- with site.Params.subtitle }}
+    <p class="mt-3 min-h-6 text-fg"{{ if site.Params.home.typeit }} data-typeit{{ end }}>{{ . }}</p>
+  {{- end }}
+
+  <div class="mt-4 flex items-center gap-3">
+    {{- range site.Params.social }}
+      <a href="{{ .url }}" target="_blank" rel="me noopener noreferrer" class="hover:text-accent" title="{{ .name }}" aria-label="{{ .name }}">
+        {{- partial "icon.html" (dict "name" .icon "class" "size-6") -}}
+      </a>
+    {{- end }}
+    {{- with site.Home.OutputFormats.Get "rss" }}
+      <a href="{{ .RelPermalink }}" class="hover:text-accent" title="RSS" aria-label="RSS">
+        {{- partial "icon.html" (dict "name" "rss" "class" "size-6") -}}
+      </a>
+    {{- end }}
+  </div>
+</section>

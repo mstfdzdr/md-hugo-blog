@@ -1,0 +1,10 @@
+{{- /* App icon: a page resource named icon.* or a placeholder */ -}}
+{{- with .page.Resources.GetMatch "icon.*" }}
+  {{- $img := . }}
+  {{- if ne .MediaType.SubType "svg" }}{{ $img = .Process "fill 256x256 webp" }}{{ end }}
+  <img src="{{ $img.RelPermalink }}" alt="" class="{{ $.class }} shrink-0 object-cover">
+{{- else }}
+  <span class="{{ .class }} flex shrink-0 items-center justify-center bg-accent/15 text-accent">
+    {{- partial "icon.html" (dict "name" "smartphone" "class" "size-1/2") -}}
+  </span>
+{{- end -}}

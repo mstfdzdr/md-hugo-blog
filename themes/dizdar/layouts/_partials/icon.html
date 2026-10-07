@@ -1,0 +1,11 @@
+{{- /*
+Inline SVG icon from assets/icons.
+
+  {{ partial "icon.html" (dict "name" "folder" "class" "size-4") }}
+*/ -}}
+{{- $class := .class | default "size-4" -}}
+{{- with resources.Get (printf "icons/%s.svg" .name) -}}
+  {{- replace .Content "<svg" (printf `<svg class="%s shrink-0" aria-hidden="true" focusable="false"` $class) 1 | safeHTML -}}
+{{- else -}}
+  {{- errorf "icon.html: no icon named %q in assets/icons" .name -}}
+{{- end -}}

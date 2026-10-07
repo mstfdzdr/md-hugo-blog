@@ -1,0 +1,22 @@
+{{ define "main" }}
+  {{- /* Standalone pages (about, privacy policies, …) */}}
+  <article>
+    <header class="mb-8 text-center">
+      {{- with .Parent }}
+        {{- if not .IsHome }}
+          <a href="{{ .RelPermalink }}" class="mb-4 inline-flex items-center gap-1 text-sm text-muted hover:text-accent">
+            {{- partial "icon.html" (dict "name" "arrow-left" "class" "size-4") }}{{ .Title }}
+          </a>
+        {{- end }}
+      {{- end }}
+      <h1 class="text-3xl font-bold text-strong sm:text-4xl">{{ .Title }}</h1>
+      {{- with .Params.subtitle }}
+        <p class="mt-2 text-lg text-muted">{{ . }}</p>
+      {{- end }}
+      <div class="flex justify-center">{{ partial "post/translations.html" . }}</div>
+    </header>
+    <div class="content" data-max-lines="{{ partial "post/max-lines.html" . }}">
+      {{- .Content -}}
+    </div>
+  </article>
+{{ end }}

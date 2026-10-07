@@ -1,0 +1,81 @@
+{{- /*
+Project page. Front matter of content/projects/<name>/_index.md:
+
+  title, description
+  platforms: [iOS, Android]
+  links: {appStore: URL, googlePlay: URL, website: URL, github: URL}
+
+Screenshots: images in content/projects/<name>/screenshots/
+Legal pages (privacy policy, …): regular pages in the same folder.
+*/ -}}
+<article>
+  <a href="{{ .Parent.RelPermalink }}" class="mb-6 inline-flex items-center gap-1 text-sm text-muted hover:text-accent">
+    {{- partial "icon.html" (dict "name" "arrow-left" "class" "size-4") }}{{ .Parent.Title }}
+  </a>
+
+  <header class="flex items-center gap-5">
+    {{- partial "projects/icon.html" (dict "page" . "class" "size-20 rounded-3xl shadow-md") }}
+    <div>
+      <h1 class="text-3xl font-bold text-strong">{{ .Title }}</h1>
+      {{- with .Description }}<p class="mt-1 text-muted">{{ . }}</p>{{ end }}
+      {{- partial "projects/platforms.html" . }}
+    </div>
+  </header>
+  {{- partial "post/translations.html" . }}
+
+  {{- with .Params.links }}
+    {{- $buttons := slice
+      (dict "key" "appstore" "icon" "brand-appstore" "label" "App Store")
+      (dict "key" "googleplay" "icon" "brand-googleplay" "label" "Google Play")
+      (dict "key" "website" "icon" "external-link" "label" (T "website"))
+      (dict "key" "github" "icon" "brand-github" "label" "GitHub")
+    }}
+    <div class="mt-6 flex flex-wrap gap-3">
+      {{- range $button := $buttons }}
+        {{- /* front matter keys are lowercased by Hugo: appStore -> appstore */}}
+        {{- with index $.Params.links $button.key }}
+          <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-strong px-4 py-2 text-sm font-semibold text-page hover:bg-accent">
+            {{- partial "icon.html" (dict "name" $button.icon "class" "size-4") -}}
+            {{ $button.label }}
+          </a>
+        {{- end }}
+      {{- end }}
+    </div>
+  {{- end }}
+
+  {{- with .Content }}
+    <div class="content mt-8">{{ . }}</div>
+  {{- end }}
+
+  {{- with .Resources.Match "screenshots/*" }}
+    <section class="mt-10">
+      <h2 class="mb-4 flex items-center gap-2 text-xl font-bold text-strong">
+        {{- partial "icon.html" (dict "name" "image" "class" "size-5") }}{{ T "screenshots" }}
+      </h2>
+      <div class="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-3 sm:mx-0 sm:px-0" data-gallery>
+        {{- range . }}
+          {{- $thumb := .Process "fit 480x960 webp" }}
+          {{- $full := .Process "fit 1600x1600 webp" }}
+          <a href="{{ $full.RelPermalink }}" class="shrink-0 snap-start" data-caption="{{ .Title }}">
+            <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ .Title }}" loading="lazy" class="h-80 w-auto rounded-xl border border-line object-cover sm:h-96">
+          </a>
+        {{- end }}
+      </div>
+    </section>
+  {{- end }}
+
+  {{- with .RegularPages }}
+    <section class="mt-10 border-t border-line pt-6">
+      <h2 class="mb-3 text-xl font-bold text-strong">{{ T "legal" }}</h2>
+      <ul class="space-y-2">
+        {{- range . }}
+          <li>
+            <a href="{{ .RelPermalink }}" class="inline-flex items-center gap-2 hover:text-accent">
+              {{- partial "icon.html" (dict "name" "shield-check" "class" "size-4") }}{{ .Title }}
+            </a>
+          </li>
+        {{- end }}
+      </ul>
+    </section>
+  {{- end }}
+</article>

@@ -1,0 +1,19 @@
+{{- $url := .Permalink | urlquery -}}
+{{- $title := .Title | urlquery -}}
+{{- $services := slice
+  (dict "key" "x" "name" "X" "icon" "brand-x" "href" (printf "https://x.com/intent/post?url=%s&text=%s" $url $title))
+  (dict "key" "facebook" "name" "Facebook" "icon" "brand-facebook" "href" (printf "https://www.facebook.com/sharer/sharer.php?u=%s" $url))
+  (dict "key" "linkedin" "name" "LinkedIn" "icon" "brand-linkedin" "href" (printf "https://www.linkedin.com/sharing/share-offsite/?url=%s" $url))
+  (dict "key" "whatsapp" "name" "WhatsApp" "icon" "brand-whatsapp" "href" (printf "https://api.whatsapp.com/send?text=%s%%20%s" $title $url))
+  (dict "key" "trello" "name" "Trello" "icon" "brand-trello" "href" (printf "https://trello.com/add-card?mode=popup&url=%s&name=%s" $url $title))
+  (dict "key" "evernote" "name" "Evernote" "icon" "brand-evernote" "href" (printf "https://www.evernote.com/clip.action?url=%s&title=%s" $url $title))
+-}}
+<span class="flex items-center gap-2.5">
+  {{- range $services }}
+    {{- if index site.Params.share .key }}
+      <a href="{{ .href | safeURL }}" target="_blank" rel="noopener noreferrer" class="hover:text-accent" title="{{ T "shareOn" }} {{ .name }}" aria-label="{{ T "shareOn" }} {{ .name }}">
+        {{- partial "icon.html" (dict "name" .icon "class" "size-4") -}}
+      </a>
+    {{- end }}
+  {{- end }}
+</span>

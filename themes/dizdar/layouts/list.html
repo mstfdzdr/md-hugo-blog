@@ -1,0 +1,29 @@
+{{ define "main" }}
+  {{- /* Sections and taxonomy terms: posts grouped by year, LoveIt style */}}
+  <h1 class="text-3xl font-bold text-strong">
+    {{- if eq .Kind "term" }}
+      <span class="text-muted">{{ T (.Data.Singular | default "tag") }}:</span> {{ .Title }}
+    {{- else }}
+      {{- .Title }}
+    {{- end }}
+  </h1>
+  {{- with .Content }}<div class="content mt-4">{{ . }}</div>{{ end }}
+
+  {{- $paginator := .Paginate (.RegularPages.GroupByDate "2006") 20 }}
+  {{- range $paginator.PageGroups }}
+    <section class="mt-8">
+      <h2 class="mb-2 text-xl font-bold text-strong">{{ .Key }}</h2>
+      <ul>
+        {{- range .Pages }}
+          <li class="flex items-baseline justify-between gap-4 border-b border-dashed border-line py-2">
+            <a href="{{ .RelPermalink }}" class="hover:text-accent">{{ .Title }}</a>
+            <time datetime="{{ .Date.Format "2006-01-02" }}" class="shrink-0 text-sm text-muted">{{ time.Format "02 Jan" .Date }}</time>
+          </li>
+        {{- end }}
+      </ul>
+    </section>
+  {{- else }}
+    <p class="mt-10 text-center text-muted">{{ T "noPosts" }}</p>
+  {{- end }}
+  {{- partial "pagination.html" . }}
+{{ end }}

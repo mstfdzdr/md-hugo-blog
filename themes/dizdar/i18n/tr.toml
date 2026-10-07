@@ -1,0 +1,75 @@
+# Header / footer
+mainMenu = "Menü"
+search = "Ara"
+searchPlaceholder = "Başlık ya da içerik ara..."
+cancel = "İptal"
+noResultsFound = "Sonuç bulunamadı"
+switchTheme = "Temayı değiştir"
+poweredBy = "{{ .Hugo }} ile yapıldı | Tema - {{ .Theme }}"
+backToTop = "Başa dön"
+
+# Lists
+noPosts = "Henüz yazı yok."
+readMore = "Devamını oku"
+more = "Daha fazla"
+pagination = "Sayfalar"
+previous = "Önceki"
+next = "Sonraki"
+tag = "Etiket"
+category = "Kategori"
+allTags = "Tüm Etiketler"
+allCategories = "Tüm Kategoriler"
+
+# Post types
+postTypeSnippet = "Snippet"
+postTypeVideo = "Video"
+playVideo = "Videoyu oynat"
+
+# Posts
+contents = "İçindekiler"
+alsoAvailableIn = "Bu sayfa şu dilde de var:"
+updatedOn = "{{ .Date }} tarihinde güncellendi"
+readMarkdown = "Markdown oku"
+morePosts = "Diğer yazılar"
+shareOn = "Paylaş:"
+copyToClipboard = "Kopyala"
+copied = "Kopyalandı"
+expandCode = "Tamamını göster"
+collapseCode = "Daralt"
+close = "Kapat"
+
+# Projects
+noProjects = "Henüz proje yok."
+website = "Web sitesi"
+screenshots = "Ekran görüntüleri"
+legal = "Yasal metinler"
+
+# 404
+pageNotFound = "Sayfa bulunamadı"
+pageNotFoundText = "Aradığınız sayfa bulunamadı. Üzgünüz."
+home = "Anasayfa"
+
+# Alerts: > [!TYPE]
+note = "Not"
+info = "Bilgi"
+abstract = "Özet"
+tip = "İpucu"
+success = "Başarılı"
+question = "Soru"
+important = "Önemli"
+warning = "Uyarı"
+caution = "Dikkat"
+failure = "Başarısız"
+danger = "Tehlike"
+bug = "Hata"
+example = "Örnek"
+quote = "Alıntı"
+
+# Plurals (tables must come last in TOML)
+[wordCount]
+one = "1 kelime"
+other = "{{ .Count }} kelime"
+
+[readingTime]
+one = "1 dakikada okunur"
+other = "{{ .Count }} dakikada okunur"

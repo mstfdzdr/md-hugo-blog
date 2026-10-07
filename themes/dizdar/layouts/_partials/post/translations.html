@@ -1,0 +1,10 @@
+{{- with .Translations }}
+<p class="mt-3 flex items-center gap-1.5 text-sm text-muted">
+  {{- partial "icon.html" (dict "name" "languages" "class" "size-4") }}
+  <span>{{ T "alsoAvailableIn" }}</span>
+  {{- range $i, $t := . }}
+    {{- if $i }},{{ end }}
+    <a href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}" lang="{{ .Language.Locale }}" class="font-medium text-accent hover:underline">{{ .Language.Label }}</a>
+  {{- end }}
+</p>
+{{- end }}

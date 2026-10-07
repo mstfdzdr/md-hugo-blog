@@ -1,0 +1,18 @@
+{{- $url := urls.Parse .Destination -}}
+{{- $href := .Destination -}}
+{{- /* Resolve links to page resources and content pages */ -}}
+{{- if and (not $url.IsAbs) $url.Path -}}
+  {{- with .Page.Resources.Get $url.Path -}}
+    {{- $href = .RelPermalink -}}
+  {{- else -}}
+    {{- with .Page.GetPage $url.Path -}}
+      {{- $href = printf "%s%s" .RelPermalink (cond (ne $url.Fragment "") (printf "#%s" $url.Fragment) "") -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+<a href="{{ $href | safeURL }}"
+  {{- with .Title }} title="{{ . }}"{{ end }}
+  {{- if $url.IsAbs }} target="_blank" rel="noopener noreferrer"{{ end }}>
+  {{- .Text -}}
+</a>
+{{- /* chomp trailing newline */ -}}

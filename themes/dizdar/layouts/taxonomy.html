@@ -1,0 +1,40 @@
+{{ define "main" }}
+  <h1 class="text-3xl font-bold text-strong">{{ T (printf "all%s" (title .Data.Plural)) | default .Title }}</h1>
+
+  {{- if eq .Data.Plural "categories" }}
+    {{- /* Categories: cards with their latest posts */}}
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+      {{- range .Data.Terms.ByCount }}
+        <section class="rounded-md border border-line p-4">
+          <h2 class="flex items-center justify-between font-bold text-strong">
+            <a href="{{ .Page.RelPermalink }}" class="flex items-center gap-2 hover:text-accent">
+              {{- partial "icon.html" (dict "name" "folder" "class" "size-4") }}{{ .Page.Title }}
+            </a>
+            <span class="text-sm font-normal text-muted">{{ .Count }}</span>
+          </h2>
+          <ul class="mt-3 space-y-1.5 text-sm">
+            {{- range first 5 .Pages }}
+              <li><a href="{{ .RelPermalink }}" class="hover:text-accent">{{ .Title }}</a></li>
+            {{- end }}
+          </ul>
+          {{- if gt .Count 5 }}
+            <a href="{{ .Page.RelPermalink }}" class="mt-3 inline-block text-sm text-accent hover:underline">{{ T "more" }}</a>
+          {{- end }}
+        </section>
+      {{- else }}
+        <p class="text-muted">{{ T "noPosts" }}</p>
+      {{- end }}
+    </div>
+  {{- else }}
+    {{- /* Tags (and any other taxonomy): a tag cloud */}}
+    <div class="mt-8 flex flex-wrap gap-x-5 gap-y-3">
+      {{- range .Data.Terms.Alphabetical }}
+        <a href="{{ .Page.RelPermalink }}" class="hover:text-accent">
+          {{- .Page.Title }} <sup class="text-muted">{{ .Count }}</sup>
+        </a>
+      {{- else }}
+        <p class="text-muted">{{ T "noPosts" }}</p>
+      {{- end }}
+    </div>
+  {{- end }}
+{{ end }}

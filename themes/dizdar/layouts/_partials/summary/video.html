@@ -1,0 +1,10 @@
+{{- partial "post/summary-header.html" (dict "page" . "badge" "play" "label" (T "postTypeVideo")) }}
+<div class="mt-4">
+  {{- partial "post/video.html" . }}
+</div>
+<div class="content mt-4" data-max-lines="{{ partial "post/max-lines.html" . }}">
+  {{- .Content -}}
+</div>
+<footer class="mt-4 flex flex-wrap items-center justify-end gap-2 text-sm">
+  {{- partial "post/tags.html" . }}
+</footer>

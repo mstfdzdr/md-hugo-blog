@@ -1,0 +1,226 @@
+baseURL = "https://dizdar.dev/"
+theme = "dizdar"
+
+# Turkish is the default language and lives at the site root (/2023/slug/),
+# English lives under /en/.
+defaultContentLanguage = "tr"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.tr]
+    weight = 1
+    locale = "tr"
+    label = "Türkçe"
+    title = "mustafa dizdar - blog"
+    [languages.tr.params]
+      description = "mustafa dizdar blog"
+      subtitle = "Full Stack Developer - Always Student"
+    [[languages.tr.menus.main]]
+      identifier = "posts"
+      name = "Yazılar"
+      pageRef = "/posts"
+      weight = 1
+      [languages.tr.menus.main.params]
+        icon = "file-text"
+    [[languages.tr.menus.main]]
+      identifier = "projects"
+      name = "Projeler"
+      pageRef = "/projects"
+      weight = 2
+      [languages.tr.menus.main.params]
+        icon = "smartphone"
+    [[languages.tr.menus.main]]
+      identifier = "tags"
+      name = "Etiketler"
+      pageRef = "/tags"
+      weight = 3
+      [languages.tr.menus.main.params]
+        icon = "tags"
+    [[languages.tr.menus.main]]
+      identifier = "categories"
+      name = "Kategoriler"
+      pageRef = "/categories"
+      weight = 4
+      [languages.tr.menus.main.params]
+        icon = "folder"
+    [[languages.tr.menus.main]]
+      identifier = "about"
+      name = "Hakkımda"
+      pageRef = "/about"
+      weight = 5
+
+  [languages.en]
+    weight = 2
+    locale = "en"
+    label = "English"
+    title = "mustafa dizdar - blog"
+    [languages.en.params]
+      description = "Mustafa Dizdar's blog"
+      subtitle = "Full Stack Developer - Always Student"
+    [[languages.en.menus.main]]
+      identifier = "posts"
+      name = "Posts"
+      pageRef = "/posts"
+      weight = 1
+      [languages.en.menus.main.params]
+        icon = "file-text"
+    [[languages.en.menus.main]]
+      identifier = "projects"
+      name = "Projects"
+      pageRef = "/projects"
+      weight = 2
+      [languages.en.menus.main.params]
+        icon = "smartphone"
+    [[languages.en.menus.main]]
+      identifier = "tags"
+      name = "Tags"
+      pageRef = "/tags"
+      weight = 3
+      [languages.en.menus.main.params]
+        icon = "tags"
+    [[languages.en.menus.main]]
+      identifier = "categories"
+      name = "Categories"
+      pageRef = "/categories"
+      weight = 4
+      [languages.en.menus.main.params]
+        icon = "folder"
+    # Add an "About" entry here once content/about.en.md exists.
+
+[permalinks]
+  [permalinks.page]
+    posts = "/:year/:contentbasename/"
+
+[pagination]
+  pagerSize = 10
+
+[services.rss]
+  limit = 10
+
+[params]
+  # Header title
+  logoText = "dizdardev"
+  # "light", "dark" or "auto"
+  defaultTheme = "auto"
+  # Default Open Graph / Twitter image
+  images = []
+  since = 2020
+  license = '<a rel="license external nofollow noopener" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  [params.author]
+    name = "mstfdzdr"
+    gravatarEmail = "mustafadizdar.28@gmail.com"
+
+  [params.home]
+    title = "Mustafa Dizdar"
+    # Typing animation for the profile subtitle
+    typeit = true
+
+  # Social links on the home page, in this order
+  [[params.social]]
+    name = "GitHub"
+    icon = "brand-github"
+    url = "https://github.com/mstfdzdr"
+  [[params.social]]
+    name = "LinkedIn"
+    icon = "brand-linkedin"
+    url = "https://www.linkedin.com/in/mstfdzdr"
+  [[params.social]]
+    name = "X"
+    icon = "brand-x"
+    url = "https://x.com/mstfdzdr"
+  [[params.social]]
+    name = "Instagram"
+    icon = "brand-instagram"
+    url = "https://www.instagram.com/mstfdzdr"
+
+  # Defaults for posts; each can be overridden in front matter
+  [params.page]
+    toc = true
+    share = true
+    linkToMarkdown = true
+    # Code blocks longer than this are collapsed
+    maxShownLines = 10
+
+  [params.share]
+    x = true
+    facebook = true
+    linkedin = true
+    whatsapp = true
+    trello = true
+    evernote = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+[sitemap]
+  changeFreq = "weekly"
+  priority = 0.5
+
+[privacy]
+  [privacy.x]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# Raw Markdown output for each page (the "Read Markdown" link)
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["md"]
+[outputFormats]
+  [outputFormats.MarkDown]
+    mediaType = "text/plain"
+    isPlainText = true
+    isHTML = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+# Tailwind CSS: Hugo writes every class used in the rendered HTML to
+# hugo_stats.json, and Tailwind generates CSS only for those classes.
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = "assets/notwatching/hugo_stats\\.json"
+    target = "css"
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "hugo_stats.json"
+    target = "assets/notwatching/hugo_stats.json"
+    disableWatch = true
+
+# Allow Hugo to run the Tailwind CLI from node_modules.
+[security.exec]
+  allow = ["^(dart-)?sass$", "^go$", "^git$", "^node$", "^postcss$", "^tailwindcss$"]

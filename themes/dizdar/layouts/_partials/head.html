@@ -1,0 +1,55 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}</title>
+{{- $description := site.Params.description }}
+{{- with .Description }}{{ $description = . }}{{ else }}{{ if .IsPage }}{{ with .Summary }}{{ $description = . | plainify | htmlUnescape | truncate 160 }}{{ end }}{{ end }}{{ end }}
+<meta name="description" content="{{ $description }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
+{{- end }}
+{{- with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">
+{{- end }}
+{{- partial "opengraph.html" . }}
+{{- partial "twitter_cards.html" . }}
+{{- partial "schema.html" . }}
+
+{{- /* App icons (files live in /static) */}}
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#292a2d" media="(prefers-color-scheme: dark)">
+
+{{- /* Apply the saved theme before first paint to avoid a flash. */}}
+<script>
+  (function () {
+    var theme;
+    try { theme = localStorage.getItem("theme"); } catch (e) {}
+    theme = theme || {{ site.Params.defaultTheme | default "auto" }};
+    var dark = theme === "dark" || (theme === "auto" && matchMedia("(prefers-color-scheme: dark)").matches);
+    document.documentElement.classList.toggle("dark", dark);
+  })();
+</script>
+
+{{- /* Deferred so Tailwind sees the classes of every rendered page. */}}
+{{- with (templates.Defer (dict "key" "global")) }}
+  {{- with resources.Get "css/main.css" }}
+    {{- $css := . | css.TailwindCSS (dict "minify" (not hugo.IsDevelopment)) }}
+    {{- with resources.Get "css/chroma.css" }}
+      {{- $css = slice $css . | resources.Concat "css/style.css" }}
+    {{- end }}
+    {{- if hugo.IsDevelopment }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    {{- else }}
+      {{- with $css | minify | fingerprint }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}

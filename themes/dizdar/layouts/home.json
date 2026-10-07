@@ -1,0 +1,13 @@
+{{- /* Search index for the current language, loaded on demand by main.js */ -}}
+{{- $items := slice -}}
+{{- range where site.RegularPages "Params.hiddenFromSearch" "!=" true -}}
+  {{- $items = $items | append (dict
+    "title" .Title
+    "url" .RelPermalink
+    "date" (time.Format ":date_long" .Date)
+    "tags" (.Params.tags | default slice)
+    "categories" (.Params.categories | default slice)
+    "content" (.Plain | truncate 4000)
+  ) -}}
+{{- end -}}
+{{- $items | jsonify -}}

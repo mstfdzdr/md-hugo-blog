@@ -1,0 +1,23 @@
+{{- /* Language switch, search and theme buttons shared by desktop and mobile headers. */ -}}
+{{- $page := . -}}
+{{- range site.Home.AllTranslations }}
+  {{- if ne .Language.Lang site.Language.Lang }}
+    {{- $lang := .Language.Lang }}
+    {{- $href := .RelPermalink }}
+    {{- /* Prefer the translation of the current page when there is one. */}}
+    {{- range $page.Translations }}
+      {{- if eq .Language.Lang $lang }}{{ $href = .RelPermalink }}{{ end }}
+    {{- end }}
+    <a href="{{ $href }}" hreflang="{{ .Language.Locale }}" lang="{{ .Language.Locale }}" class="flex items-center gap-1 text-sm font-semibold hover:text-accent" title="{{ .Language.Label }}">
+      {{- partial "icon.html" (dict "name" "languages" "class" "size-4") -}}
+      <span>{{ upper $lang }}</span>
+    </a>
+  {{- end }}
+{{- end }}
+<button type="button" class="cursor-pointer hover:text-accent" data-search-open title="{{ T "search" }}" aria-label="{{ T "search" }}">
+  {{- partial "icon.html" (dict "name" "search" "class" "size-5") -}}
+</button>
+<button type="button" class="cursor-pointer hover:text-accent" data-theme-toggle title="{{ T "switchTheme" }}" aria-label="{{ T "switchTheme" }}">
+  <span class="dark:hidden">{{ partial "icon.html" (dict "name" "moon" "class" "size-5") }}</span>
+  <span class="hidden dark:inline">{{ partial "icon.html" (dict "name" "sun" "class" "size-5") }}</span>
+</button>

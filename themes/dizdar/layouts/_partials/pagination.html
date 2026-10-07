@@ -1,0 +1,18 @@
+{{- $p := .Paginator -}}
+{{- if gt $p.TotalPages 1 }}
+<nav class="mt-10 flex items-center justify-center gap-1 text-sm" aria-label="{{ T "pagination" }}">
+  {{- with $p.Prev }}
+    <a href="{{ .URL }}" class="flex size-9 items-center justify-center rounded hover:text-accent" aria-label="{{ T "previous" }}">{{ partial "icon.html" (dict "name" "arrow-left" "class" "size-4") }}</a>
+  {{- end }}
+  {{- range $p.Pagers }}
+    {{- if eq . $p }}
+      <span class="flex size-9 items-center justify-center rounded bg-accent font-semibold text-page" aria-current="page">{{ .PageNumber }}</span>
+    {{- else }}
+      <a href="{{ .URL }}" class="flex size-9 items-center justify-center rounded hover:text-accent">{{ .PageNumber }}</a>
+    {{- end }}
+  {{- end }}
+  {{- with $p.Next }}
+    <a href="{{ .URL }}" class="flex size-9 items-center justify-center rounded hover:text-accent" aria-label="{{ T "next" }}">{{ partial "icon.html" (dict "name" "arrow-right" "class" "size-4") }}</a>
+  {{- end }}
+</nav>
+{{- end }}

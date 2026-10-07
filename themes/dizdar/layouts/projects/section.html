@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{- /* /projects/ lists the projects; each project is a branch bundle below it. */}}
+  {{- if .Parent.IsHome }}
+    {{- partial "projects/index.html" . }}
+  {{- else }}
+    {{- partial "projects/project.html" . }}
+  {{- end }}
+{{ end }}

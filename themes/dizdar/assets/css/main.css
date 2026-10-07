@@ -1,0 +1,259 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Hugo writes every class it renders to hugo_stats.json; Tailwind scans it. */
+@source "hugo_stats.json";
+
+/* Dark mode is a class on <html>, set before first paint in head.html. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------------
+   Design tokens. Utilities like bg-page / text-muted resolve to CSS variables,
+   so one set of classes works for both themes.
+   ------------------------------------------------------------------------- */
+:root {
+  --page: #ffffff;
+  --header: #fafafa;
+  --fg: #161209;
+  --fg-strong: #161209;
+  --muted: #8b8b93;
+  --link: #161209;
+  --accent: #2d96bd;
+  --line: #ececec;
+  --code-bg: #f6f8fa;
+  --code-head: #eef1f4;
+  --inline-code: #e74c3c;
+  --inline-code-bg: #f4f4f5;
+  color-scheme: light;
+}
+
+.dark {
+  --page: #292a2d;
+  --header: #252627;
+  --fg: #a9a9b3;
+  --fg-strong: #dddddd;
+  --muted: #74747d;
+  --link: #eeeeee;
+  --accent: #55bde2;
+  --line: #3a3b3f;
+  --code-bg: #272c34;
+  --code-head: #1f2329;
+  --inline-code: #e5bf78;
+  --inline-code-bg: #20252b;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-header: var(--header);
+  --color-fg: var(--fg);
+  --color-strong: var(--fg-strong);
+  --color-muted: var(--muted);
+  --color-link: var(--link);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+  --color-code: var(--code-bg);
+  --color-code-head: var(--code-head);
+}
+
+@theme {
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-page text-fg font-sans antialiased;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 30%, transparent);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Article content (Markdown). Built on @tailwindcss/typography.
+   ------------------------------------------------------------------------- */
+@layer components {
+  .content {
+    @apply prose max-w-none;
+    --tw-prose-body: var(--fg);
+    --tw-prose-headings: var(--fg-strong);
+    --tw-prose-lead: var(--fg);
+    --tw-prose-links: var(--accent);
+    --tw-prose-bold: var(--fg-strong);
+    --tw-prose-counters: var(--muted);
+    --tw-prose-bullets: var(--muted);
+    --tw-prose-hr: var(--line);
+    --tw-prose-quotes: var(--fg);
+    --tw-prose-quote-borders: var(--line);
+    --tw-prose-captions: var(--muted);
+    --tw-prose-code: var(--inline-code);
+    --tw-prose-pre-code: inherit;
+    --tw-prose-pre-bg: var(--code-bg);
+    --tw-prose-th-borders: var(--line);
+    --tw-prose-td-borders: var(--line);
+  }
+  .content a {
+    @apply no-underline hover:underline;
+  }
+  /* LoveIt-style bar in front of section headings */
+  .content :where(h2, h3)::before {
+    content: "|";
+    @apply mr-1.5 font-bold text-accent;
+  }
+  .content :where(h2, h3, h4, h5, h6) .heading-anchor {
+    @apply ml-1 font-normal text-muted no-underline opacity-0 transition-opacity;
+  }
+  .content :where(h2, h3, h4, h5, h6):hover .heading-anchor {
+    @apply opacity-100;
+  }
+  .content :not(pre) > code {
+    @apply rounded px-1.5 py-0.5 font-normal;
+    background: var(--inline-code-bg);
+  }
+  .content :not(pre) > code::before,
+  .content :not(pre) > code::after {
+    content: none;
+  }
+  .content img {
+    @apply mx-auto rounded-md;
+  }
+  .content :not(a) > img {
+    @apply cursor-zoom-in;
+  }
+  .content figure figcaption {
+    @apply text-center;
+  }
+  .content table {
+    @apply block overflow-x-auto;
+  }
+
+  /* --- Code blocks -------------------------------------------------------- */
+  .code-block {
+    @apply my-5 overflow-hidden rounded-md bg-code text-sm;
+  }
+  .code-block-header {
+    @apply flex items-center justify-between bg-code-head px-3 py-1.5 font-sans text-xs font-semibold text-muted select-none;
+  }
+  .code-block-header button {
+    @apply inline-flex cursor-pointer items-center gap-1 rounded px-1.5 py-0.5 hover:text-accent;
+  }
+  .code-block .highlight,
+  .content .highlight {
+    @apply my-0;
+  }
+  .content .highlight pre,
+  .content pre {
+    @apply m-0 rounded-none bg-transparent px-3 py-3 text-[0.85rem] leading-relaxed;
+  }
+  .content .highlight .lntable {
+    @apply m-0 w-full table-auto;
+  }
+  .content .highlight .lntd {
+    @apply border-0 p-0;
+  }
+  .content .highlight .lntd:first-child pre {
+    @apply pr-0 text-right;
+  }
+  .code-block.is-collapsed .highlight {
+    @apply relative max-h-64 overflow-hidden;
+  }
+  .code-block.is-collapsed .highlight::after {
+    content: "";
+    @apply pointer-events-none absolute inset-x-0 bottom-0 h-16;
+    background: linear-gradient(transparent, var(--code-bg));
+  }
+  .code-block-expand {
+    @apply block w-full cursor-pointer bg-code-head py-1.5 font-sans text-xs font-semibold text-muted hover:text-accent;
+  }
+
+  /* --- Alerts: > [!TIP] Title ------------------------------------------------ */
+  .alert {
+    --alert: #448aff;
+    @apply my-5 overflow-hidden rounded-md border-l-4;
+    border-color: var(--alert);
+    background: color-mix(in srgb, var(--alert) 8%, transparent);
+  }
+  .alert > summary {
+    @apply flex cursor-pointer list-none items-center gap-2 px-4 py-2 font-semibold;
+    color: var(--alert);
+    background: color-mix(in srgb, var(--alert) 12%, transparent);
+  }
+  .alert > summary::-webkit-details-marker {
+    display: none;
+  }
+  .alert > summary .alert-chevron {
+    @apply ml-auto transition-transform;
+  }
+  .alert[open] > summary .alert-chevron {
+    @apply rotate-90;
+  }
+  .alert-body {
+    @apply px-4 py-1;
+  }
+  .alert-body > :first-child {
+    @apply mt-2;
+  }
+  .alert-body > :last-child {
+    @apply mb-2;
+  }
+  .alert-note, .alert-info { --alert: #00b8d4; }
+  .alert-abstract { --alert: #00b0ff; }
+  .alert-tip, .alert-success { --alert: #00bfa5; }
+  .alert-question { --alert: #64dd17; }
+  .alert-important { --alert: #8c6fe0; }
+  .alert-warning { --alert: #ff9100; }
+  .alert-caution, .alert-failure, .alert-danger { --alert: #ff5252; }
+  .alert-bug { --alert: #f50057; }
+  .alert-example { --alert: #651fff; }
+  .alert-quote { --alert: #9e9e9e; }
+}
+
+/* ---------------------------------------------------------------------------
+   Interactive bits driven by main.js
+   ------------------------------------------------------------------------- */
+@layer components {
+  /* Table of contents */
+  .toc nav ul {
+    @apply list-none space-y-1 pl-0;
+  }
+  .toc nav ul ul {
+    @apply mt-1 pl-4;
+  }
+  .toc nav a {
+    @apply block border-l-2 border-transparent pl-2 text-muted hover:text-accent;
+  }
+  .toc nav a.is-active {
+    @apply border-accent font-semibold text-accent;
+  }
+
+  /* Typing cursor on the home subtitle */
+  .typeit-cursor {
+    @apply ml-0.5 inline-block animate-pulse;
+  }
+
+  /* Search results */
+  .search-result mark {
+    @apply rounded-sm bg-transparent font-semibold text-accent;
+  }
+
+  /* Lightbox */
+  .lightbox {
+    @apply m-auto max-h-none max-w-none bg-transparent p-0 backdrop:bg-black/85;
+  }
+  .lightbox img {
+    @apply max-h-[90vh] max-w-[92vw] rounded-md object-contain;
+  }
+  .lightbox button {
+    @apply fixed flex size-10 cursor-pointer items-center justify-center rounded-full bg-black/50 text-white hover:bg-black/80;
+  }
+  .lightbox .lightbox-close { @apply top-4 right-4; }
+  .lightbox .lightbox-prev { @apply top-1/2 left-4 -translate-y-1/2; }
+  .lightbox .lightbox-next { @apply top-1/2 right-4 -translate-y-1/2; }
+  .lightbox-caption {
+    @apply fixed inset-x-0 bottom-4 text-center text-sm text-white/80;
+  }
+}

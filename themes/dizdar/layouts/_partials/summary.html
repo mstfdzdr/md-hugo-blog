@@ -1,0 +1,17 @@
+{{- /*
+Home page entry for a post. The layout depends on `postType` in front matter:
+
+  article (default)  summary + "read more"
+  snippet            full content
+  video              video player + full content
+
+Each type lives in _partials/summary/<type>.html.
+*/ -}}
+{{- $type := .Params.postType | default "article" | lower -}}
+{{- if not (templates.Exists (printf "_partials/summary/%s.html" $type)) -}}
+  {{- warnf "%s: unknown postType %q, using article" .File.Path $type -}}
+  {{- $type = "article" -}}
+{{- end -}}
+<article class="border-b border-dashed border-line py-8 last:border-b-0">
+  {{- partial (printf "summary/%s.html" $type) . -}}
+</article>

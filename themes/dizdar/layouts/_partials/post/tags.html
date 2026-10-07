@@ -1,0 +1,8 @@
+{{- with .GetTerms "tags" }}
+<div class="flex items-center gap-1.5 text-muted">
+  {{- partial "icon.html" (dict "name" "tags" "class" "size-4") }}
+  <span>
+    {{- range $i, $term := . }}{{ if $i }}, {{ end }}<a href="{{ .RelPermalink }}" class="hover:text-accent">{{ .LinkTitle }}</a>{{ end -}}
+  </span>
+</div>
+{{- end }}

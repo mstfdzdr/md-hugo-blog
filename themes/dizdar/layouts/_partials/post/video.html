@@ -1,0 +1,33 @@
+{{- /*
+Video of a `postType: video` post. Front matter `video` accepts:
+
+  a YouTube URL or video ID   video: https://youtu.be/dQw4w9WgXcQ
+  a page resource or a URL    video: demo.mp4
+
+YouTube is shown as a thumbnail first and only loads the player on click.
+*/ -}}
+{{- with .Params.video }}
+  {{- $id := "" }}
+  {{- with findRESubmatch `(?:youtube\.com/(?:watch\?v=|shorts/|embed/)|youtu\.be/)([A-Za-z0-9_-]{11})` . 1 }}
+    {{- $id = index (index . 0) 1 }}
+  {{- else }}
+    {{- if findRE `^[A-Za-z0-9_-]{11}$` . }}{{ $id = . }}{{ end }}
+  {{- end }}
+
+  {{- if $id }}
+    <div class="relative aspect-video overflow-hidden rounded-md bg-black">
+      <button type="button" class="group absolute inset-0 size-full cursor-pointer" data-youtube="{{ $id }}" data-title="{{ $.Title }}" aria-label="{{ T "playVideo" }}: {{ $.Title }}">
+        <img src="https://i.ytimg.com/vi/{{ $id }}/hqdefault.jpg" alt="" class="size-full object-cover opacity-85 transition-opacity group-hover:opacity-100" loading="lazy">
+        <span class="absolute inset-0 m-auto flex h-12 w-16 items-center justify-center rounded-xl bg-red-600 text-white shadow-lg transition-transform group-hover:scale-110">
+          {{- partial "icon.html" (dict "name" "play" "class" "size-6 fill-current") -}}
+        </span>
+      </button>
+    </div>
+  {{- else }}
+    {{- $src := . }}
+    {{- with $.Resources.Get . }}{{ $src = .RelPermalink }}{{ end }}
+    <video class="aspect-video w-full rounded-md bg-black" src="{{ $src }}" controls preload="metadata"{{ with $.Params.videoPoster }} poster="{{ . }}"{{ end }}></video>
+  {{- end }}
+{{- else }}
+  {{- warnf "%s: postType video needs a `video` front matter value" .File.Path }}
+{{- end }}

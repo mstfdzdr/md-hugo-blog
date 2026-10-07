@@ -1,0 +1,4 @@
+{{- /* Code blocks longer than this are collapsed. Front matter: code.maxShownLines */ -}}
+{{- $lines := site.Params.page.maxShownLines | default 10 -}}
+{{- with .Params.code }}{{ with index . "maxshownlines" }}{{ $lines = . }}{{ end }}{{ end -}}
+{{- $lines -}}

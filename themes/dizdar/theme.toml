@@ -1,0 +1,8 @@
+name = "dizdar"
+license = "MIT"
+description = "Personal blog theme for dizdar.dev, styled after LoveIt, built with Tailwind CSS."
+min_version = "0.158.0"
+
+[author]
+  name = "Mustafa Dizdar"
+  homepage = "https://dizdar.dev"

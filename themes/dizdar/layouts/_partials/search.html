@@ -1,0 +1,21 @@
+{{- with site.Home.OutputFormats.Get "json" }}
+<dialog id="search" class="mx-auto mt-[10vh] w-[min(42rem,calc(100vw-2rem))] overflow-hidden rounded-lg bg-page p-0 text-fg shadow-2xl backdrop:bg-black/50" data-search data-index="{{ .RelPermalink }}" aria-label="{{ T "search" }}">
+  <div class="flex items-center gap-3 border-b border-line px-4">
+    {{- partial "icon.html" (dict "name" "search" "class" "size-5 text-muted") }}
+    <input type="search" class="w-full bg-transparent py-3.5 text-base outline-none placeholder:text-muted" placeholder="{{ T "searchPlaceholder" }}" autocomplete="off" spellcheck="false" data-search-input>
+    <button type="button" class="cursor-pointer text-xs text-muted hover:text-accent" data-search-close>{{ T "cancel" }}</button>
+  </div>
+  <ul class="max-h-[60vh] divide-y divide-line overflow-y-auto" data-search-results></ul>
+  <p class="hidden px-4 py-6 text-center text-sm text-muted" data-search-empty>{{ T "noResultsFound" }}</p>
+</dialog>
+
+{{- /* Markup for one result; main.js clones it. Kept in HTML so Tailwind sees the classes. */}}
+<template id="search-result">
+  <li>
+    <a class="search-result block px-4 py-3 hover:bg-header focus:bg-header focus:outline-none">
+      <span class="block font-semibold text-strong" data-title></span>
+      <span class="mt-1 block text-sm text-muted" data-snippet></span>
+    </a>
+  </li>
+</template>
+{{- end }}

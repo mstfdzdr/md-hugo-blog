@@ -1,0 +1,8 @@
+{{- $page := .page -}}
+{{- range site.Menus.main }}
+  {{- $active := or ($page.IsMenuCurrent "main" .) ($page.HasMenuCurrent "main" .) }}
+  <a href="{{ .URL }}" class="{{ $.itemClass }}{{ if $active }} text-accent{{ end }}"{{ if $active }} aria-current="page"{{ end }}>
+    {{- with .Params.icon }}{{ partial "icon.html" (dict "name" . "class" "size-4") }}{{ end -}}
+    <span>{{ .Name }}</span>
+  </a>
+{{- end }}

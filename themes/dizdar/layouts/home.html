@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{- partial "home/profile.html" . }}
+
+  {{- $pages := where site.RegularPages "Section" "posts" }}
+  {{- $pages = where $pages "Params.hiddenFromHomePage" "!=" true }}
+  {{- $paginator := .Paginate $pages }}
+  <div class="mt-6">
+    {{- range $paginator.Pages }}
+      {{- partial "summary.html" . }}
+    {{- else }}
+      <p class="py-10 text-center text-muted">{{ T "noPosts" }}</p>
+    {{- end }}
+  </div>
+  {{- partial "pagination.html" . }}
+{{ end }}

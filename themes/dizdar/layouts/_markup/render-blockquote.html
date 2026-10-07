@@ -1,0 +1,27 @@
+{{- /*
+Alerts: > [!TIP] Optional title
+        > [!QUOTE]- Collapsed by default
+Supports the GitHub types (note, tip, important, warning, caution) and the
+LoveIt admonition types (abstract, info, success, question, failure, danger,
+bug, example, quote).
+*/ -}}
+{{- if eq .Type "alert" -}}
+  {{- $type := lower .AlertType -}}
+  {{- $icons := dict
+    "note" "info" "info" "info" "abstract" "list" "tip" "lightbulb"
+    "success" "circle-check" "question" "circle-help" "important" "circle-alert"
+    "warning" "triangle-alert" "caution" "zap" "failure" "circle-x" "danger" "zap"
+    "bug" "bug" "example" "flask-conical" "quote" "quote"
+  -}}
+  {{- $icon := index $icons $type | default "info" -}}
+  <details class="alert alert-{{ $type }}"{{ if ne .AlertSign "-" }} open{{ end }}>
+    <summary>
+      {{- partial "icon.html" (dict "name" $icon "class" "size-4") }}
+      <span>{{ with .AlertTitle }}{{ . }}{{ else }}{{ T $type | default (title $type) }}{{ end }}</span>
+      {{- partial "icon.html" (dict "name" "chevron-right" "class" "alert-chevron size-4") }}
+    </summary>
+    <div class="alert-body">{{ .Text }}</div>
+  </details>
+{{- else -}}
+  <blockquote>{{ .Text }}</blockquote>
+{{- end -}}

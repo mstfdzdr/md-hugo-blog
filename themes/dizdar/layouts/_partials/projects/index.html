@@ -1,0 +1,17 @@
+<h1 class="text-3xl font-bold text-strong">{{ .Title }}</h1>
+{{- with .Content }}<div class="content mt-4">{{ . }}</div>{{ end }}
+
+<div class="mt-8 grid gap-5 sm:grid-cols-2">
+  {{- range .Sections.ByWeight }}
+    <a href="{{ .RelPermalink }}" class="group flex gap-4 rounded-xl border border-line p-4 transition-colors hover:border-accent">
+      {{- partial "projects/icon.html" (dict "page" . "class" "size-16 rounded-2xl") }}
+      <div class="min-w-0">
+        <h2 class="font-bold text-strong group-hover:text-accent">{{ .Title }}</h2>
+        {{- with .Description }}<p class="mt-1 text-sm">{{ . }}</p>{{ end }}
+        {{- partial "projects/platforms.html" . }}
+      </div>
+    </a>
+  {{- else }}
+    <p class="text-muted">{{ T "noProjects" }}</p>
+  {{- end }}
+</div>
