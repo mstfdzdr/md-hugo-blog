@@ -33,7 +33,7 @@ sudo apt update && sudo apt -y upgrade
 
 ### Node.js
 
-Burada Node.js’in sürümünü özellikle seçmek istiyorsanız aşağıdaki komut satırı yerine {{< link href="https://github.com/nodesource/distributions" content=şuradan >}} github reposuna göz atmalısınız.
+Burada Node.js’in sürümünü özellikle seçmek istiyorsanız aşağıdaki komut satırı yerine [şuradan](https://github.com/nodesource/distributions) github reposuna göz atmalısınız.
 
 {{< highlight bash >}}
 sudo apt-get install nodejs
@@ -124,7 +124,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PAROLANI
 
 ### IDE ve Browser
 
-Buraya kadar her şey yolunda gitti ise kodlamaya başlamak için {{< link href="https://github.com/nodesource/distributions" content="Visual Studio Code" >}},
-ortaya çıkanları görmek için ise {{< link href="https://github.com/nodesource/distributions" content=Brave >}} tarayıcıyı öneririm.
+Buraya kadar her şey yolunda gitti ise kodlamaya başlamak için [Visual Studio Code](https://github.com/nodesource/distributions),
+ortaya çıkanları görmek için ise [Brave](https://github.com/nodesource/distributions) tarayıcıyı öneririm.
 
 

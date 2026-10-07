@@ -41,6 +41,5 @@ Eğer sadece projenizin altındaki bir uygulamanın tablolarını kaldırmanız 
 python3 manage.py migrate UygulamaAdi zero
 {{< /highlight >}}
 
-{{< admonition type=warning title="UYARI" open=true >}}
-Tüm işlemlerden önce dataların **yedeğini** mutlaka alın.
-{{< /admonition >}}
+> [!WARNING] UYARI
+> Tüm işlemlerden önce dataların **yedeğini** mutlaka alın.

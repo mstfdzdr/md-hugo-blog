@@ -33,13 +33,12 @@ Zend Engine v4.1.11, Copyright (c) Zend Technologies
 with Zend OPcache v8.1.11, Copyright (c), by Zend Technologies
 {{< /highlight >}}
 
-{{< admonition type=info title="Brew ile PHP kurma" open=true >}}
-Eğer sisteminizde brew varsa, PHP kurmak için tek satır yeterli.
-
-{{< highlight bash >}}
-brew install php
-{{< /highlight >}}
-{{< /admonition >}}
+> [!INFO] Brew ile PHP kurma
+> Eğer sisteminizde brew varsa, PHP kurmak için tek satır yeterli.
+>
+> ```bash
+> brew install php
+> ```
 
 PHP işi tamamsa, gelelim Xdebug'a.
 

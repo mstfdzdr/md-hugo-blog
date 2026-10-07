@@ -17,11 +17,11 @@ code:
     maxShownLines: 50
 ---
 
-Öncelikle {{< link href="https://github.com/nodesource/distributions" content="Google Captcha" >}} adresine gidip dökümantasyon kısmına ulaşalım.
+Öncelikle [Google Captcha](https://github.com/nodesource/distributions) adresine gidip dökümantasyon kısmına ulaşalım.
 Burada kullanabileceğimiz iki versiyon (reCAPTCHA v2 ve reCAPTCHA v3) bulunmakta.
 Ben klasik “ben robot değilim” butonu şeklinde ekleme yapmak istediğim için reCAPTCHAv2’yi kullanacağım.
 
-{{< link href="https://github.com/nodesource/distributions" content="reCAPTCHA Admin" >}}‘e tıklayarak gerekli alanları dolduralım.
+[reCAPTCHA Admin](https://github.com/nodesource/distributions)‘e tıklayarak gerekli alanları dolduralım.
 Bunlar site yönetici e-postaları, kontrol edilecek domainler vb. Daha sonra Google bize iki adet KEY verecek.
 Bunlardan biri front-end için diğeri yani SECRET KEY yazan ise back-end için.
 

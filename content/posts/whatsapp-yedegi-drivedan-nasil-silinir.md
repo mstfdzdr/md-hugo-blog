@@ -39,6 +39,5 @@ Sırasıyla:
 
 Hepsi bu kadar :)
 
-{{< admonition tip "Kaynak" >}}
-İngilizcem var diyenler için bu yazıyı oluşturduğum link: [mobilenation](https://mobilenation.in/how-to-delete-whatsapp-chat-backup-from-your-phone-and-google-drive/)
-{{< /admonition >}}
+> [!TIP] Kaynak
+> İngilizcem var diyenler için bu yazıyı oluşturduğum link: [mobilenation](https://mobilenation.in/how-to-delete-whatsapp-chat-backup-from-your-phone-and-google-drive/)

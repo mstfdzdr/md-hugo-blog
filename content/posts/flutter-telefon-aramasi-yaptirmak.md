@@ -23,7 +23,7 @@ Hatta paket sadece arama yapmak için değil, adı gibi tüm url açma işlemler
 
 ### Paketin Kurulumu
 
-* {{< link href="https://pub.dev/packages/url_launcher" content=https://pub.dev/packages/url_launcher >}} adresine gidip paketi yükleyin.
+* [https://pub.dev/packages/url_launcher](https://pub.dev/packages/url_launcher) adresine gidip paketi yükleyin.
 * Sonrasında paketi projenize import edin, ben bu örnekte urLauncher alias’ı ile import ettim.
 * Arama yaptıracağınız butonun ya da herhangi bir şeyin, ben butondan örnek vereyim; onPressed metoduna;
 

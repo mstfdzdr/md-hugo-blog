@@ -28,7 +28,7 @@ Sonra dökümantasyona bakayım dur diyorsun ve Django ağabeyimiz diyor ki, eğ
 
 ### Peki nasıl çözeceğiz?
 
-Esasında {{< link href="https://stackoverflow.com/questions/5836674/why-does-debug-false-setting-make-my-django-static-files-access-fail" content="stackoverflow’da" >}} epey konuşulmuş ve baya da yöntemler önerilmiş. Fakat Django sürümleri vb. nedeniyle önerilen çözümlerde import edilen url kütüphanesi değişmiş falan. Ben kendimde nasıl aştım bu durumu adım adım paylaşayım.
+Esasında [stackoverflow’da](https://stackoverflow.com/questions/5836674/why-does-debug-false-setting-make-my-django-static-files-access-fail) epey konuşulmuş ve baya da yöntemler önerilmiş. Fakat Django sürümleri vb. nedeniyle önerilen çözümlerde import edilen url kütüphanesi değişmiş falan. Ben kendimde nasıl aştım bu durumu adım adım paylaşayım.
 
 ### settings.py
 

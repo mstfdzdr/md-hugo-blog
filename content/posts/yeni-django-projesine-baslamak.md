@@ -23,7 +23,7 @@ olsam teyit etmek amaçlı dokümantasyonlardan kontrol ediyorum. Bu yüzden der
 Tüm adımlara başlamadan önce işletim sisteminizde Python kurulu olmalı. İşletim sisteminize göre bu süreç değişebilir,
 Windows’ta exe dosyası ile kurulum, Linux ve Mac’te genelde Python kurulu gelse de güncel olmuyor, onlara da terminal
 yardımıyla kurulum yapıyoruz. He Windows’a terminalden kuramaz mıyız? Kurarız ama önce
-{{< link href="https://docs.python.org/3/library/calendar.html#calendar.monthrange" content=chocolatey.org >}} adresinden chocolatey kurmak lazım falan.
+[chocolatey.org](https://docs.python.org/3/library/calendar.html#calendar.monthrange) adresinden chocolatey kurmak lazım falan.
 Neyse tüm bu adımları geçtiğimizi ve işletim sistemi environment’imizde **Python 3** kurulu olduğunu varsayıyorum.
 
 ### Virtual Environment Kurulumu
@@ -71,9 +71,8 @@ Yani burası isteğe göre değişebilir. Django dediğimiz için sadece Djangoy
 pip install django
 ```
 
-{{< admonition type=tip title="Ek not" open=true >}}
-Eğer projeye sıfırdan girişmiyorsanız ve projenin kendine ait bir bağımlılıklar dosyası (requirements.txt) varsa şunu yaparak bu dosya içindekileri kurabiliriz.
-{{< /admonition >}}
+> [!TIP] Ek not
+> Eğer projeye sıfırdan girişmiyorsanız ve projenin kendine ait bir bağımlılıklar dosyası (requirements.txt) varsa şunu yaparak bu dosya içindekileri kurabiliriz.
 
 ```bash
 pip install -r requirements.txt

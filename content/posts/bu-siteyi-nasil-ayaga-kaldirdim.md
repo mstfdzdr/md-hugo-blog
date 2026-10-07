@@ -109,9 +109,8 @@ Bu aslında bilgisayarınızda ***SSH Key** yok demek. Aşağıdaki adımlarla b
 
 4. SSH key dosyalarını oluşturmak için git bash'te şunu yazıyoruz: **ssh -keygen -t rsa -C "MAİL ADRESİNİZ"**
 
-    {{< admonition warning "Önemli Hatırlatma" >}}
-    E-posta adresiniz github'daki birincil mail adresiniz olsun.
-    {{< /admonition >}}
+    > [!WARNING] Önemli Hatırlatma
+    > E-posta adresiniz github'daki birincil mail adresiniz olsun.
 
 5. Son adımdan sonra bahsi geçen klasörde üçüncü adımda ismini belirtiğim dosyaların oluştuğunu göreceksiniz.
 
@@ -143,9 +142,8 @@ kullanıcıAdınız.github.io klasörüne girdikten sonra terminalde sırasıyla
 
 Her yeni posttan sonra **hugo** komutu ile siteyi derleyip html renderı almak ve sonra üstteki dosyaları yollama adımlarını tekrar yapmak sitenizi güncel kılacaktır.
 
-{{< admonition quote "Kaynaklar" false >}}
-
-1. [kayaen.github.io](https://kayaen.github.io/blog/2019-02/bu-sitenin-kurulumu/)
-
-2. [levelup](https://levelup.gitconnected.com/build-a-personal-website-with-github-pages-and-hugo-6c68592204c7)
-{{< /admonition >}}
+> [!QUOTE]- Kaynaklar
+>
+> 1. [kayaen.github.io](https://kayaen.github.io/blog/2019-02/bu-sitenin-kurulumu/)
+>
+> 2. [levelup](https://levelup.gitconnected.com/build-a-personal-website-with-github-pages-and-hugo-6c68592204c7)
