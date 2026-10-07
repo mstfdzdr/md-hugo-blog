@@ -124,7 +124,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PAROLANI
 
 ### IDE ve Browser
 
-Buraya kadar her şey yolunda gitti ise kodlamaya başlamak için [Visual Studio Code](https://github.com/nodesource/distributions),
-ortaya çıkanları görmek için ise [Brave](https://github.com/nodesource/distributions) tarayıcıyı öneririm.
+Buraya kadar her şey yolunda gitti ise kodlamaya başlamak için [Visual Studio Code](https://code.visualstudio.com/),
+ortaya çıkanları görmek için ise [Brave](https://brave.com/) tarayıcıyı öneririm.
 
 

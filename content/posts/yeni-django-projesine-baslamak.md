@@ -23,7 +23,7 @@ olsam teyit etmek amaçlı dokümantasyonlardan kontrol ediyorum. Bu yüzden der
 Tüm adımlara başlamadan önce işletim sisteminizde Python kurulu olmalı. İşletim sisteminize göre bu süreç değişebilir,
 Windows’ta exe dosyası ile kurulum, Linux ve Mac’te genelde Python kurulu gelse de güncel olmuyor, onlara da terminal
 yardımıyla kurulum yapıyoruz. He Windows’a terminalden kuramaz mıyız? Kurarız ama önce
-[chocolatey.org](https://docs.python.org/3/library/calendar.html#calendar.monthrange) adresinden chocolatey kurmak lazım falan.
+[chocolatey.org](https://chocolatey.org/) adresinden chocolatey kurmak lazım falan.
 Neyse tüm bu adımları geçtiğimizi ve işletim sistemi environment’imizde **Python 3** kurulu olduğunu varsayıyorum.
 
 ### Virtual Environment Kurulumu
