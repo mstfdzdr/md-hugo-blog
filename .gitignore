@@ -1,5 +1,7 @@
+# Hugo build output and caches
+/public/
+/resources/_gen/
+.hugo_build.lock
 
-static/.DS_Store
+# macOS
 .DS_Store
-static/.DS_Store
-static/.DS_Store
