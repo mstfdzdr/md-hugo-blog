@@ -2,6 +2,9 @@
 title: "Mobil Uygulama Gizlilik Sözleşmesi"
 date: 2024-01-18T11:08:14+03:00
 draft: false
+hiddenFromSearch: true
+sitemap:
+  disable: true
 ---
 
 # Gizlilik Politikası

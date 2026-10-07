@@ -493,8 +493,6 @@ theme = "LoveIt"
     # you can store your own data files in the same path under your project:
     # "assets/data/cdn/"
     data = ""
-    fontawesomeFreeCSS = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-
 
   #  Compatibility config
   [params.compatibility]
