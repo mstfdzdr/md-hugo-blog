@@ -1,13 +1,13 @@
 ---
-title: "Mobil Uygulama Gizlilik Sözleşmesi"
+title: "Gizlilik Politikası"
 date: 2024-01-18T11:08:14+03:00
 draft: false
+# Old URL, linked from the app store listing
+aliases: ["/mobil-uygulama-gizlilik-sozlesmesi/"]
 hiddenFromSearch: true
 sitemap:
   disable: true
 ---
-
-# Gizlilik Politikası
 
 **Son güncelleme: 18 Ocak 2024**
 
