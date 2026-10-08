@@ -30,7 +30,7 @@
     <div class="mt-8 flex flex-wrap gap-x-5 gap-y-3">
       {{- range .Data.Terms.Alphabetical }}
         <a href="{{ .Page.RelPermalink }}" class="hover:text-accent">
-          {{- .Page.Title }} <sup class="text-muted">{{ .Count }}</sup>
+          {{- if eq $.Data.Plural "posttype" }}{{ (partial "post/type-info.html" .Page.Data.Term).label }}{{ else }}{{ .Page.Data.Term }}{{ end }} <sup class="text-muted">{{ .Count }}</sup>
         </a>
       {{- else }}
         <p class="text-muted">{{ T "noPosts" }}</p>

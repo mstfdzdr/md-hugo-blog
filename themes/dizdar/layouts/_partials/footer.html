@@ -72,7 +72,7 @@ configured with [params.footer] (each language can override values under
         <nav class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1" aria-label="{{ T "tags" }}">
           {{- partial "icon.html" (dict "name" "tags" "class" "size-4") }}
           {{- range first (int $opt.tags) . }}
-            <a href="{{ .Page.RelPermalink }}" class="hover:text-accent">{{ .Page.LinkTitle }}</a>
+            <a href="{{ .Page.RelPermalink }}" class="hover:text-accent">{{ .Page.Data.Term }}</a>
           {{- end }}
         </nav>
       {{- end }}

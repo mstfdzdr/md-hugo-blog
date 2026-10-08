@@ -1,0 +1,7 @@
+{{- /* Page title for <title> and social tags: tags stay lowercase as written, post types use their label. */ -}}
+{{- $title := .Title -}}
+{{- if eq .Kind "term" }}
+  {{- if eq .Data.Plural "tags" }}{{ $title = .Data.Term }}{{ end }}
+  {{- if eq .Data.Plural "posttype" }}{{ $title = (partial "post/type-info.html" .Data.Term).label }}{{ end }}
+{{- end -}}
+{{- return $title -}}

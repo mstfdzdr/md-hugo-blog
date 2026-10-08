@@ -2,7 +2,7 @@
 {{- $description := partial "seo/description.html" . -}}
 {{- $image := partial "seo/image.html" . -}}
 {{- $ogLocales := dict "tr" "tr_TR" "en" "en_US" -}}
-{{- $title := cond .IsHome site.Title .Title -}}
+{{- $title := cond .IsHome site.Title (partial "page-title.html" .) -}}
 
 <meta name="description" content="{{ $description }}">
 <link rel="canonical" href="{{ .Permalink }}">
@@ -42,7 +42,7 @@
 <meta property="article:section" content="{{ (index . 0).LinkTitle }}">
   {{- end }}
   {{- range .GetTerms "tags" }}
-<meta property="article:tag" content="{{ .LinkTitle }}">
+<meta property="article:tag" content="{{ .Data.Term }}">
   {{- end }}
 {{- else }}
 <meta property="og:type" content="website">

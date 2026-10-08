@@ -5,7 +5,8 @@
       {{- $info := partial "post/type-info.html" .Data.Term }}
       <span class="flex items-center gap-2.5">{{ partial "icon.html" (dict "name" $info.icon "class" "size-7 text-accent") }}{{ $info.label }}</span>
     {{- else if eq .Kind "term" }}
-      <span class="text-muted">{{ T (.Data.Singular | default "tag") }}:</span> {{ .Title }}
+      {{- /* Tags are shown as written (lowercase); Hugo title-cases term titles */}}
+      <span class="text-muted">{{ T (.Data.Singular | default "tag") }}:</span> {{ cond (eq .Data.Plural "tags") .Data.Term .Title }}
     {{- else }}
       {{- .Title }}
     {{- end }}
