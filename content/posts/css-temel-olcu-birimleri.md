@@ -4,6 +4,7 @@ date: 2020-12-18T03:45:13+03:00
 aliases: ["/css-temel-olcu-birimleri/"]
 draft: false
 description: "CSS Temel Ölçü Birimleri nelermiş öğrendim."
+postType: article
 tags: ["css temel ölçüler", "responsive"]
 categories: ["CSS"]
 toc:

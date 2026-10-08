@@ -5,6 +5,7 @@ configured with [params.footer] (each language can override values under
 
   social    = true   social links from params.social
   rss       = true   RSS icon next to them
+  postTypes = true   post types (article, snippet, video) linking to their lists
   tags      = 10     number of most used tags to list (0 hides the row)
   tagsMinCount = 2   only tags used in at least this many posts
   copyright = "Mustafa Dizdar"   name after © (empty hides the © line)
@@ -13,7 +14,7 @@ configured with [params.footer] (each language can override values under
   hugo      = true   "Built with Hugo"
   theme     = true   "Theme - dizdar"
 */ -}}
-{{- $opt := dict "social" true "rss" true "tags" 10 "tagsmincount" 2 "copyright" "" "since" 0 "license" "" "hugo" true "theme" true -}}
+{{- $opt := dict "social" true "rss" true "posttypes" true "tags" 10 "tagsmincount" 2 "copyright" "" "since" 0 "license" "" "hugo" true "theme" true -}}
 {{- /* merge instead of `default`, which would turn an explicit false back into true */ -}}
 {{- range $key, $value := site.Params.footer }}{{ $opt = merge $opt (dict $key $value) }}{{ end -}}
 
@@ -28,7 +29,35 @@ configured with [params.footer] (each language can override values under
       </nav>
     {{- end }}
 
-    {{- if or $opt.social $opt.rss }}
+    {{- if $opt.posttypes }}
+      {{- $types := slice }}
+      {{- range slice "article" "snippet" "video" }}
+        {{- with site.GetPage (printf "/posttype/%s" .) }}{{ $types = $types | append . }}{{ end }}
+      {{- end }}
+      {{- if $types }}
+        <nav class="flex flex-wrap items-center justify-center gap-x-5 gap-y-1" aria-label="{{ T "postTypes" }}">
+          {{- range $types }}
+            {{- $info := partial "post/type-info.html" .Data.Term }}
+            {{- $active := eq $.RelPermalink .RelPermalink }}
+            <a href="{{ .RelPermalink }}" class="flex items-center gap-1.5 {{ if $active }}text-accent{{ else }}hover:text-accent{{ end }}"{{ if $active }} aria-current="page"{{ end }}>
+              {{- partial "icon.html" (dict "name" $info.icon "class" "size-4") -}}
+              <span>{{ $info.label }}</span>
+              <sup>{{ len .Pages }}</sup>
+            </a>
+          {{- end }}
+          {{- /* Without social icons, RSS sits at the end of this row instead of alone in its own */}}
+          {{- if and $opt.rss (not $opt.social) }}
+            {{- with site.Home.OutputFormats.Get "rss" }}
+              <a href="{{ .RelPermalink }}" class="flex items-center gap-1.5 hover:text-accent">
+                {{- partial "icon.html" (dict "name" "rss" "class" "size-4") }}<span>RSS</span>
+              </a>
+            {{- end }}
+          {{- end }}
+        </nav>
+      {{- end }}
+    {{- end }}
+
+    {{- if or $opt.social (and $opt.rss (not $opt.posttypes)) }}
       <div class="flex items-center justify-center gap-4">
         {{- partial "social.html" (dict "size" "size-5" "social" $opt.social "rss" $opt.rss) }}
       </div>

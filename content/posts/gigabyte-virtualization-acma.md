@@ -4,6 +4,7 @@ date: 2020-11-20T19:23:28+03:00
 aliases: ["/gigabyte-virtualization-acma/"]
 draft: false
 description: "Bu aralar Android Studio ile biraz flörtleşiyoruz. Emülatör için virtualization teknolojisini açmak icap etti. Biraz uğraştırdı"
+postType: article
 tags: ["amd", "gigabyte b450","virtualization"]
 categories: ["Nasıl Yapılır"]
 toc:

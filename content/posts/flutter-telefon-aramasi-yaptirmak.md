@@ -4,6 +4,7 @@ subtitle: ""
 date: 2023-01-27T14:15:22+03:00
 aliases: ["/flutter-telefon-aramasi-yaptirmak/"]
 lastmod: 2023-01-27T14:15:22+03:00
+postType: article
 tags: ["mobil programlama"]
 categories: ["Flutter"]
 featuredImage: ""

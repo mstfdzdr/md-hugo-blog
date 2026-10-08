@@ -22,8 +22,11 @@ tag = "Etiket"
 category = "Kategori"
 allTags = "Tüm Etiketler"
 allCategories = "Tüm Kategoriler"
+allPosttype = "Yazı Tipleri"
+postTypes = "Yazı tipleri"
 
 # Post types
+postTypeArticle = "Makale"
 postTypeSnippet = "Snippet"
 postTypeVideo = "Video"
 playVideo = "Videoyu oynat"

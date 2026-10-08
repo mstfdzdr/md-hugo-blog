@@ -4,6 +4,7 @@ subtitle: ""
 date: 2023-01-30T16:16:22+03:00
 aliases: ["/django-debug-false-durumunda-statik-dosyalari-gostermeme-sorunu/"]
 lastmod: 2023-01-30T16:16:22+03:00
+postType: article
 tags: []
 categories: ["Django"]
 featuredImage: ""

@@ -97,6 +97,10 @@ defaultContentLanguageInSubdir = false
     # Add an "About" entry (pageRef = "/about") once content/about.en.md exists.
 
 [permalinks]
+  [permalinks.taxonomy]
+    posttype = "/types/"
+  [permalinks.term]
+    posttype = "/types/:slug/"
   [permalinks.page]
     # `slug` in front matter overrides the file name (handy for English posts)
     posts = "/:year/:slugorcontentbasename/"
@@ -117,10 +121,12 @@ defaultContentLanguageInSubdir = false
   # these under [languages.<lang>.params.footer].
   [params.footer]
     # Social icons (from params.social) and the RSS icon
-    social = true
+    social = false
     rss = true
+    # Post types (article, snippet, video) with links to their lists
+    postTypes = true
     # How many of the most used tags to list (0 hides the row)
-    tags = 10
+    tags = 0
     # ...that are used in at least this many posts
     tagsMinCount = 2
     # © <since> - <this year> <copyright>; empty copyright hides the year too
@@ -189,6 +195,8 @@ defaultContentLanguageInSubdir = false
 [taxonomies]
   tag = "tags"
   category = "categories"
+  # Post types (front matter `postType`), listed in the footer
+  posttype = "posttype"
 
 [markup]
   [markup.highlight]

@@ -4,6 +4,7 @@ subtitle: ""
 date: 2021-10-19T15:58:12+03:00
 aliases: ["/django-projesine-google-captcha-ekleme/"]
 lastmod: 2021-10-19T15:58:12+03:00
+postType: article
 tags: ["google captcha"]
 categories: ["Django"]
 featuredImage: ""

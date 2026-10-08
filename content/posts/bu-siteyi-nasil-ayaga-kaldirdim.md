@@ -4,6 +4,7 @@ date: 2020-11-12T02:27:24+03:00
 aliases: ["/bu-siteyi-nasil-ayaga-kaldirdim/"]
 draft: false
 description: "Hugo ile Github Pages'i nasıl konuşturdum?"
+postType: article
 tags: ["hugo", "statik blog","github pages"]
 categories: ["Web Programlama","Nasıl Yapılır"]
 toc:

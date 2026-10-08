@@ -4,6 +4,7 @@ subtitle: ""
 date: 2023-05-29T10:52:10+03:00
 aliases: ["/nginx-413-request-entity-too-large-hatasi/"]
 lastmod: 2023-05-29T10:52:10+03:00
+postType: article
 tags: ["nginx", "ubuntu"]
 categories: ["Linux"]
 featuredImage: ""

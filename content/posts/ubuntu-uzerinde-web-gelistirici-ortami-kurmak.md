@@ -4,6 +4,7 @@ subtitle: ""
 date: 2021-06-12T13:23:30+03:00
 aliases: ["/ubuntu-uzerinde-web-gelistirici-ortami-kurmak/"]
 lastmod: 2021-06-12T13:23:30+03:00
+postType: article
 tags: ["ubuntu", "apache", "php", "localhost"]
 categories: ["Linux"]
 featuredImage: ""

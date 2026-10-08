@@ -4,6 +4,7 @@ subtitle: ""
 date: 2023-01-27T13:52:29+03:00
 aliases: ["/yeni-django-projesine-baslamak/"]
 lastmod: 2023-01-27T13:52:29+03:00
+postType: article
 tags: ["python"]
 categories: ["Django"]
 featuredImage: ""

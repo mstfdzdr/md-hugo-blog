@@ -3,6 +3,7 @@ title: "[Dotnet] Program.cs dosyasındakı DI'ları toparlamak"
 subtitle: ""
 date: 2025-11-24T23:47:35+03:00
 lastmod: 2025-11-24T23:47:35+03:00
+postType: article
 tags: [dependency injection, c sharp]
 categories: [dotnet]
 featuredImage: ""

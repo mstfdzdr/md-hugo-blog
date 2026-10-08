@@ -1,7 +1,10 @@
 {{ define "main" }}
   {{- /* Sections and taxonomy terms: posts grouped by year, LoveIt style */}}
   <h1 class="text-3xl font-bold text-strong">
-    {{- if eq .Kind "term" }}
+    {{- if and (eq .Kind "term") (eq .Data.Plural "posttype") }}
+      {{- $info := partial "post/type-info.html" .Data.Term }}
+      <span class="flex items-center gap-2.5">{{ partial "icon.html" (dict "name" $info.icon "class" "size-7 text-accent") }}{{ $info.label }}</span>
+    {{- else if eq .Kind "term" }}
       <span class="text-muted">{{ T (.Data.Singular | default "tag") }}:</span> {{ .Title }}
     {{- else }}
       {{- .Title }}

@@ -4,6 +4,7 @@ subtitle: ""
 date: 2023-01-27T13:41:55+03:00
 aliases: ["/django-veritabanini-resetlemek/"]
 lastmod: 2023-01-27T13:41:55+03:00
+postType: article
 tags: []
 categories: ["Django"]
 featuredImage: ""

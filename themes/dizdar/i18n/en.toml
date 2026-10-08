@@ -22,8 +22,11 @@ tag = "Tag"
 category = "Category"
 allTags = "All Tags"
 allCategories = "All Categories"
+allPosttype = "Post Types"
+postTypes = "Post types"
 
 # Post types
+postTypeArticle = "Article"
 postTypeSnippet = "Snippet"
 postTypeVideo = "Video"
 playVideo = "Play video"

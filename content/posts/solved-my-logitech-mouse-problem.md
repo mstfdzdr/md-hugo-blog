@@ -3,6 +3,7 @@ title: "[Çözüldü!] Logitech M560 mouse Button 5 problemi"
 date: 2020-12-13T01:37:16+03:00
 aliases: ["/solved-my-logitech-mouse-problem/"]
 draft: false
+postType: article
 tags: ["logitech m560", "hardware" ,"button 5 not working"]
 categories: ["Nasıl Yapılır"]
 toc:

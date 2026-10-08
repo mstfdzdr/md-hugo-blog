@@ -4,6 +4,7 @@ subtitle: ""
 date: 2021-11-26T16:06:59+03:00
 aliases: ["/vs-code-koyu-acik-tema-ayari-yapmak/"]
 lastmod: 2021-11-26T16:06:59+03:00
+postType: article
 tags: []
 categories: ["Nasıl Yapılır"]
 featuredImage: ""

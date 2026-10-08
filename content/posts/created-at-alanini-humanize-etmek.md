@@ -3,6 +3,7 @@ title: "Created at Alanini Humanize Etmek"
 subtitle: ""
 date: 2025-11-01T16:05:22+03:00
 lastmod: 2025-11-01T16:05:22+03:00
+postType: article
 tags: [django]
 categories: [django]
 featuredImage: ""

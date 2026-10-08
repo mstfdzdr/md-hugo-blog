@@ -4,6 +4,7 @@ subtitle: ""
 date: 2021-11-27T16:03:09+03:00
 aliases: ["/windowsta-otomatik-koyu-mod-ozelligini-kullanmak/"]
 lastmod: 2021-11-27T16:03:09+03:00
+postType: article
 tags: ["windows", "dark theme"]
 categories: ["Nasıl Yapılır"]
 featuredImage: ""

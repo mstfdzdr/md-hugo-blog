@@ -4,6 +4,7 @@ subtitle: ""
 date: 2023-01-27T14:57:05+03:00
 aliases: ["/windows-terminalden-uygulama-guncellemek/"]
 lastmod: 2023-01-27T14:57:05+03:00
+postType: article
 tags: ["terminal", "cmd"]
 categories: ["Nasıl Yapılır"]
 featuredImage: ""

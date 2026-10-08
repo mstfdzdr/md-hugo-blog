@@ -1,0 +1,8 @@
+{{- /* Label and icon of a post type ("article", "snippet", "video"). Returns (dict "label" "icon"). */ -}}
+{{- $types := dict
+  "article" (dict "label" (T "postTypeArticle") "icon" "file-text")
+  "snippet" (dict "label" (T "postTypeSnippet") "icon" "code")
+  "video" (dict "label" (T "postTypeVideo") "icon" "play")
+-}}
+{{- $key := . | lower -}}
+{{- return (index $types $key | default (dict "label" (title $key) "icon" "file-text")) -}}

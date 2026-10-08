@@ -114,6 +114,9 @@ Video yazısında `video:` alanına YouTube adresini (`https://youtu.be/...`) ya
 
 Article özetinin nerede biteceğini kendin belirlemek istersen metnin içine `<!--more-->` koy.
 
+Her tipin kendi listesi var ve footer'dan açılır: `/types/article/`, `/types/snippet/`, `/types/video/`
+(İngilizcesi `/en/types/…`). `postType` yazmazsan yazı `article` sayılır.
+
 Bir article'ın özet yerine **tamamının** anasayfada görünmesini istersen (rozet olmadan, "Devamını oku" çıkmadan):
 
 ```yaml
@@ -211,9 +214,10 @@ Footer'daki linkler yukarıdaki `footer` menüsünden gelir. Diğer satırlar `h
 
 ```toml
 [params.footer]
-  social = true          # sosyal medya ikonları (params.social listesinden)
-  rss = true             # RSS ikonu
-  tags = 10              # en çok kullanılan kaç etiket gösterilsin (0 = satırı gizle)
+  social = false         # sosyal medya ikonları (params.social listesinden)
+  rss = true             # RSS linki (sosyal ikonlar kapalıyken yazı tipleri satırının sonunda)
+  postTypes = true       # yazı tipleri (Makale, Snippet, Video) ve yazı sayıları
+  tags = 0               # en çok kullanılan kaç etiket gösterilsin (0 = satırı gizle)
   tagsMinCount = 2       # ...en az kaç yazıda geçen etiketler
   copyright = "Mustafa Dizdar"   # boş bırakırsan © satırı gizlenir
   since = 2020

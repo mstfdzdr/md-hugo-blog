@@ -3,6 +3,7 @@ title: "Veritabaninda Bir Alani Uppercase Yapma Vakasi"
 subtitle: ""
 date: 2025-11-14T00:32:06+03:00
 lastmod: 2025-11-14T00:32:06+03:00
+postType: article
 tags: [oracle]
 categories: [veritabanı]
 featuredImage: ""
