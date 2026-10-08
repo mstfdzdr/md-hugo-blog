@@ -54,3 +54,13 @@ Türkçe kökte (`/2023/yazi/`), İngilizce `/en/` altında. Bir sayfanın çevi
   Tipler: note, info, abstract, tip, success, question, important, warning, caution, failure, danger, bug, example, quote.
 - İçindekiler: front matter'da `toc: true` / `false`.
 - Uzun kod blokları `code.maxShownLines` satırdan sonra daraltılır.
+
+## SEO
+
+`layouts/_partials/seo/` altında:
+
+- `meta.html`: description, canonical, hreflang (+ `x-default`), Open Graph, Twitter kartı
+- `schema.html`: JSON-LD (`WebSite` + `Person`, `BlogPosting`, `MobileApplication`)
+- `image.html`: paylaşım görseli seçimi (`images` → `featuredImage` → `cover.*` → üretilen kart)
+- `card.html`: `images.Text` ile 1200×630 kart üretimi; arka plan ve maskeler `assets/og/`,
+  font `assets/fonts/` (Inter, OFL lisansı)

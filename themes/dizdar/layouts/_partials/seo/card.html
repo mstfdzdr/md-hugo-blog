@@ -1,0 +1,67 @@
+{{- /*
+Generated 1200x630 social card for pages without their own image: page title,
+a small label above it, and the author's avatar (or the app icon on project
+pages) with name and domain in the footer. Returns an image resource.
+*/ -}}
+{{- $page := . -}}
+{{- $card := resources.Get "og/background.png" -}}
+{{- $bold := resources.Get "fonts/Inter-Bold.ttf" -}}
+{{- $medium := resources.Get "fonts/Inter-Medium.ttf" -}}
+
+{{- /* Label: first category for posts, section title otherwise */ -}}
+{{- $label := "" -}}
+{{- with $page.GetTerms "categories" }}{{ $label = (index . 0).LinkTitle }}{{ end -}}
+{{- if and (not $label) (not $page.IsHome) }}{{ with $page.FirstSection }}{{ if not .IsHome }}{{ $label = .LinkTitle }}{{ end }}{{ end }}{{ end -}}
+
+{{- $title := $page.Title -}}
+{{- if $page.IsHome }}{{ $title = site.Params.home.title | default site.Title }}{{ $label = site.Params.subtitle }}{{ end -}}
+{{- $title = $title | truncate 110 -}}
+{{- $size := cond (gt (len $title) 70) 54 64 -}}
+
+{{- /* Wrap the title ourselves so it keeps an 80px right margin
+       (images.Text only wraps at the image edge). ~30px per char at 54px, ~35px at 64px. */ -}}
+{{- $maxChars := cond (eq $size 54) 33 28 -}}
+{{- $lines := slice -}}
+{{- $line := "" -}}
+{{- range split $title " " }}
+  {{- if and $line (gt (add (strings.RuneCount $line) (strings.RuneCount .) 1) $maxChars) }}
+    {{- $lines = $lines | append $line }}{{ $line = . }}
+  {{- else }}
+    {{- $line = cond (eq $line "") . (printf "%s %s" $line .) }}
+  {{- end }}
+{{- end }}
+{{- $lines = $lines | append $line -}}
+
+{{- $filters := slice -}}
+{{- with $label }}
+  {{- /* Not upper-cased: Go's ToUpper turns Turkish "i" into "I" instead of "İ" */}}
+  {{- $filters = $filters | append (images.Text . (dict "font" $medium "size" 28 "color" "#55bde2" "x" 80 "y" 78)) }}
+{{- end }}
+{{- $filters = $filters | append (images.Text (delimit $lines "\n") (dict "font" $bold "size" $size "color" "#f2f2f2" "x" 80 "y" 135 "linespacing" 10)) -}}
+
+{{- /* Footer: picture, name, domain */ -}}
+{{- $picture := "" -}}
+{{- $mask := resources.Get "og/mask-circle.png" -}}
+{{- with $page.Resources.GetMatch "icon.*" }}
+  {{- if ne .MediaType.SubType "svg" }}{{ $picture = . }}{{ $mask = resources.Get "og/mask-rounded.png" }}{{ end }}
+{{- end }}
+{{- if not $picture }}
+  {{- with site.Params.author.gravatarEmail }}
+    {{- $url := printf "https://www.gravatar.com/avatar/%s?s=256&d=mp" (md5 (lower (trim . " "))) }}
+    {{- with try (resources.GetRemote $url) }}
+      {{- with .Err }}{{ warnf "social card: could not fetch avatar: %s" . }}{{ else }}{{ $picture = .Value }}{{ end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+{{- $textX := 80 -}}
+{{- with $picture }}
+  {{- $pic := .Process "fill 256x256 png" | images.Filter (images.Mask $mask) }}
+  {{- $pic = $pic.Process "resize 88x88" }}
+  {{- $filters = $filters | append (images.Overlay $pic 80 500) }}
+  {{- $textX = 190 }}
+{{- end }}
+{{- $filters = $filters | append (images.Text (site.Params.home.title | default site.Params.author.name) (dict "font" $medium "size" 30 "color" "#dddddd" "x" $textX "y" 510)) -}}
+{{- $filters = $filters | append (images.Text (urls.Parse site.BaseURL).Host (dict "font" $medium "size" 24 "color" "#55bde2" "x" $textX "y" 552)) -}}
+
+{{- $out := $card | images.Filter $filters -}}
+{{- return $out -}}

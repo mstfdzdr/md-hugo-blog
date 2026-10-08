@@ -1,0 +1,66 @@
+{{- /*
+Structured data (JSON-LD, schema.org):
+  home      WebSite + Person
+  posts     BlogPosting
+  projects  MobileApplication (project pages)
+*/ -}}
+{{- $page := .page -}}
+{{- $sameAs := slice -}}
+{{- range site.Params.social }}{{ $sameAs = $sameAs | append .url }}{{ end -}}
+{{- $person := dict
+  "@type" "Person"
+  "name" (site.Params.home.title | default site.Params.author.name)
+  "url" site.Home.Permalink
+  "sameAs" $sameAs
+-}}
+{{- with site.Params.author.gravatarEmail }}
+  {{- $person = merge $person (dict "image" (printf "https://www.gravatar.com/avatar/%s?s=256&d=mp" (md5 (lower (trim . " "))))) }}
+{{- end -}}
+
+{{- $data := dict -}}
+{{- if $page.IsHome }}
+  {{- $data = dict
+    "@context" "https://schema.org"
+    "@graph" (slice
+      (dict "@type" "WebSite" "name" site.Title "url" site.Home.Permalink "inLanguage" $page.Language.Locale "description" .description "author" $person)
+      $person
+    )
+  }}
+{{- else if and $page.IsPage (eq $page.Section "posts") }}
+  {{- $data = dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" $page.Title
+    "description" .description
+    "url" $page.Permalink
+    "mainEntityOfPage" $page.Permalink
+    "datePublished" ($page.Date.Format "2006-01-02T15:04:05-07:00")
+    "dateModified" ($page.Lastmod.Format "2006-01-02T15:04:05-07:00")
+    "inLanguage" $page.Language.Locale
+    "wordCount" $page.WordCount
+    "author" $person
+    "publisher" $person
+  }}
+  {{- with .image.url }}{{ $data = merge $data (dict "image" .) }}{{ end }}
+  {{- with $page.Params.tags }}{{ $data = merge $data (dict "keywords" (delimit . ", ")) }}{{ end }}
+{{- else if and (eq $page.Section "projects") $page.IsSection (not $page.Parent.IsHome) }}
+  {{- $data = dict
+    "@context" "https://schema.org"
+    "@type" "MobileApplication"
+    "name" $page.Title
+    "description" .description
+    "url" $page.Permalink
+    "inLanguage" $page.Language.Locale
+    "author" $person
+  }}
+  {{- with $page.Params.platforms }}{{ $data = merge $data (dict "operatingSystem" (delimit . ", ")) }}{{ end }}
+  {{- with $page.Params.applicationCategory }}{{ $data = merge $data (dict "applicationCategory" .) }}{{ end }}
+  {{- with $page.Resources.GetMatch "icon.*" }}{{ $data = merge $data (dict "image" .Permalink) }}{{ end }}
+  {{- $stores := slice }}
+  {{- with $page.Params.links }}{{ range $k, $v := . }}{{ if and $v (in (slice "appstore" "googleplay") $k) }}{{ $stores = $stores | append $v }}{{ end }}{{ end }}{{ end }}
+  {{- with $stores }}{{ $data = merge $data (dict "sameAs" .) }}{{ end }}
+{{- end -}}
+
+{{- with $data }}
+<script type="application/ld+json">{{ . | jsonify | safeJS }}</script>
+{{- end }}

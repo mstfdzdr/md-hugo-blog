@@ -103,10 +103,13 @@ defaultContentLanguageInSubdir = false
   logoText = "dizdardev"
   # "light", "dark" or "auto"
   defaultTheme = "auto"
-  # Default Open Graph / Twitter image
-  images = []
   since = 2020
   license = '<a rel="license external nofollow noopener" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  # Search engine verification via meta tag (not needed when the domain is verified with DNS)
+  [params.verification]
+    google = ""
+    bing = ""
 
   [params.author]
     name = "mstfdzdr"

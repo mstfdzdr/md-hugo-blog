@@ -130,6 +130,33 @@ git push origin master
 
 ---
 
+## SEO ve paylaşım görseli
+
+**Açıklama:** Front matter'daki `description`, Google sonuçlarında ve link önizlemelerinde (X, LinkedIn, WhatsApp…)
+görünen metindir. 150–160 karakter civarı bir cümle yaz. Boş bırakırsan yazının ilk paragrafı kullanılır.
+
+```yaml
+description: "macOS 27'de Shottr'ın neden kapandığını Terminal loglarıyla nasıl bulduğumu anlatıyorum."
+```
+
+**Paylaşım görseli:** Hiçbir şey yapmana gerek yok. Derleme sırasında her sayfa için yazının başlığı, kategorisi ve
+avatarınla 1200×630 bir kart otomatik üretilir (projelerde avatar yerine uygulama ikonu). Bir yazıya özel görsel
+istersen yazıyı klasör olarak oluştur ve görseli `cover.png` (ya da `.jpg`) adıyla koy, veya front matter'da belirt:
+
+```yaml
+images: ["kapak.png"]
+```
+
+**Arka planda otomatik olanlar:** canonical adres, TR/EN `hreflang` bağlantıları, sitemap (`/sitemap.xml`),
+Open Graph / Twitter etiketleri ve Google için yapısal veri (yazılarda `BlogPosting`, projelerde `MobileApplication`).
+
+**Kontrol araçları:**
+- Google Search Console → sitemap: `https://dizdar.dev/sitemap.xml`; yeni yazıyı hızlandırmak için URL denetimi → "Dizine eklenmesini iste"
+- Yapısal veri: [Rich Results Test](https://search.google.com/test/rich-results)
+- Link önizlemesi: [opengraph.xyz](https://www.opengraph.xyz) ya da LinkedIn [Post Inspector](https://www.linkedin.com/post-inspector/)
+
+---
+
 ## Yeni proje
 
 ```sh

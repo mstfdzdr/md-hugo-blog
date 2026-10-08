@@ -1,5 +1,7 @@
 ---
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
+# Shown in search results and link previews; leave empty to use the first paragraph
+description: ""
 date: {{ .Date }}
 # Video on top, then the full text, on the home page
 postType: video

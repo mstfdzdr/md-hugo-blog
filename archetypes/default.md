@@ -1,6 +1,8 @@
 ---
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
 subtitle: ""
+# Shown in search results and link previews; leave empty to use the first paragraph
+description: ""
 date: {{ .Date }}
 lastmod: {{ .Date }}
 # article (default): summary + "read more" on the home page

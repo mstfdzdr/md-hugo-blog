@@ -1,19 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} - {{ site.Title }}{{ end }}</title>
-{{- $description := site.Params.description }}
-{{- with .Description }}{{ $description = . }}{{ else }}{{ if .IsPage }}{{ with .Summary }}{{ $description = . | plainify | htmlUnescape | truncate 160 }}{{ end }}{{ end }}{{ end }}
-<meta name="description" content="{{ $description }}">
-<link rel="canonical" href="{{ .Permalink }}">
-{{- range .AllTranslations }}
-<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
+{{- partial "seo/meta.html" . }}
+{{- with site.Params.verification }}
+  {{- with .google }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
+  {{- with .bing }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
 {{- end }}
 {{- with .OutputFormats.Get "rss" }}
 <link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">
 {{- end }}
-{{- partial "opengraph.html" . }}
-{{- partial "twitter_cards.html" . }}
-{{- partial "schema.html" . }}
 
 {{- /* App icons (files live in /static) */}}
 <link rel="icon" type="image/x-icon" href="/favicon.ico">

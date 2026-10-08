@@ -1,0 +1,8 @@
+{{- /* Page description: front matter `description`, else the summary, else the site description. */ -}}
+{{- $description := site.Params.description -}}
+{{- with .Description }}
+  {{- $description = . }}
+{{- else }}
+  {{- if .IsPage }}{{ with .Summary }}{{ $description = . | plainify | htmlUnescape | truncate 160 }}{{ end }}{{ end }}
+{{- end -}}
+{{- return (trim $description " \n") -}}
