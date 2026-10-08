@@ -3,7 +3,7 @@ title: "Visual Studio Code koyu tema/açık tema ayarı yapmak"
 subtitle: ""
 date: 2021-11-26T16:06:59+03:00
 aliases: ["/vs-code-koyu-acik-tema-ayari-yapmak/"]
-lastmod: 2023-01-30T16:06:59+03:00
+lastmod: 2021-11-26T16:06:59+03:00
 tags: []
 categories: ["Nasıl Yapılır"]
 featuredImage: ""
