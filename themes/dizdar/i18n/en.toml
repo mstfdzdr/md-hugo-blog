@@ -1,4 +1,5 @@
 # Header / footer
+footerMenu = "Footer menu"
 mainMenu = "Menu"
 search = "Search"
 searchPlaceholder = "Search titles or content..."
@@ -8,7 +9,6 @@ switchTheme = "Switch theme"
 backToTop = "Back to top"
 builtWith = "Built with {{ .Hugo }}"
 themeBy = "Theme - {{ .Theme }}"
-allTagsLink = "All tags"
 tags = "Tags"
 
 # Lists

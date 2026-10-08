@@ -15,6 +15,7 @@ defaultContentLanguageInSubdir = false
     [languages.tr.params]
       description = "mustafa dizdar blog"
       subtitle = "Full Stack Developer - Always Student"
+    # Header menu ("main") keeps the content types; everything else goes to "footer".
     [[languages.tr.menus.main]]
       identifier = "posts"
       name = "Yazılar"
@@ -29,25 +30,22 @@ defaultContentLanguageInSubdir = false
       weight = 2
       [languages.tr.menus.main.params]
         icon = "smartphone"
-    [[languages.tr.menus.main]]
+    # Footer links
+    [[languages.tr.menus.footer]]
       identifier = "tags"
       name = "Etiketler"
       pageRef = "/tags"
-      weight = 3
-      [languages.tr.menus.main.params]
-        icon = "tags"
-    [[languages.tr.menus.main]]
+      weight = 1
+    [[languages.tr.menus.footer]]
       identifier = "categories"
       name = "Kategoriler"
       pageRef = "/categories"
-      weight = 4
-      [languages.tr.menus.main.params]
-        icon = "folder"
-    [[languages.tr.menus.main]]
+      weight = 2
+    [[languages.tr.menus.footer]]
       identifier = "about"
       name = "Hakkımda"
       pageRef = "/about"
-      weight = 5
+      weight = 3
 
   [languages.en]
     weight = 2
@@ -71,21 +69,18 @@ defaultContentLanguageInSubdir = false
       weight = 2
       [languages.en.menus.main.params]
         icon = "smartphone"
-    [[languages.en.menus.main]]
+    # Footer links
+    [[languages.en.menus.footer]]
       identifier = "tags"
       name = "Tags"
       pageRef = "/tags"
-      weight = 3
-      [languages.en.menus.main.params]
-        icon = "tags"
-    [[languages.en.menus.main]]
+      weight = 1
+    [[languages.en.menus.footer]]
       identifier = "categories"
       name = "Categories"
       pageRef = "/categories"
-      weight = 4
-      [languages.en.menus.main.params]
-        icon = "folder"
-    # Add an "About" entry here once content/about.en.md exists.
+      weight = 2
+    # Add an "About" entry (pageRef = "/about") once content/about.en.md exists.
 
 [permalinks]
   [permalinks.page]

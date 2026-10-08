@@ -1,4 +1,5 @@
 # Header / footer
+footerMenu = "Alt menü"
 mainMenu = "Menü"
 search = "Ara"
 searchPlaceholder = "Başlık ya da içerik ara..."
@@ -8,7 +9,6 @@ switchTheme = "Temayı değiştir"
 backToTop = "Başa dön"
 builtWith = "{{ .Hugo }} ile yapıldı"
 themeBy = "Tema - {{ .Theme }}"
-allTagsLink = "Tüm etiketler"
 tags = "Etiketler"
 
 # Lists

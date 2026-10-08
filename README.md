@@ -157,9 +157,37 @@ Open Graph / Twitter etiketleri ve Google için yapısal veri (yazılarda `BlogP
 
 ---
 
+## Menüler
+
+İki menü var, ikisi de `hugo.toml`'da ve her dil için ayrı tanımlanır:
+
+- `main`: üstteki menü. İçerik türleri burada (Yazılar, Projeler…); kalabalıklaşmasın.
+- `footer`: footer'ın en üstündeki linkler (Etiketler, Kategoriler, Hakkımda).
+
+Bir linki diğer menüye taşımak için girdinin menü adını değiştirmen yeterli:
+
+```toml
+[[languages.tr.menus.main]]      # üst menü
+  identifier = "projects"
+  name = "Projeler"
+  pageRef = "/projects"
+  weight = 2                     # sıra
+  [languages.tr.menus.main.params]
+    icon = "smartphone"          # isteğe bağlı, themes/dizdar/assets/icons/ içindeki ad
+
+[[languages.tr.menus.footer]]    # footer
+  identifier = "about"
+  name = "Hakkımda"
+  pageRef = "/about"
+  weight = 3
+```
+
+Aynı girdiyi İngilizce için `[[languages.en.menus.…]]` altına da ekle.
+
 ## Footer
 
-`hugo.toml` içindeki `[params.footer]` bölümünden yönetilir; her satır kapatılabilir:
+Footer'daki linkler yukarıdaki `footer` menüsünden gelir. Diğer satırlar `hugo.toml` içindeki
+`[params.footer]` bölümünden yönetilir; her satır kapatılabilir:
 
 ```toml
 [params.footer]

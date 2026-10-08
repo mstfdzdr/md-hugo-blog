@@ -1,6 +1,7 @@
 {{- /*
-Footer, configured with [params.footer] in hugo.toml (each language can
-override values under [languages.<lang>.params.footer]):
+Footer. Links come from the "footer" menu in hugo.toml; the other rows are
+configured with [params.footer] (each language can override values under
+[languages.<lang>.params.footer]):
 
   social    = true   social links from params.social
   rss       = true   RSS icon next to them
@@ -18,6 +19,15 @@ override values under [languages.<lang>.params.footer]):
 
 <footer class="mt-8 border-t border-line px-4 py-8 text-center text-sm text-muted">
   <div class="mx-auto max-w-3xl space-y-4">
+    {{- with site.Menus.footer }}
+      <nav class="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[0.95rem]" aria-label="{{ T "footerMenu" }}">
+        {{- range . }}
+          {{- $active := or ($.IsMenuCurrent "footer" .) ($.HasMenuCurrent "footer" .) }}
+          <a href="{{ .URL }}" class="{{ if $active }}text-accent{{ else }}text-fg hover:text-accent{{ end }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        {{- end }}
+      </nav>
+    {{- end }}
+
     {{- if or $opt.social $opt.rss }}
       <div class="flex items-center justify-center gap-4">
         {{- partial "social.html" (dict "size" "size-5" "social" $opt.social "rss" $opt.rss) }}
@@ -34,9 +44,6 @@ override values under [languages.<lang>.params.footer]):
           {{- partial "icon.html" (dict "name" "tags" "class" "size-4") }}
           {{- range first (int $opt.tags) . }}
             <a href="{{ .Page.RelPermalink }}" class="hover:text-accent">{{ .Page.LinkTitle }}</a>
-          {{- end }}
-          {{- with site.GetPage "/tags" }}
-            <a href="{{ .RelPermalink }}" class="font-medium text-accent hover:underline">{{ T "allTagsLink" }}</a>
           {{- end }}
         </nav>
       {{- end }}
