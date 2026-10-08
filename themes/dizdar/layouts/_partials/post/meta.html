@@ -14,6 +14,12 @@
     </span>
   {{- end }}
   {{- if not .compact }}
+    {{- if gt ($page.Lastmod.Format "2006-01-02") ($page.Date.Format "2006-01-02") }}
+      <span class="flex items-center gap-1.5" title="{{ T "lastUpdated" }}">
+        {{- partial "icon.html" (dict "name" "history" "class" "size-3.5") -}}
+        <span>{{ T "updatedLabel" }}: <time datetime="{{ $page.Lastmod.Format "2006-01-02T15:04:05-07:00" }}">{{ time.Format ":date_long" $page.Lastmod }}</time></span>
+      </span>
+    {{- end }}
     <span class="flex items-center gap-1.5">
       {{- partial "icon.html" (dict "name" "pencil" "class" "size-3.5") -}}
       {{ T "wordCount" $page.WordCount }}

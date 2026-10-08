@@ -9,6 +9,8 @@ lastmod: {{ .Date }}
 # snippet: full content on the home page
 # video: video + full content on the home page (needs `video`)
 postType: article
+# true: show the whole post on the home page instead of a summary + "read more"
+fullContent: false
 tags: []
 categories: []
 featuredImage: ""

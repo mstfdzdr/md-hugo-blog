@@ -1,10 +1,17 @@
-<footer class="mt-12 border-t border-line pt-5 text-sm text-muted">
-  <div class="flex flex-wrap items-center justify-between gap-3">
-    <span>
-      {{- if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }}
-        {{- T "updatedOn" (dict "Date" (time.Format ":date_long" .Lastmod)) }}
-      {{- end -}}
-    </span>
+{{- /* Last updated: front matter lastmod, or the publish date when the post was never updated. */}}
+{{- $updated := gt (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }}
+<div class="mt-12 flex items-start gap-3 rounded-lg bg-header px-4 py-3 text-sm">
+  {{- partial "icon.html" (dict "name" "history" "class" "mt-0.5 size-4 text-accent") }}
+  <p>
+    {{- T "lastUpdated" }}: <strong class="text-strong">{{ with cond $updated .Lastmod .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ time.Format ":date_long" . }}</time>{{ end }}</strong>
+    {{- if $updated }}
+      <span class="text-muted"> · {{ T "firstPublished" }}: <time datetime="{{ .Date.Format "2006-01-02" }}">{{ time.Format ":date_long" .Date }}</time></span>
+    {{- end -}}
+  </p>
+</div>
+
+<footer class="mt-6 border-t border-line pt-5 text-sm text-muted">
+  <div class="flex flex-wrap items-center justify-end gap-3">
     <div class="flex items-center gap-3">
       {{- if site.Params.page.linkToMarkdown }}
         {{- with .OutputFormats.Get "markdown" }}

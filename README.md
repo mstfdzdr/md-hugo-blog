@@ -114,6 +114,26 @@ Video yazısında `video:` alanına YouTube adresini (`https://youtu.be/...`) ya
 
 Article özetinin nerede biteceğini kendin belirlemek istersen metnin içine `<!--more-->` koy.
 
+Bir article'ın özet yerine **tamamının** anasayfada görünmesini istersen (rozet olmadan, "Devamını oku" çıkmadan):
+
+```yaml
+postType: article
+fullContent: true   # varsayılan: false
+```
+
+## Son güncelleme tarihi
+
+Her yazının sonunda "Son güncelleme: **tarih**" kutusu çıkar. Tarih front matter'daki `lastmod` alanından gelir;
+yoksa yayın tarihi (`date`) kullanılır. Bir yazıyı güncellediğinde `lastmod`'u o günün tarihi yap:
+
+```yaml
+date: 2025-11-24T23:47:35+03:00      # ilk yayın, değiştirme
+lastmod: 2026-10-09T10:00:00+03:00   # son güncelleme
+```
+
+`lastmod` yayın tarihinden sonraysa kutuda "İlk yayın" tarihi de gösterilir ve başlığın altına
+"Güncellendi: …" eklenir. Küçük düzeltmelerde (yazım hatası gibi) `lastmod`'a dokunmana gerek yok.
+
 ## Yayınlamak
 
 1. Yazının `draft:` alanını `false` yap (`true` iken sitede görünmez).

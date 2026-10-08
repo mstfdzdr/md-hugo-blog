@@ -1,5 +1,15 @@
+{{- /* Article on the home page: summary + "read more", or the whole post with `fullContent: true`. */ -}}
+{{- $full := .Param "fullContent" | default false -}}
 {{- partial "post/featured-image.html" (dict "page" . "preview" true) }}
 {{- partial "post/summary-header.html" . }}
+{{- if $full }}
+<div class="content mt-3" data-max-lines="{{ partial "post/max-lines.html" . }}">
+  {{- .Content -}}
+</div>
+<footer class="mt-4 flex flex-wrap items-center justify-end gap-2 text-sm">
+  {{- partial "post/tags.html" . }}
+</footer>
+{{- else }}
 <p class="mt-3 line-clamp-3 leading-relaxed text-fg/85">
   {{- with .Summary }}{{ . | plainify | htmlUnescape }}{{ else }}{{ .Description }}{{ end -}}
 </p>
@@ -7,3 +17,4 @@
   <a href="{{ .RelPermalink }}" class="font-medium text-accent hover:underline">{{ T "readMore" }}</a>
   {{- partial "post/tags.html" . }}
 </footer>
+{{- end }}
