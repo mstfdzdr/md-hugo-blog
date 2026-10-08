@@ -4,7 +4,8 @@ Social sharing image of a page, first match wins:
   1. front matter `images: [cover.png]`   (page resource or URL)
   2. front matter `featuredImage`
   3. page resource cover.* or featured-image.*
-  4. a generated card (seo/card.html)
+  4. the first photo in images/ (flea market items)
+  5. a generated card (seo/card.html)
 
 Returns (dict "url" "width" "height") ; width/height are 0 when unknown.
 */ -}}
@@ -21,6 +22,7 @@ Returns (dict "url" "width" "height") ; width/height are 0 when unknown.
   {{- end }}
 {{- else }}
   {{- with $page.Resources.GetMatch "{cover,featured-image}.*" }}{{ $res = . }}{{ end }}
+  {{- if not $res }}{{ with sort ($page.Resources.Match "images/*") "Name" }}{{ $res = index . 0 }}{{ end }}{{ end }}
 {{- end -}}
 
 {{- if and (not $res) (not $result.url) }}

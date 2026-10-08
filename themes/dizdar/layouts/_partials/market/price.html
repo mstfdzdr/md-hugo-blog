@@ -1,0 +1,13 @@
+{{- /*
+Price as currency symbol + number grouped for the page language
+(₺4.500 in Turkish, ₺4,500 in English), or "ask for price".
+lang.FormatCurrency is not used because English CLDR renders TRY as "TRY4,500".
+*/ -}}
+{{- $currency := .Params.currency | default site.Params.market.currency | default "TRY" | upper -}}
+{{- $symbols := dict "TRY" "₺" "USD" "$" "EUR" "€" "GBP" "£" -}}
+{{- with .Params.price -}}
+  {{- with index $symbols $currency }}{{ . }}{{ else }}{{ $currency }} {{ end -}}
+  {{- lang.FormatNumber 0 . -}}
+{{- else -}}
+  {{- T "marketAskPrice" -}}
+{{- end -}}

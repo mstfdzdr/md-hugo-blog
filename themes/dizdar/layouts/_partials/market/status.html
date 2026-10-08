@@ -1,0 +1,11 @@
+{{- /* Status badge: available (default), reserved, sold. Pass (dict "page" . "class" "…"). */ -}}
+{{- $status := .page.Params.status | default "available" | lower -}}
+{{- $styles := dict
+  "available" "bg-emerald-600 text-white"
+  "reserved" "bg-amber-500 text-white"
+  "sold" "bg-zinc-500 text-white"
+-}}
+{{- $label := dict "available" "marketAvailable" "reserved" "marketReserved" "sold" "marketSold" -}}
+<span class="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold {{ index $styles $status | default (index $styles "available") }} {{ .class }}">
+  {{- T (index $label $status | default "marketAvailable") -}}
+</span>

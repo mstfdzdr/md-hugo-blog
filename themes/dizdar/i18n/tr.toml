@@ -48,6 +48,23 @@ screenshots = "Ekran görüntüleri"
 screenshot = "Ekran görüntüsü"
 legal = "Yasal metinler"
 
+# Flea market
+marketEmpty = "Şu an satışta ürün yok."
+marketAskPrice = "Fiyat için sorun"
+marketAvailable = "Satışta"
+marketReserved = "Rezerve"
+marketSold = "Satıldı"
+marketSoldNote = "Bu ürün satıldı."
+marketCondition = "Kondisyon"
+marketConditionNew = "Sıfır"
+marketConditionLikeNew = "Sıfır ayarında"
+marketConditionGood = "İyi"
+marketConditionFair = "Kullanılmış"
+marketViewOn = "{{ .Site }} ilanına git"
+marketContact = "Bana ulaş"
+marketDescription = "Açıklama"
+marketListedOn = "{{ .Date }} tarihinde eklendi"
+
 # 404
 pageNotFound = "Sayfa bulunamadı"
 pageNotFoundText = "Aradığınız sayfa bulunamadı. Üzgünüz."

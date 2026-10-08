@@ -43,6 +43,13 @@ content/projects/uygulama-adi/
 └── gizlilik-politikasi.en.md   # slug: privacy-policy
 ```
 
+## Bit Pazarı
+
+`content/market/` altındaki her ürün bir klasör (`index.md`, `index.en.md`, `images/`). Liste
+`layouts/market/section.html`, ürün sayfası `layouts/market/single.html`; ortak parçalar
+`_partials/market/` altında (fotoğraf listesi, fiyat, durum rozeti). Oluşturma:
+`hugo new content --kind market market/urun-adi`.
+
 ## Çok dillilik
 
 Türkçe kökte (`/2023/yazi/`), İngilizce `/en/` altında. Bir sayfanın çevirisi aynı adla `.en.md` uzantılı dosyadır

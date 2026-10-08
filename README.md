@@ -214,6 +214,41 @@ Sosyal medya hesapları `[[params.social]]` listesinde; buraya eklediğin hesap 
 
 ---
 
+## Bit Pazarı (ikinci el ürünler)
+
+```sh
+hugo new content --kind market market/samsung-galaxy-watch-4-classic
+```
+
+Türkçe ve İngilizce dosyalarıyla birlikte bir klasör oluşur:
+
+```
+content/market/samsung-galaxy-watch-4-classic/
+├── index.md       # Türkçe
+├── index.en.md    # İngilizce
+└── images/        # fotoğraflar: 01.jpg, 02.jpg… (ilki kapak ve paylaşım görseli olur)
+```
+
+```yaml
+price: 4500                  # boş = "Fiyat için sorun"
+status: available            # available (Satışta) | reserved (Rezerve) | sold (Satıldı)
+condition: good              # new | like-new | good | fair
+specs:                       # ürün sayfasındaki tablo
+  - name: "Kasa"
+    value: "46 mm"
+links:                       # ilan butonları ("Sahibinden ilanına git"); url boşsa buton çıkmaz
+  - name: "Sahibinden"
+    url: "https://…"
+```
+
+- Liste sayfasında önce satıştakiler, sonra rezerve, en son satılanlar gösterilir. Satılan ürünün fiyatı üstü
+  çizili ve fotoğrafı soluk görünür; ilan butonları gizlenir. Ürünü silmek yerine `status: sold` yapabilirsin.
+- Para birimi varsayılan olarak TRY; ürün bazında `currency: USD` gibi değiştirebilirsin.
+- "Bana ulaş" butonu `hugo.toml` içindeki `[params.market] contact` ile açılır (örn. `mailto:…` ya da bir DM linki).
+- Ürün sayfaları Google'a `Product` olarak (fiyat, stok durumu, kondisyon) bildirilir.
+
+---
+
 ## Yeni proje
 
 ```sh

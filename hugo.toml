@@ -30,6 +30,13 @@ defaultContentLanguageInSubdir = false
       weight = 2
       [languages.tr.menus.main.params]
         icon = "smartphone"
+    [[languages.tr.menus.main]]
+      identifier = "market"
+      name = "Bit Pazarı"
+      pageRef = "/market"
+      weight = 3
+      [languages.tr.menus.main.params]
+        icon = "shopping-bag"
     # Footer links
     [[languages.tr.menus.footer]]
       identifier = "tags"
@@ -69,6 +76,13 @@ defaultContentLanguageInSubdir = false
       weight = 2
       [languages.en.menus.main.params]
         icon = "smartphone"
+    [[languages.en.menus.main]]
+      identifier = "market"
+      name = "Flea Market"
+      pageRef = "/market"
+      weight = 3
+      [languages.en.menus.main.params]
+        icon = "shopping-bag"
     # Footer links
     [[languages.en.menus.footer]]
       identifier = "tags"
@@ -117,6 +131,12 @@ defaultContentLanguageInSubdir = false
     # "Built with Hugo" and "Theme - dizdar"
     hugo = true
     theme = true
+
+  # Flea market (content/market)
+  [params.market]
+    currency = "TRY"
+    # Link for the "Contact me" button on items (mailto:, a DM link…); empty hides the button
+    contact = ""
 
   # Search engine verification via meta tag (not needed when the domain is verified with DNS)
   [params.verification]

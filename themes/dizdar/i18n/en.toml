@@ -48,6 +48,23 @@ screenshots = "Screenshots"
 screenshot = "Screenshot"
 legal = "Legal"
 
+# Flea market
+marketEmpty = "Nothing for sale right now."
+marketAskPrice = "Ask for price"
+marketAvailable = "Available"
+marketReserved = "Reserved"
+marketSold = "Sold"
+marketSoldNote = "This item has been sold."
+marketCondition = "Condition"
+marketConditionNew = "New"
+marketConditionLikeNew = "Like new"
+marketConditionGood = "Good"
+marketConditionFair = "Fair"
+marketViewOn = "View on {{ .Site }}"
+marketContact = "Contact me"
+marketDescription = "Description"
+marketListedOn = "Listed on {{ .Date }}"
+
 # 404
 pageNotFound = "Page not found"
 pageNotFoundText = "Sorry, the page you are looking for does not exist."

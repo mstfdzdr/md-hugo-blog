@@ -1,0 +1,38 @@
+{{ define "main" }}
+  {{- /* Flea market: items for sale as cards. Available first, then reserved, then sold; newest first within each. */}}
+  <h1 class="text-3xl font-bold text-strong">{{ .Title }}</h1>
+  {{- with .Content }}<div class="content mt-4">{{ . }}</div>{{ end }}
+
+  {{- $groups := dict "available" slice "reserved" slice "sold" slice }}
+  {{- range .RegularPages.ByDate.Reverse }}
+    {{- $status := .Params.status | default "available" | lower }}
+    {{- if not (isset $groups $status) }}{{ $status = "available" }}{{ end }}
+    {{- $groups = merge $groups (dict $status ((index $groups $status) | append .)) }}
+  {{- end }}
+  {{- $items := (index $groups "available") | append (index $groups "reserved") | append (index $groups "sold") }}
+
+  <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+    {{- range $items }}
+      {{- $sold := eq (.Params.status | default "available" | lower) "sold" }}
+      {{- $images := partial "market/images.html" . }}
+      {{- $title := .Title }}
+      <a href="{{ .RelPermalink }}" class="group flex flex-col overflow-hidden rounded-xl border border-line transition-colors hover:border-accent">
+        <div class="relative aspect-square overflow-hidden bg-header">
+          {{- with $images }}
+            {{- $img := (index . 0).Process "fill 600x600 webp" }}
+            <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $title }}" loading="lazy" class="size-full object-cover transition-transform duration-300 group-hover:scale-105{{ if $sold }} opacity-60 grayscale{{ end }}">
+          {{- else }}
+            <span class="flex size-full items-center justify-center text-muted">{{ partial "icon.html" (dict "name" "package" "class" "size-12") }}</span>
+          {{- end }}
+          {{- partial "market/status.html" (dict "page" . "class" "absolute top-2 left-2 shadow") }}
+        </div>
+        <div class="flex flex-1 flex-col p-3">
+          <h2 class="line-clamp-2 leading-snug font-semibold text-strong group-hover:text-accent">{{ .Title }}</h2>
+          <p class="mt-auto pt-2 text-lg font-bold {{ if $sold }}text-muted line-through{{ else }}text-accent{{ end }}">{{ partial "market/price.html" . }}</p>
+        </div>
+      </a>
+    {{- else }}
+      <p class="col-span-full py-10 text-center text-muted">{{ T "marketEmpty" }}</p>
+    {{- end }}
+  </div>
+{{ end }}

@@ -1,0 +1,111 @@
+{{ define "main" }}
+  {{- /*
+  Flea market item. Front matter:
+    price: 4500            currency: TRY (default: params.market.currency)
+    status: available | reserved | sold
+    condition: new | like-new | good | fair
+    specs: [{name: "Kasa", value: "46 mm"}, …]
+    links: [{name: "Sahibinden", url: "https://…"}, …]
+  Photos: cover.* and/or images/* in the item's folder.
+  */}}
+  {{- $status := .Params.status | default "available" | lower }}
+  {{- $sold := eq $status "sold" }}
+  {{- $images := partial "market/images.html" . }}
+
+  <article>
+    <a href="{{ .Parent.RelPermalink }}" class="mb-6 inline-flex items-center gap-1 text-sm text-muted hover:text-accent">
+      {{- partial "icon.html" (dict "name" "arrow-left" "class" "size-4") }}{{ .Parent.Title }}
+    </a>
+
+    <div class="grid gap-8 md:grid-cols-2">
+      {{- /* Photos */}}
+      <div data-gallery>
+        {{- with $images }}
+          {{- range $i, $image := . }}
+            {{- $full := .Process "fit 1600x1600 webp" }}
+            {{- if eq $i 0 }}
+              {{- $main := .Process "fit 900x900 webp" }}
+              <a href="{{ $full.RelPermalink }}" class="block overflow-hidden rounded-xl border border-line bg-header">
+                <img src="{{ $main.RelPermalink }}" width="{{ $main.Width }}" height="{{ $main.Height }}" alt="{{ $.Title }}" class="aspect-square w-full object-contain{{ if $sold }} opacity-60 grayscale{{ end }}">
+              </a>
+              {{- if gt (len $images) 1 }}<div class="mt-3 grid grid-cols-5 gap-2">{{ end }}
+            {{- else }}
+              {{- $thumb := .Process "fill 200x200 webp" }}
+              <a href="{{ $full.RelPermalink }}" class="block overflow-hidden rounded-lg border border-line hover:border-accent">
+                <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $.Title }} – {{ add $i 1 }}" loading="lazy" class="aspect-square w-full object-cover">
+              </a>
+            {{- end }}
+          {{- end }}
+          {{- if gt (len $images) 1 }}</div>{{ end }}
+        {{- else }}
+          <div class="flex aspect-square items-center justify-center rounded-xl border border-line bg-header text-muted">
+            {{- partial "icon.html" (dict "name" "package" "class" "size-16") -}}
+          </div>
+        {{- end }}
+      </div>
+
+      {{- /* Summary */}}
+      <div>
+        <h1 class="text-2xl leading-tight font-bold text-strong sm:text-3xl">{{ .Title }}</h1>
+        <div class="mt-4 flex flex-wrap items-center gap-3">
+          <span class="text-3xl font-bold {{ if $sold }}text-muted line-through{{ else }}text-accent{{ end }}">{{ partial "market/price.html" . }}</span>
+          {{- partial "market/status.html" (dict "page" .) }}
+        </div>
+
+        {{- $specs := slice }}
+        {{- with .Params.condition }}
+          {{- $conditions := dict "new" "marketConditionNew" "like-new" "marketConditionLikeNew" "good" "marketConditionGood" "fair" "marketConditionFair" }}
+          {{- $value := . }}
+          {{- with index $conditions (lower .) }}{{ $value = T . }}{{ end }}
+          {{- $specs = $specs | append (dict "name" (T "marketCondition") "value" $value) }}
+        {{- end }}
+        {{- range .Params.specs }}{{ $specs = $specs | append (dict "name" .name "value" .value) }}{{ end }}
+        {{- with $specs }}
+          <dl class="mt-6 divide-y divide-line border-y border-line text-sm">
+            {{- range . }}
+              <div class="flex justify-between gap-4 py-2.5">
+                <dt class="text-muted">{{ .name }}</dt>
+                <dd class="text-right font-medium text-strong">{{ .value }}</dd>
+              </div>
+            {{- end }}
+          </dl>
+        {{- end }}
+
+        {{- if $sold }}
+          <p class="mt-6 rounded-lg bg-header px-4 py-3 text-sm text-muted">{{ T "marketSoldNote" }}</p>
+        {{- else }}
+          <div class="mt-6 flex flex-wrap gap-3">
+            {{- range $link := .Params.links }}
+              {{- with $link.url }}
+                <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg bg-strong px-4 py-2 text-sm font-semibold text-page hover:bg-accent">
+                  {{- partial "icon.html" (dict "name" "external-link" "class" "size-4") -}}
+                  {{ T "marketViewOn" (dict "Site" $link.name) }}
+                </a>
+              {{- end }}
+            {{- end }}
+            {{- with site.Params.market.contact }}
+              <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-lg border border-line px-4 py-2 text-sm font-semibold text-strong hover:border-accent hover:text-accent">
+                {{- partial "icon.html" (dict "name" "message-circle" "class" "size-4") -}}
+                {{ T "marketContact" }}
+              </a>
+            {{- end }}
+          </div>
+        {{- end }}
+
+        {{- partial "post/translations.html" . }}
+      </div>
+    </div>
+
+    {{- with .Content }}
+      <section class="mt-10">
+        <h2 class="mb-3 text-xl font-bold text-strong">{{ T "marketDescription" }}</h2>
+        <div class="content">{{ . }}</div>
+      </section>
+    {{- end }}
+
+    <p class="mt-10 border-t border-line pt-4 text-sm text-muted">
+      {{- T "marketListedOn" (dict "Date" (time.Format ":date_long" .Date)) }}
+      {{- if ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02") }} · {{ T "updatedOn" (dict "Date" (time.Format ":date_long" .Lastmod)) }}{{ end -}}
+    </p>
+  </article>
+{{ end }}

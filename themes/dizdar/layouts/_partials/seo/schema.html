@@ -3,6 +3,7 @@ Structured data (JSON-LD, schema.org):
   home      WebSite + Person
   posts     BlogPosting
   projects  MobileApplication (project pages)
+  market    Product with an Offer (flea market items)
 */ -}}
 {{- $page := .page -}}
 {{- $sameAs := slice -}}
@@ -59,6 +60,32 @@ Structured data (JSON-LD, schema.org):
   {{- $stores := slice }}
   {{- with $page.Params.links }}{{ range $k, $v := . }}{{ if and $v (in (slice "appstore" "googleplay") $k) }}{{ $stores = $stores | append $v }}{{ end }}{{ end }}{{ end }}
   {{- with $stores }}{{ $data = merge $data (dict "sameAs" .) }}{{ end }}
+{{- else if and $page.IsPage (eq $page.Section "market") }}
+  {{- $data = dict
+    "@context" "https://schema.org"
+    "@type" "Product"
+    "name" $page.Title
+    "description" .description
+    "url" $page.Permalink
+  }}
+  {{- with .image.url }}{{ $data = merge $data (dict "image" .) }}{{ end }}
+  {{- with $page.Params.price }}
+    {{- $availability := dict "available" "InStock" "reserved" "LimitedAvailability" "sold" "SoldOut" }}
+    {{- $conditions := dict "new" "NewCondition" "like-new" "UsedCondition" "good" "UsedCondition" "fair" "UsedCondition" }}
+    {{- $status := $page.Params.status | default "available" | lower }}
+    {{- $offer := dict
+      "@type" "Offer"
+      "price" .
+      "priceCurrency" ($page.Params.currency | default site.Params.market.currency | default "TRY")
+      "availability" (printf "https://schema.org/%s" (index $availability $status | default "InStock"))
+      "url" $page.Permalink
+      "seller" $person
+    }}
+    {{- with $page.Params.condition }}
+      {{- $offer = merge $offer (dict "itemCondition" (printf "https://schema.org/%s" (index $conditions (lower .) | default "UsedCondition"))) }}
+    {{- end }}
+    {{- $data = merge $data (dict "offers" $offer) }}
+  {{- end }}
 {{- end -}}
 
 {{- with $data }}

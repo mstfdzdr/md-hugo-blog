@@ -1,0 +1,7 @@
+{{- /* Photos of an item: cover.* first (if any), then images/* by file name. Returns a slice of resources. */ -}}
+{{- $images := slice -}}
+{{- with .Resources.GetMatch "cover.*" }}{{ $images = $images | append . }}{{ end -}}
+{{- range sort (.Resources.Match "images/*") "Name" }}
+  {{- if eq .MediaType.MainType "image" }}{{ $images = $images | append . }}{{ end }}
+{{- end -}}
+{{- return $images -}}
