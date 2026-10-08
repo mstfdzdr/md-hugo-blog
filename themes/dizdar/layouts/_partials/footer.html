@@ -1,14 +1,71 @@
-<footer class="px-4 py-8 text-center text-sm text-muted">
-  <p>
-    {{- $hugo := printf `<a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" class="hover:text-accent" title="Hugo %s">Hugo</a>` hugo.Version }}
-    {{- $theme := `<a href="https://github.com/mstfdzdr/md-hugo-blog/tree/master/themes/dizdar" target="_blank" rel="noopener noreferrer" class="hover:text-accent">dizdar</a>` }}
-    {{- T "poweredBy" (dict "Hugo" $hugo "Theme" $theme) | safeHTML -}}
-  </p>
-  <p class="mt-1">
-    &copy; {{ with site.Params.since }}{{ if lt . now.Year }}{{ . }} - {{ end }}{{ end }}{{ now.Year }}
-    <a href="{{ site.Home.RelPermalink }}" class="hover:text-accent">{{ site.Params.author.name }}</a>
-    {{- with site.Params.license }} | {{ . | safeHTML }}{{ end }}
-  </p>
+{{- /*
+Footer, configured with [params.footer] in hugo.toml (each language can
+override values under [languages.<lang>.params.footer]):
+
+  social    = true   social links from params.social
+  rss       = true   RSS icon next to them
+  tags      = 10     number of most used tags to list (0 hides the row)
+  tagsMinCount = 2   only tags used in at least this many posts
+  copyright = "Mustafa Dizdar"   name after © (empty hides the © line)
+  since     = 2020   first year shown after ©
+  license   = '<a href="…">CC BY-NC 4.0</a>'   HTML, empty hides it
+  hugo      = true   "Built with Hugo"
+  theme     = true   "Theme - dizdar"
+*/ -}}
+{{- $opt := dict "social" true "rss" true "tags" 10 "tagsmincount" 2 "copyright" "" "since" 0 "license" "" "hugo" true "theme" true -}}
+{{- /* merge instead of `default`, which would turn an explicit false back into true */ -}}
+{{- range $key, $value := site.Params.footer }}{{ $opt = merge $opt (dict $key $value) }}{{ end -}}
+
+<footer class="mt-8 border-t border-line px-4 py-8 text-center text-sm text-muted">
+  <div class="mx-auto max-w-3xl space-y-4">
+    {{- if or $opt.social $opt.rss }}
+      <div class="flex items-center justify-center gap-4">
+        {{- partial "social.html" (dict "size" "size-5" "social" $opt.social "rss" $opt.rss) }}
+      </div>
+    {{- end }}
+
+    {{- $popular := slice }}
+    {{- with site.Taxonomies.tags }}
+      {{- range .ByCount }}{{ if ge .Count (int $opt.tagsmincount) }}{{ $popular = $popular | append . }}{{ end }}{{ end }}
+    {{- end }}
+    {{- with $popular }}
+      {{- if gt (int $opt.tags) 0 }}
+        <nav class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1" aria-label="{{ T "tags" }}">
+          {{- partial "icon.html" (dict "name" "tags" "class" "size-4") }}
+          {{- range first (int $opt.tags) . }}
+            <a href="{{ .Page.RelPermalink }}" class="hover:text-accent">{{ .Page.LinkTitle }}</a>
+          {{- end }}
+          {{- with site.GetPage "/tags" }}
+            <a href="{{ .RelPermalink }}" class="font-medium text-accent hover:underline">{{ T "allTagsLink" }}</a>
+          {{- end }}
+        </nav>
+      {{- end }}
+    {{- end }}
+
+    {{- if or $opt.copyright $opt.license }}
+      <p>
+        {{- with $opt.copyright }}
+          &copy; {{ with $opt.since }}{{ if lt (int .) now.Year }}{{ . }} - {{ end }}{{ end }}{{ now.Year }}
+          <a href="{{ site.Home.RelPermalink }}" class="hover:text-accent">{{ . }}</a>
+        {{- end }}
+        {{- if and $opt.copyright $opt.license }} | {{ end }}
+        {{- with $opt.license }}{{ . | safeHTML }}{{ end -}}
+      </p>
+    {{- end }}
+
+    {{- $credits := slice }}
+    {{- if $opt.hugo }}
+      {{- $link := printf `<a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" class="hover:text-accent" title="Hugo %s">Hugo</a>` hugo.Version }}
+      {{- $credits = $credits | append (T "builtWith" (dict "Hugo" $link)) }}
+    {{- end }}
+    {{- if $opt.theme }}
+      {{- $link := `<a href="https://github.com/mstfdzdr/md-hugo-blog/tree/master/themes/dizdar" target="_blank" rel="noopener noreferrer" class="hover:text-accent">dizdar</a>` }}
+      {{- $credits = $credits | append (T "themeBy" (dict "Theme" $link)) }}
+    {{- end }}
+    {{- with $credits }}
+      <p class="text-xs">{{ delimit . " | " | safeHTML }}</p>
+    {{- end }}
+  </div>
 </footer>
 
 <button type="button" class="pointer-events-none fixed right-4 bottom-4 z-30 flex size-10 cursor-pointer items-center justify-center rounded-full bg-header text-fg opacity-0 shadow-md transition-opacity hover:text-accent" data-back-to-top title="{{ T "backToTop" }}" aria-label="{{ T "backToTop" }}">

@@ -5,8 +5,11 @@ searchPlaceholder = "Search titles or content..."
 cancel = "Cancel"
 noResultsFound = "No results found"
 switchTheme = "Switch theme"
-poweredBy = "Powered by {{ .Hugo }} | Theme - {{ .Theme }}"
 backToTop = "Back to top"
+builtWith = "Built with {{ .Hugo }}"
+themeBy = "Theme - {{ .Theme }}"
+allTagsLink = "All tags"
+tags = "Tags"
 
 # Lists
 noPosts = "No posts yet."

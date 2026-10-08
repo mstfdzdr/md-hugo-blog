@@ -1,0 +1,20 @@
+{{- /*
+Social links from params.social, plus the RSS feed of the current language.
+  {{ partial "social.html" (dict "size" "size-6" "social" true "rss" true) }}
+*/ -}}
+{{- $size := .size | default "size-6" -}}
+{{- $social := true }}{{ if isset . "social" }}{{ $social = .social }}{{ end -}}
+{{- if $social }}
+  {{- range site.Params.social }}
+  <a href="{{ .url }}" target="_blank" rel="me noopener noreferrer" class="hover:text-accent" title="{{ .name }}" aria-label="{{ .name }}">
+    {{- partial "icon.html" (dict "name" .icon "class" $size) -}}
+  </a>
+  {{- end }}
+{{- end }}
+{{- if .rss }}
+  {{- with site.Home.OutputFormats.Get "rss" }}
+    <a href="{{ .RelPermalink }}" class="hover:text-accent" title="RSS" aria-label="RSS">
+      {{- partial "icon.html" (dict "name" "rss" "class" $size) -}}
+    </a>
+  {{- end }}
+{{- end }}

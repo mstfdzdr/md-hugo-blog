@@ -5,8 +5,11 @@ searchPlaceholder = "Başlık ya da içerik ara..."
 cancel = "İptal"
 noResultsFound = "Sonuç bulunamadı"
 switchTheme = "Temayı değiştir"
-poweredBy = "{{ .Hugo }} ile yapıldı | Tema - {{ .Theme }}"
 backToTop = "Başa dön"
+builtWith = "{{ .Hugo }} ile yapıldı"
+themeBy = "Tema - {{ .Theme }}"
+allTagsLink = "Tüm etiketler"
+tags = "Etiketler"
 
 # Lists
 noPosts = "Henüz yazı yok."

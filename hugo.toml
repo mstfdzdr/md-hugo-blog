@@ -103,8 +103,25 @@ defaultContentLanguageInSubdir = false
   logoText = "dizdardev"
   # "light", "dark" or "auto"
   defaultTheme = "auto"
-  since = 2020
-  license = '<a rel="license external nofollow noopener" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  # Footer rows; every row can be turned off. A language can override any of
+  # these under [languages.<lang>.params.footer].
+  [params.footer]
+    # Social icons (from params.social) and the RSS icon
+    social = true
+    rss = true
+    # How many of the most used tags to list (0 hides the row)
+    tags = 10
+    # ...that are used in at least this many posts
+    tagsMinCount = 2
+    # © <since> - <this year> <copyright>; empty copyright hides the year too
+    copyright = "Mustafa Dizdar"
+    since = 2020
+    # HTML; empty hides it
+    license = '<a rel="license external nofollow noopener" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+    # "Built with Hugo" and "Theme - dizdar"
+    hugo = true
+    theme = true
 
   # Search engine verification via meta tag (not needed when the domain is verified with DNS)
   [params.verification]

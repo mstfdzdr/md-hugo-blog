@@ -11,15 +11,6 @@
   {{- end }}
 
   <div class="mt-4 flex items-center gap-3">
-    {{- range site.Params.social }}
-      <a href="{{ .url }}" target="_blank" rel="me noopener noreferrer" class="hover:text-accent" title="{{ .name }}" aria-label="{{ .name }}">
-        {{- partial "icon.html" (dict "name" .icon "class" "size-6") -}}
-      </a>
-    {{- end }}
-    {{- with site.Home.OutputFormats.Get "rss" }}
-      <a href="{{ .RelPermalink }}" class="hover:text-accent" title="RSS" aria-label="RSS">
-        {{- partial "icon.html" (dict "name" "rss" "class" "size-6") -}}
-      </a>
-    {{- end }}
+    {{- partial "social.html" (dict "size" "size-6" "rss" true) }}
   </div>
 </section>

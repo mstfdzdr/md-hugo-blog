@@ -157,6 +157,35 @@ Open Graph / Twitter etiketleri ve Google için yapısal veri (yazılarda `BlogP
 
 ---
 
+## Footer
+
+`hugo.toml` içindeki `[params.footer]` bölümünden yönetilir; her satır kapatılabilir:
+
+```toml
+[params.footer]
+  social = true          # sosyal medya ikonları (params.social listesinden)
+  rss = true             # RSS ikonu
+  tags = 10              # en çok kullanılan kaç etiket gösterilsin (0 = satırı gizle)
+  tagsMinCount = 2       # ...en az kaç yazıda geçen etiketler
+  copyright = "Mustafa Dizdar"   # boş bırakırsan © satırı gizlenir
+  since = 2020
+  license = '<a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>'   # boş = gizle
+  hugo = true            # "Hugo ile yapıldı"
+  theme = true           # "Tema - dizdar"
+```
+
+Bir dil için farklı değer vermek istersen sadece değişen ayarı yaz, gerisi genel ayardan gelir:
+
+```toml
+[languages.en.params.footer]
+  license = '<a href="…">CC BY 4.0</a>'
+```
+
+Sosyal medya hesapları `[[params.social]]` listesinde; buraya eklediğin hesap hem anasayfada hem footer'da görünür.
+İkon adı `themes/dizdar/assets/icons/` içindeki dosya adıdır (örn. `brand-github`).
+
+---
+
 ## Yeni proje
 
 ```sh
