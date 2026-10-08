@@ -4,7 +4,7 @@ subtitle: ""
 date: 2023-01-27T13:49:23+03:00
 aliases: ["/python-ayin-son-gununu-bulmak/"]
 lastmod: 2023-01-27T13:49:23+03:00
-postType: article
+postType: snippet
 tags: []
 categories: ["Python"]
 featuredImage: ""
