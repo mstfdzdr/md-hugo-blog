@@ -104,15 +104,20 @@
     content: "|";
     @apply mr-1.5 font-bold text-accent;
   }
-  .content :where(h2, h3, h4, h5, h6) .heading-anchor {
+  .content :where(h1, h2, h3, h4, h5, h6) .heading-anchor {
     @apply ml-1 font-normal text-muted no-underline opacity-0 transition-opacity;
   }
-  .content :where(h2, h3, h4, h5, h6):hover .heading-anchor {
+  .content :where(h1, h2, h3, h4, h5, h6):hover .heading-anchor {
     @apply opacity-100;
   }
   .content :not(pre) > code {
     @apply rounded px-1.5 py-0.5 font-normal;
     background: var(--inline-code-bg);
+  }
+  /* Typography adds quote marks around blockquotes; LoveIt did not. */
+  .content blockquote p:first-of-type::before,
+  .content blockquote p:last-of-type::after {
+    content: none;
   }
   .content :not(pre) > code::before,
   .content :not(pre) > code::after {

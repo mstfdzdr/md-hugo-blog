@@ -75,7 +75,9 @@ $$(".content .highlight").forEach((highlight) => {
 
   const header = document.createElement("div");
   header.className = "code-block-header";
-  const lang = $("code[data-lang]", highlight)?.dataset.lang || "";
+  let lang = $("code[data-lang]", highlight)?.dataset.lang || "";
+  // Fences without a language get Chroma's internal lexer names; show no label.
+  if (["fallback", "plaintext", "text", "txt"].includes(lang.toLowerCase())) lang = "";
   const label = document.createElement("span");
   label.textContent = lang ? lang.charAt(0).toUpperCase() + lang.slice(1) : "";
 
