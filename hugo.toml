@@ -89,7 +89,8 @@ defaultContentLanguageInSubdir = false
 
 [permalinks]
   [permalinks.page]
-    posts = "/:year/:contentbasename/"
+    # `slug` in front matter overrides the file name (handy for English posts)
+    posts = "/:year/:slugorcontentbasename/"
 
 [pagination]
   pagerSize = 10

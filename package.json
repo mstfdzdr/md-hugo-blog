@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "hugo server",
+    "dev:drafts": "hugo server --buildDrafts --buildFuture",
     "build": "hugo --gc --minify"
   },
   "devDependencies": {
