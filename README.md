@@ -146,6 +146,15 @@ content/projects/uygulama-adi/
 └── gizlilik-politikasi.en.md   # front matter'a slug: "privacy-policy"
 ```
 
+Ekran görüntüleri dosya adı sırasıyla gösterilir (`01-…`, `02-…`). Büyütünce altında yazı çıksın istersen
+`_index.md` front matter'ına ekle:
+
+```yaml
+resources:
+  - src: screenshots/01-schedule.png
+    title: "Aylık nöbet takvimi"
+```
+
 Gizlilik metinlerini arama ve sitemap dışında tutmak için front matter'a şunu ekle:
 
 ```yaml

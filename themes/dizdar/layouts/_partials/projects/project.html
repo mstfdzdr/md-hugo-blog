@@ -53,11 +53,15 @@ Legal pages (privacy policy, …): regular pages in the same folder.
         {{- partial "icon.html" (dict "name" "image" "class" "size-5") }}{{ T "screenshots" }}
       </h2>
       <div class="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-3 sm:mx-0 sm:px-0" data-gallery>
-        {{- range . }}
+        {{- range $i, $shot := . }}
           {{- $thumb := .Process "fit 480x960 webp" }}
           {{- $full := .Process "fit 1600x1600 webp" }}
-          <a href="{{ $full.RelPermalink }}" class="shrink-0 snap-start" data-caption="{{ .Title }}">
-            <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ .Title }}" loading="lazy" class="h-80 w-auto rounded-xl border border-line object-cover sm:h-96">
+          {{- /* Caption from front matter `resources: [{src, title}]`; the default title is just the file path. */}}
+          {{- $caption := "" }}
+          {{- if ne .Title .Name }}{{ $caption = .Title }}{{ end }}
+          {{- $alt := $caption | default (printf "%s – %s %d" $.Title (T "screenshot") (add $i 1)) }}
+          <a href="{{ $full.RelPermalink }}" class="shrink-0 snap-start" data-caption="{{ $caption }}">
+            <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ $alt }}" loading="lazy" class="h-80 w-auto rounded-xl border border-line object-cover sm:h-96">
           </a>
         {{- end }}
       </div>
