@@ -38,6 +38,7 @@ content/projects/uygulama-adi/
 ├── _index.en.md           # İngilizcesi
 ├── icon.png               # uygulama ikonu
 ├── screenshots/           # galeri
+│   └── en/                # İngilizce sayfa için ayrı set (isteğe bağlı, yoksa üsttekiler)
 ├── gizlilik-politikasi.md
 └── gizlilik-politikasi.en.md   # slug: privacy-policy
 ```

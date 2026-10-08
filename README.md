@@ -141,18 +141,30 @@ content/projects/uygulama-adi/
 ├── _index.md                   # proje sayfası: description, platforms, links (mağaza linkleri)
 ├── _index.en.md                # İngilizcesi
 ├── icon.png                    # uygulama ikonu
-├── screenshots/                # buradaki görseller galeride gösterilir
+├── screenshots/                # galerideki görseller (Türkçe sayfa)
+│   └── en/                     # İngilizce sayfa için ayrı görseller (yoksa üsttekiler kullanılır)
 ├── gizlilik-politikasi.md      # yasal metinler proje sayfasında listelenir
 └── gizlilik-politikasi.en.md   # front matter'a slug: "privacy-policy"
 ```
 
-Ekran görüntüleri dosya adı sırasıyla gösterilir (`01-…`, `02-…`). Büyütünce altında yazı çıksın istersen
-`_index.md` front matter'ına ekle:
+Ekran görüntüleri dosya adı sırasıyla gösterilir (`01-…`, `02-…`). Her sayfa önce kendi dilinin klasörüne bakar:
+İngilizce sayfa `screenshots/en/` içindekileri gösterir; bu klasör yoksa ya da boşsa `screenshots/` altındakileri
+kullanır. Türkçe sayfa her zaman `screenshots/` altındakileri gösterir.
+
+Büyütünce altında yazı çıksın istersen ilgili dilin `_index` dosyasının front matter'ına ekle:
 
 ```yaml
+# _index.md
 resources:
   - src: screenshots/01-schedule.png
     title: "Aylık nöbet takvimi"
+```
+
+```yaml
+# _index.en.md
+resources:
+  - src: screenshots/en/01-schedule.png
+    title: "Monthly duty calendar"
 ```
 
 Gizlilik metinlerini arama ve sitemap dışında tutmak için front matter'a şunu ekle:

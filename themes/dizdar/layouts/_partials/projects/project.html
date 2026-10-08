@@ -5,7 +5,8 @@ Project page. Front matter of content/projects/<name>/_index.md:
   platforms: [iOS, Android]
   links: {appStore: URL, googlePlay: URL, website: URL, github: URL}
 
-Screenshots: images in content/projects/<name>/screenshots/
+Screenshots: images in content/projects/<name>/screenshots/, and optionally
+screenshots/<lang>/ (e.g. screenshots/en/) for a language-specific set.
 Legal pages (privacy policy, …): regular pages in the same folder.
 */ -}}
 <article>
@@ -47,7 +48,10 @@ Legal pages (privacy policy, …): regular pages in the same folder.
     <div class="content mt-8">{{ . }}</div>
   {{- end }}
 
-  {{- with .Resources.Match "screenshots/*" }}
+  {{- /* Screenshots for this language (screenshots/en/) if any, else the shared ones (screenshots/). */}}
+  {{- $screenshots := .Resources.Match (printf "screenshots/%s/*" .Language.Lang) }}
+  {{- if not $screenshots }}{{ $screenshots = .Resources.Match "screenshots/*" }}{{ end }}
+  {{- with $screenshots }}
     <section class="mt-10">
       <h2 class="mb-4 flex items-center gap-2 text-xl font-bold text-strong">
         {{- partial "icon.html" (dict "name" "image" "class" "size-5") }}{{ T "screenshots" }}
