@@ -156,6 +156,15 @@ sitemap:
 
 ## Yazarken işe yarayanlar
 
+- **Başlıklar:** bölümler için `##`, alt bölümler için `###` kullan. `#` (H1) yazının başlığıdır (`title`);
+  metin içinde kullanılırsa o bölüm içindekiler tablosunda çıkmaz ve diğer başlıklardan farklı görünür.
+
+  ```markdown
+  ## Sorun ne?
+  ### İlk deneme
+  ## Çözüm
+  ```
+
 - **Uyarı kutusu:**
 
   ```markdown
