@@ -147,6 +147,8 @@ content/projects/uygulama-adi/
 └── gizlilik-politikasi.en.md   # front matter'a slug: "privacy-policy"
 ```
 
+`description` proje sayfasında tam, /projects/ listesindeki kartta en fazla 2 satır gösterilir.
+
 Ekran görüntüleri dosya adı sırasıyla gösterilir (`01-…`, `02-…`). Her sayfa önce kendi dilinin klasörüne bakar:
 İngilizce sayfa `screenshots/en/` içindekileri gösterir; bu klasör yoksa ya da boşsa `screenshots/` altındakileri
 kullanır. Türkçe sayfa her zaman `screenshots/` altındakileri gösterir.

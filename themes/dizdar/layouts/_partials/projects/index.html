@@ -1,13 +1,14 @@
 <h1 class="text-3xl font-bold text-strong">{{ .Title }}</h1>
 {{- with .Content }}<div class="content mt-4">{{ . }}</div>{{ end }}
 
-<div class="mt-8 grid gap-5 sm:grid-cols-2">
+<div class="mt-8 flex flex-col gap-4">
   {{- range .Sections.ByWeight }}
-    <a href="{{ .RelPermalink }}" class="group flex gap-4 rounded-xl border border-line p-4 transition-colors hover:border-accent">
+    <a href="{{ .RelPermalink }}" class="group flex items-center gap-4 rounded-xl border border-line p-4 transition-colors hover:border-accent sm:gap-5">
       {{- partial "projects/icon.html" (dict "page" . "class" "size-16 rounded-2xl") }}
       <div class="min-w-0">
         <h2 class="font-bold text-strong group-hover:text-accent">{{ .Title }}</h2>
-        {{- with .Description }}<p class="mt-1 text-sm">{{ . }}</p>{{ end }}
+        {{- /* Full description is on the project page; keep cards to two lines. */}}
+        {{- with .Description }}<p class="mt-1 line-clamp-2 text-sm" title="{{ . }}">{{ . }}</p>{{ end }}
         {{- partial "projects/platforms.html" . }}
       </div>
     </a>
