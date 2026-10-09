@@ -21,6 +21,47 @@ Kaydettiğin her değişiklik tarayıcıda anında yenilenir.
 
 ---
 
+## VS Code ile içerik yönetimi (Front Matter CMS)
+
+Terminal komutları yerine VS Code içindeki **Front Matter CMS** panelini kullanabilirsin. Ayarları repodaki
+`frontmatter.json` dosyasında; eklentiyi kurman yeterli (VS Code bu projeyi açınca önerir).
+
+**Paneli açmak:** Sol çubuktaki Front Matter ikonu → **Open dashboard**. Bütün içerik (Yazılar, Projeler,
+Bit Pazarı, Sayfalar) burada listelenir; arayabilir, taslakları filtreleyebilirsin.
+
+**Yeni içerik:** Dashboard → **Create content** → klasörü seç (Yazılar / Projeler / Bit Pazarı) → başlığı yaz.
+Dosya doğru yerde, doğru alanlarla ve **taslak** olarak oluşur. Bit Pazarı ürünü ve proje klasör olarak
+oluşturulur (`images/`, `screenshots/` klasörlerini içine sen eklersin).
+
+**Alanları düzenlemek:** Bir içerik dosyası açıkken Front Matter yan paneli alanları form olarak gösterir:
+yazı tipi, durum ve kondisyon açılır listeden, fiyat sayı kutusundan, taslak ve "anasayfada tamamını göster"
+düğmeden, etiket ve kategoriler var olanlardan seçilir, tarihler takvimden. "Video" alanı sadece yazı tipi
+Video iken, "Anasayfada tamamını göster" sadece Makale iken görünür.
+
+**İngilizce çeviri:** Türkçe dosya açıkken yan panelde **İngilizce çevirisini oluştur** düğmesine bas
+(Custom actions bölümünde). Aynı adla `.en.md` dosyası oluşturulur ve açılır:
+
+- taslak olarak başlar (`draft: true`),
+- Türkçe eski adres yönlendirmeleri (`aliases`) kopyalanmaz,
+- yazılarda başlığın altına `slug` hatırlatması eklenir; İngilizce adresi oraya yaz,
+- metin Türkçe gelir, başındaki `<!-- TODO: translate to English -->` notunu çevirince sil.
+
+Çeviri zaten varsa yenisini oluşturmaz, var olanı açar.
+
+**Önizleme:** Panelde **Start server** (`npm run dev`), sonra **Open preview**.
+
+Bilmen gerekenler:
+
+- Front Matter, Bit Pazarı ürünlerine `type: market`, projelere `type: projects`, sayfalara `type: page` yazar.
+  Bunlar Hugo'da zaten varsayılan değerler, sitede hiçbir şeyi değiştirmez; silmene gerek yok.
+  Yazılara `type` yazılmaz.
+- Başlıkta "İ" varsa Front Matter dosya adını bozuk üretiyor (`i̇lk-deneme.md`); oluşturduktan hemen sonra
+  bir script adı otomatik düzeltir (`ilk-deneme.md`).
+- Etiket ve kategori önerileri `frontmatter.json` içindeki listelerden gelir; yeni etiket yazınca panel
+  listeye eklemeyi teklif eder.
+
+---
+
 ## Yeni yazı (sadece Türkçe)
 
 ```sh
