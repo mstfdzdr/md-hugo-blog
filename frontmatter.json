@@ -1,48 +1,59 @@
 {
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
-
   "frontMatter.framework.id": "hugo",
   "frontMatter.framework.startCommand": "npm run dev",
   "frontMatter.preview.host": "http://localhost:1313",
   "frontMatter.content.publicFolder": "static",
-
   "frontMatter.taxonomy.dateFormat": "yyyy-MM-dd'T'HH:mm:ssXXX",
   "frontMatter.templates.prefix": "",
   "frontMatter.content.autoUpdateDate": false,
   "frontMatter.taxonomy.seoDescriptionField": "description",
   "frontMatter.dashboard.content.card.fields.description": "description",
-
   "frontMatter.content.pageFolders": [
     {
       "title": "Yazılar",
       "path": "[[workspace]]/content/posts",
-      "contentTypes": ["default"],
+      "contentTypes": [
+        "default"
+      ],
       "filePrefix": "",
-      "excludePaths": ["_index*.md"]
+      "excludePaths": [
+        "_index*.md"
+      ]
     },
     {
       "title": "Projeler",
       "path": "[[workspace]]/content/projects",
-      "contentTypes": ["projects", "page"],
+      "contentTypes": [
+        "projects",
+        "page"
+      ],
       "filePrefix": "",
-      "excludePaths": ["_index*.md"]
+      "excludePaths": [
+        "_index*.md"
+      ]
     },
     {
       "title": "Bit Pazarı",
       "path": "[[workspace]]/content/market",
-      "contentTypes": ["market"],
+      "contentTypes": [
+        "market"
+      ],
       "filePrefix": "",
-      "excludePaths": ["_index*.md"]
+      "excludePaths": [
+        "_index*.md"
+      ]
     },
     {
       "title": "Sayfalar",
       "path": "[[workspace]]/content",
-      "contentTypes": ["page"],
+      "contentTypes": [
+        "page"
+      ],
       "filePrefix": "",
       "excludeSubdir": true
     }
   ],
-
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
@@ -51,20 +62,55 @@
       "clearEmpty": true,
       "postScript": "fix-filename",
       "fields": [
-        { "title": "Başlık", "name": "title", "type": "string", "single": true, "required": true },
-        { "title": "Açıklama (Google ve link önizlemeleri)", "name": "description", "type": "string" },
-        { "title": "Yayın tarihi", "name": "date", "type": "datetime", "isPublishDate": true, "default": "{{now}}" },
-        { "title": "Son güncelleme", "name": "lastmod", "type": "datetime", "isModifiedDate": true },
-        { "title": "Taslak", "name": "draft", "type": "draft", "default": true },
+        {
+          "title": "Başlık",
+          "name": "title",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Açıklama (Google ve link önizlemeleri)",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Yayın tarihi",
+          "name": "date",
+          "type": "datetime",
+          "isPublishDate": true,
+          "default": "{{now}}"
+        },
+        {
+          "title": "Son güncelleme",
+          "name": "lastmod",
+          "type": "datetime",
+          "isModifiedDate": true
+        },
+        {
+          "title": "Taslak",
+          "name": "draft",
+          "type": "draft",
+          "default": true
+        },
         {
           "title": "Yazı tipi",
           "name": "postType",
           "type": "choice",
           "default": "article",
           "choices": [
-            { "id": "article", "title": "Makale" },
-            { "id": "snippet", "title": "Snippet" },
-            { "id": "video", "title": "Video" }
+            {
+              "id": "article",
+              "title": "Makale"
+            },
+            {
+              "id": "snippet",
+              "title": "Snippet"
+            },
+            {
+              "id": "video",
+              "title": "Video"
+            }
           ]
         },
         {
@@ -72,21 +118,57 @@
           "name": "video",
           "type": "string",
           "single": true,
-          "when": { "fieldRef": "postType", "operator": "eq", "value": "video" }
+          "when": {
+            "fieldRef": "postType",
+            "operator": "eq",
+            "value": "video"
+          }
         },
         {
           "title": "Anasayfada tamamını göster",
           "name": "fullContent",
           "type": "boolean",
           "default": false,
-          "when": { "fieldRef": "postType", "operator": "eq", "value": "article" }
+          "when": {
+            "fieldRef": "postType",
+            "operator": "eq",
+            "value": "article"
+          }
         },
-        { "title": "İçindekiler", "name": "toc", "type": "boolean", "default": false },
-        { "title": "Etiketler", "name": "tags", "type": "tags" },
-        { "title": "Kategoriler", "name": "categories", "type": "categories" },
-        { "title": "Alt başlık", "name": "subtitle", "type": "string", "single": true },
-        { "title": "İngilizce adres (sadece .en.md)", "name": "slug", "type": "string", "single": true },
-        { "title": "Anasayfada gizle", "name": "hiddenFromHomePage", "type": "boolean", "default": false }
+        {
+          "title": "İçindekiler",
+          "name": "toc",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "title": "Etiketler",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Kategoriler",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Alt başlık",
+          "name": "subtitle",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "İngilizce adres (sadece .en.md)",
+          "name": "slug",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Anasayfada gizle",
+          "name": "hiddenFromHomePage",
+          "type": "boolean",
+          "default": false
+        }
       ]
     },
     {
@@ -97,21 +179,64 @@
       "clearEmpty": true,
       "postScript": "fix-filename",
       "fields": [
-        { "title": "Ürün adı", "name": "title", "type": "string", "single": true, "required": true },
-        { "title": "Kısa açıklama", "name": "description", "type": "string" },
-        { "title": "Eklenme tarihi", "name": "date", "type": "datetime", "isPublishDate": true, "default": "{{now}}" },
-        { "title": "Son güncelleme", "name": "lastmod", "type": "datetime", "isModifiedDate": true },
-        { "title": "Taslak", "name": "draft", "type": "draft", "default": true },
-        { "title": "Fiyat (boş = \"Fiyat için sorun\")", "name": "price", "type": "number", "numberOptions": { "isDecimal": false, "min": 0 } },
+        {
+          "title": "Ürün adı",
+          "name": "title",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Kısa açıklama",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Eklenme tarihi",
+          "name": "date",
+          "type": "datetime",
+          "isPublishDate": true,
+          "default": "{{now}}"
+        },
+        {
+          "title": "Son güncelleme",
+          "name": "lastmod",
+          "type": "datetime",
+          "isModifiedDate": true
+        },
+        {
+          "title": "Taslak",
+          "name": "draft",
+          "type": "draft",
+          "default": true
+        },
+        {
+          "title": "Fiyat (boş = \"Fiyat için sorun\")",
+          "name": "price",
+          "type": "number",
+          "numberOptions": {
+            "isDecimal": false,
+            "min": 0
+          }
+        },
         {
           "title": "Durum",
           "name": "status",
           "type": "choice",
           "default": "available",
           "choices": [
-            { "id": "available", "title": "Satışta" },
-            { "id": "reserved", "title": "Rezerve" },
-            { "id": "sold", "title": "Satıldı" }
+            {
+              "id": "available",
+              "title": "Satışta"
+            },
+            {
+              "id": "reserved",
+              "title": "Rezerve"
+            },
+            {
+              "id": "sold",
+              "title": "Satıldı"
+            }
           ]
         },
         {
@@ -120,14 +245,40 @@
           "type": "choice",
           "default": "good",
           "choices": [
-            { "id": "new", "title": "Sıfır" },
-            { "id": "like-new", "title": "Sıfır ayarında" },
-            { "id": "good", "title": "İyi" },
-            { "id": "fair", "title": "Kullanılmış" }
+            {
+              "id": "new",
+              "title": "Sıfır"
+            },
+            {
+              "id": "like-new",
+              "title": "Sıfır ayarında"
+            },
+            {
+              "id": "good",
+              "title": "İyi"
+            },
+            {
+              "id": "fair",
+              "title": "Kullanılmış"
+            }
           ]
         },
-        { "title": "Özellikler", "name": "specs", "type": "block", "fieldGroup": ["spec"] },
-        { "title": "İlan linkleri", "name": "links", "type": "block", "fieldGroup": ["listing"] }
+        {
+          "title": "Özellikler",
+          "name": "specs",
+          "type": "block",
+          "fieldGroup": [
+            "spec"
+          ]
+        },
+        {
+          "title": "İlan linkleri",
+          "name": "links",
+          "type": "block",
+          "fieldGroup": [
+            "listing"
+          ]
+        }
       ]
     },
     {
@@ -138,25 +289,67 @@
       "clearEmpty": true,
       "postScript": "fix-filename",
       "fields": [
-        { "title": "Proje adı", "name": "title", "type": "string", "single": true, "required": true },
-        { "title": "Kısa açıklama", "name": "description", "type": "string" },
-        { "title": "Sıra (küçük olan önce)", "name": "weight", "type": "number", "default": 10 },
+        {
+          "title": "Proje adı",
+          "name": "title",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Kısa açıklama",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Sıra (küçük olan önce)",
+          "name": "weight",
+          "type": "number",
+          "default": 10
+        },
         {
           "title": "Platformlar",
           "name": "platforms",
           "type": "choice",
           "multiple": true,
-          "choices": ["Android", "iOS", "Web", "macOS", "Windows", "Linux"]
+          "choices": [
+            "Android",
+            "iOS",
+            "Web",
+            "macOS",
+            "Windows",
+            "Linux"
+          ]
         },
         {
           "title": "Linkler",
           "name": "links",
           "type": "fields",
           "fields": [
-            { "title": "App Store", "name": "appStore", "type": "string", "single": true },
-            { "title": "Google Play", "name": "googlePlay", "type": "string", "single": true },
-            { "title": "Web sitesi", "name": "website", "type": "string", "single": true },
-            { "title": "GitHub", "name": "github", "type": "string", "single": true }
+            {
+              "title": "App Store",
+              "name": "appStore",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Google Play",
+              "name": "googlePlay",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Web sitesi",
+              "name": "website",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "GitHub",
+              "name": "github",
+              "type": "string",
+              "single": true
+            }
           ]
         },
         {
@@ -165,7 +358,12 @@
           "type": "fields",
           "hidden": true,
           "fields": [
-            { "title": "Orijinal görselleri yayınla", "name": "publishResources", "type": "boolean", "default": false }
+            {
+              "title": "Orijinal görselleri yayınla",
+              "name": "publishResources",
+              "type": "boolean",
+              "default": false
+            }
           ]
         }
       ]
@@ -178,42 +376,103 @@
       "clearEmpty": true,
       "postScript": "fix-filename",
       "fields": [
-        { "title": "Başlık", "name": "title", "type": "string", "single": true, "required": true },
-        { "title": "Açıklama", "name": "description", "type": "string" },
-        { "title": "Tarih", "name": "date", "type": "datetime", "isPublishDate": true, "default": "{{now}}" },
-        { "title": "Son güncelleme", "name": "lastmod", "type": "datetime", "isModifiedDate": true },
-        { "title": "Taslak", "name": "draft", "type": "draft", "default": true },
-        { "title": "İngilizce adres (sadece .en.md)", "name": "slug", "type": "string", "single": true },
-        { "title": "Site içi aramada gizle", "name": "hiddenFromSearch", "type": "boolean", "default": false },
+        {
+          "title": "Başlık",
+          "name": "title",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Açıklama",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Tarih",
+          "name": "date",
+          "type": "datetime",
+          "isPublishDate": true,
+          "default": "{{now}}"
+        },
+        {
+          "title": "Son güncelleme",
+          "name": "lastmod",
+          "type": "datetime",
+          "isModifiedDate": true
+        },
+        {
+          "title": "Taslak",
+          "name": "draft",
+          "type": "draft",
+          "default": true
+        },
+        {
+          "title": "İngilizce adres (sadece .en.md)",
+          "name": "slug",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Site içi aramada gizle",
+          "name": "hiddenFromSearch",
+          "type": "boolean",
+          "default": false
+        },
         {
           "title": "Sitemap",
           "name": "sitemap",
           "type": "fields",
-          "fields": [{ "title": "Sitemap'ten çıkar", "name": "disable", "type": "boolean", "default": false }]
+          "fields": [
+            {
+              "title": "Sitemap'ten çıkar",
+              "name": "disable",
+              "type": "boolean",
+              "default": false
+            }
+          ]
         }
       ]
     }
   ],
-
   "frontMatter.taxonomy.fieldGroups": [
     {
       "id": "spec",
       "labelField": "name",
       "fields": [
-        { "title": "Özellik", "name": "name", "type": "string", "single": true },
-        { "title": "Değer", "name": "value", "type": "string", "single": true }
+        {
+          "title": "Özellik",
+          "name": "name",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Değer",
+          "name": "value",
+          "type": "string",
+          "single": true
+        }
       ]
     },
     {
       "id": "listing",
       "labelField": "name",
       "fields": [
-        { "title": "Site (Sahibinden, Letgo…)", "name": "name", "type": "string", "single": true },
-        { "title": "İlan adresi", "name": "url", "type": "string", "single": true }
+        {
+          "title": "Site (Sahibinden, Letgo…)",
+          "name": "name",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "İlan adresi",
+          "name": "url",
+          "type": "string",
+          "single": true
+        }
       ]
     }
   ],
-
   "frontMatter.custom.scripts": [
     {
       "id": "create-translation",
@@ -231,17 +490,62 @@
       "hidden": true
     }
   ],
-
   "frontMatter.taxonomy.tags": [
-    "amd", "apache", "button 5 not working", "böte doktora", "böte yüksek lisans", "c sharp", "cmd",
-    "css temel ölçüler", "dark theme", "dependency injection", "django", "elektronik oy kullanma cihazı",
-    "gigabyte b450", "github pages", "google captcha", "hardware", "hugo", "lisansüstü eğitim", "localhost",
-    "logitech m560", "macos", "mobil programlama", "mongodb", "mustafa dizdar", "nginx", "oracle", "php",
-    "php debugger", "python", "remote access", "responsive", "reymatik", "statik blog", "temiz kurulum",
-    "terminal", "ubuntu", "virtualization", "visual studio code", "whatsapp", "windows", "xdebug"
+    "amd",
+    "apache",
+    "button 5 not working",
+    "böte doktora",
+    "böte yüksek lisans",
+    "c sharp",
+    "cmd",
+    "css temel ölçüler",
+    "dark theme",
+    "dependency injection",
+    "django",
+    "elektronik oy kullanma cihazı",
+    "gigabyte b450",
+    "github pages",
+    "google captcha",
+    "hardware",
+    "hugo",
+    "lisansüstü eğitim",
+    "localhost",
+    "logitech m560",
+    "macos",
+    "mobil programlama",
+    "mongodb",
+    "mustafa dizdar",
+    "nginx",
+    "oracle",
+    "php",
+    "php debugger",
+    "python",
+    "remote access",
+    "responsive",
+    "reymatik",
+    "statik blog",
+    "temiz kurulum",
+    "terminal",
+    "ubuntu",
+    "virtualization",
+    "visual studio code",
+    "whatsapp",
+    "windows",
+    "xdebug"
   ],
   "frontMatter.taxonomy.categories": [
-    "Bilgisayar ve Öğretim Teknolojileri", "CSS", "Django", "Dotnet", "Flutter", "Kişisel", "Linux",
-    "Nasıl Yapılır", "PHP", "Projeler", "Python", "Veritabanı", "Web Programlama"
+    "Bilgisayar ve Öğretim Teknolojileri",
+    "CSS",
+    "Django",
+    "Dotnet",
+    "Flutter",
+    "Kişisel",
+    "Linux",
+    "Nasıl Yapılır",
+    "PHP",
+    "Projeler",
+    "Python",
+    "Veritabanı",
+    "Web Programlama"
   ]
 }
