@@ -3,8 +3,8 @@ title: "About"
 slug: "about"
 subtitle: "~"
 date: 2023-01-27T13:41:55+03:00
-lastmod: 2025-11-01T18:22:55+03:00
-draft: true
+lastmod: 2026-10-11T02:19:41+03:00
+draft: false
 toc:
     enable: true
 ---
@@ -35,7 +35,7 @@ I am currently doing a PhD in my field. For more details and work experience: [m
 
 | Period      | Degree      | Institution                                                                                                                                       | Final Grade |
 |-------------|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-| 2021 - 2023 | PhD         | Trabzon University, Institute of Graduate Studies, Computer Education and Instructional Technology PhD Program (with thesis)                     | Dismissed due to non-attendance |
+| 2021 - Present | PhD     | Trabzon University, Institute of Graduate Studies, Computer Education and Instructional Technology PhD Program (with thesis)                     | In progress |
 | 2017 - 2021 | Master's    | Karadeniz Technical University, Institute of Educational Sciences, Computer Education and Instructional Technology Master's Program               | 3.14 / 4    |
 | 2012 - 2017 | Bachelor's  | Karadeniz Technical University, Fatih Faculty of Education, Computer Education and Instructional Technology                                       | 3.23 / 4    |
 | 2008 - 2011 | High School | Giresun 125th Year Vocational and Technical Anatolian High School, Information Technologies, Database Programming                                 | 71.54 / 100 |

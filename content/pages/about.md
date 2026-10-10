@@ -2,7 +2,7 @@
 title: "Hakkımda"
 subtitle: "~"
 date: 2023-01-27T13:41:55+03:00
-lastmod: 2025-11-01T18:22:55+03:00
+lastmod: 2026-10-11T02:19:41+03:00
 tags: []
 categories: ["mustafa dizdar kimdir?"]
 featuredImage: ""
@@ -42,7 +42,7 @@ burada -ne yazık ki mühendislik kazanamadığım için- Bilgisayar ve Eğitim 
 
 | Zaman Aralığı       | Derece        | Kurum                                                                                                                         | Bitirme Notu |
 |---------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------|--------------|
-| 2021 - 2023 | Doktora       | Trabzon Üniversitesi, Lisansüstü Eğitim Enstitüsü, Bilgisayar ve Öğretim Teknolojileri Eğitimi Tezli Doktora Programı         | Devamsızlıktan atıldım           |
+| 2021 - Devam Ediyor | Doktora | Trabzon Üniversitesi, Lisansüstü Eğitim Enstitüsü, Bilgisayar ve Öğretim Teknolojileri Eğitimi Tezli Doktora Programı | Devam ediyor |
 | 2017 - 2021         | Yüksek Lisans | Karadeniz Teknik Üniversitesi, Eğitim Bilimleri Enstitüsü, Bilgisayar ve Öğretim Teknolojileri Eğitimi Yüksek Lisans Programı | 3,14 / 4     |
 | 2012 - 2017         | Lisans        | Karadeniz Teknik Üniversitesi, Fatih Eğitim Fakültesi, Bilgisayar ve Öğretim Teknolojileri Eğitimi                            | 3,23 / 4     |
 | 2008 - 2011         | Ortaöğretim   | Giresun 125. Yıl Mesleki ve Teknik Anadolu Lisesi, Bilişim Teknolojileri Alanı, Veri Tabanı Programcılığı Bölümü              | 71,54 / 100  |

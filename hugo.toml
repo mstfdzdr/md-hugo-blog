@@ -94,7 +94,11 @@ defaultContentLanguageInSubdir = false
       name = "Categories"
       pageRef = "/categories"
       weight = 2
-    # Add an "About" entry (pageRef = "/pages/about") once content/pages/about.en.md exists.
+    [[languages.en.menus.footer]]
+      identifier = "about"
+      name = "About"
+      pageRef = "/pages/about"
+      weight = 3
 
 [permalinks]
   [permalinks.taxonomy]
