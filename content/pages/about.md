@@ -2,7 +2,7 @@
 title: "Hakkımda"
 subtitle: "~"
 date: 2023-01-27T13:41:55+03:00
-lastmod: 2026-10-11T02:19:41+03:00
+lastmod: 2026-10-11T02:21:10+03:00
 tags: []
 categories: ["mustafa dizdar kimdir?"]
 featuredImage: ""

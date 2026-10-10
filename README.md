@@ -167,7 +167,7 @@ fullContent: true   # varsayılan: false
 
 ## Son güncelleme tarihi
 
-Her yazının sonunda "Son güncelleme: **tarih**" kutusu çıkar. Tarih front matter'daki `lastmod` alanından gelir;
+Her yazının ve sayfanın (Hakkımda, gizlilik metinleri…) sonunda "Son güncelleme: **tarih**" kutusu çıkar. Tarih front matter'daki `lastmod` alanından gelir;
 yoksa yayın tarihi (`date`) kullanılır. Bir yazıyı güncellediğinde `lastmod`'u o günün tarihi yap:
 
 ```yaml

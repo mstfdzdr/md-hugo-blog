@@ -19,5 +19,6 @@
     <div class="content" data-max-lines="{{ partial "post/max-lines.html" . }}">
       {{- .Content -}}
     </div>
+    {{- partial "last-updated.html" . }}
   </article>
 {{ end }}
