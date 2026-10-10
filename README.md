@@ -242,7 +242,7 @@ Bir linki diğer menüye taşımak için girdinin menü adını değiştirmen ye
 [[languages.tr.menus.footer]]    # footer
   identifier = "about"
   name = "Hakkımda"
-  pageRef = "/about"
+  pageRef = "/pages/about"       # içeriğin dosya yolu (content/ altına göre), adres değil
   weight = 3
 ```
 
@@ -311,6 +311,23 @@ links:                       # ilan butonları ("Sahibinden ilanına git"); url 
 - Para birimi varsayılan olarak TRY; ürün bazında `currency: USD` gibi değiştirebilirsin.
 - "Bana ulaş" butonu `hugo.toml` içindeki `[params.market] contact` ile açılır (örn. `mailto:…` ya da bir DM linki).
 - Ürün sayfaları Google'a `Product` olarak (fiyat, stok durumu, kondisyon) bildirilir.
+
+---
+
+## Yeni sayfa (Hakkımda, İletişim gibi)
+
+Yazı, proje ya da ürün olmayan tekil sayfalar `content/pages/` altında durur:
+
+```sh
+hugo new content pages/iletisim.md       # Türkçe
+hugo new content pages/iletisim.en.md    # İngilizce (front matter'a slug: "contact" yaz)
+```
+
+- Klasör sadece düzen için var; adresler kökte olur: `dizdar.dev/iletisim/`, `dizdar.dev/en/contact/`.
+  `/pages/` diye bir sayfa yayınlanmaz.
+- Sayfalar anasayfada listelenmez, site içi aramada çıkar (istemezsen `hiddenFromSearch: true`).
+- Menüye eklemek için `hugo.toml`'da `pageRef = "/pages/iletisim"` (bkz. Menüler).
+- Front Matter dashboard'unda "Sayfalar" klasöründen de oluşturabilirsin.
 
 ---
 

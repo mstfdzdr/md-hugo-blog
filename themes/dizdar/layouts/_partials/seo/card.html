@@ -11,7 +11,7 @@ pages) with name and domain in the footer. Returns an image resource.
 {{- /* Label: first category for posts, section title otherwise */ -}}
 {{- $label := "" -}}
 {{- with $page.GetTerms "categories" }}{{ $label = (index . 0).LinkTitle }}{{ end -}}
-{{- if and (not $label) (not $page.IsHome) }}{{ with $page.FirstSection }}{{ if not .IsHome }}{{ $label = .LinkTitle }}{{ end }}{{ end }}{{ end -}}
+{{- if and (not $label) (not $page.IsHome) (ne $page.Section "pages") }}{{ with $page.FirstSection }}{{ if not .IsHome }}{{ $label = .LinkTitle }}{{ end }}{{ end }}{{ end -}}
 
 {{- $title := $page.Title -}}
 {{- if $page.IsHome }}{{ $title = site.Params.home.title | default site.Title }}{{ $label = site.Params.subtitle }}{{ end -}}

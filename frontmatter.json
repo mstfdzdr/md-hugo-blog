@@ -46,12 +46,14 @@
     },
     {
       "title": "Sayfalar",
-      "path": "[[workspace]]/content",
+      "path": "[[workspace]]/content/pages",
       "contentTypes": [
         "page"
       ],
       "filePrefix": "",
-      "excludeSubdir": true
+      "excludePaths": [
+        "_index*.md"
+      ]
     }
   ],
   "frontMatter.taxonomy.contentTypes": [

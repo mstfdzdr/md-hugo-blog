@@ -2,8 +2,9 @@
   {{- /* Standalone pages (about, privacy policies, …) */}}
   <article>
     <header class="mb-8 text-center">
+      {{- /* Back link to the parent (e.g. a project); not for content/pages, whose folder is not published */}}
       {{- with .Parent }}
-        {{- if not .IsHome }}
+        {{- if and (not .IsHome) (ne .Section "pages") }}
           <a href="{{ .RelPermalink }}" class="mb-4 inline-flex items-center gap-1 text-sm text-muted hover:text-accent">
             {{- partial "icon.html" (dict "name" "arrow-left" "class" "size-4") }}{{ .Title }}
           </a>

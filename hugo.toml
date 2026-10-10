@@ -51,7 +51,7 @@ defaultContentLanguageInSubdir = false
     [[languages.tr.menus.footer]]
       identifier = "about"
       name = "Hakkımda"
-      pageRef = "/about"
+      pageRef = "/pages/about"
       weight = 3
 
   [languages.en]
@@ -94,7 +94,7 @@ defaultContentLanguageInSubdir = false
       name = "Categories"
       pageRef = "/categories"
       weight = 2
-    # Add an "About" entry (pageRef = "/about") once content/about.en.md exists.
+    # Add an "About" entry (pageRef = "/pages/about") once content/pages/about.en.md exists.
 
 [permalinks]
   [permalinks.taxonomy]
@@ -102,6 +102,8 @@ defaultContentLanguageInSubdir = false
   [permalinks.term]
     posttype = "/types/:slug/"
   [permalinks.page]
+    # Standalone pages live in content/pages but keep root URLs (/about/)
+    pages = "/:slugorcontentbasename/"
     # `slug` in front matter overrides the file name (handy for English posts)
     posts = "/:year/:slugorcontentbasename/"
 
