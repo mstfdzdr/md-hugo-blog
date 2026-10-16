@@ -58,7 +58,8 @@ Legal pages (privacy policy, …): regular pages in the same folder.
       </h2>
       <div class="-mx-4 flex snap-x gap-4 overflow-x-auto px-4 pb-3 sm:mx-0 sm:px-0" data-gallery>
         {{- range $i, $shot := . }}
-          {{- $thumb := .Process "fit 480x960 webp" }}
+          {{- /* Phone screenshots are portrait; desktop ones are landscape and need more width for the same height. */}}
+          {{- $thumb := .Process (cond (gt .Width .Height) "fit 1280x768 webp" "fit 480x960 webp") }}
           {{- $full := .Process "fit 1600x1600 webp" }}
           {{- /* Caption from front matter `resources: [{src, title}]`; the default title is just the file path. */}}
           {{- $caption := "" }}
